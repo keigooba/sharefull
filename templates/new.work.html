@@ -1,0 +1,84 @@
+{{ define "content" }}
+
+<form role="form" action="/work/create" method="post">
+  <h3>求人内容</h3>
+  <table class="form-group">
+    <tbody>
+      <tr>
+        <th scope="row">日付</th>
+        <td>
+          <input type="date" name="date">
+          <p class="bold">※求人一覧画面に表示されます。</p>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">タイトル</th>
+        <td>
+          <textarea name="title"></textarea>
+          <p class="bold">※求人一覧画面に表示されます。</p>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">金額</th>
+        <td>
+          約<input type="text" name="money" class="twenty">円
+          <p class="bold">※求人一覧画面に表示されます。</p>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">最寄り駅</th>
+        <td>
+          <input type="text" name="station">
+          <p class="bold">※求人一覧画面に表示されます。</p>
+          <p class="bold">※例：JR奥羽本線(新庄～青森)横手駅 徒歩 13 分</p>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">職種</th>
+        <td>
+          <select name="JobId">
+            <option value=""></option>
+            <option value="1">エキストラ</option>
+            <option value="2">データ入力</option>
+            <option value="3">モニターバイト</option>
+            <option value="4">仕分けバイト</option>
+            <option value="5">工場バイト</option>
+            <option value="6">カフェ</option>
+            <option value="7">コールセンター</option>
+            <option value="8">イベントスタッフ</option>
+            <option value="9">試験監督</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">就業時間</th>
+        <td>
+          <input type="time" name="working_time_start">
+          ~
+          <input type="time" name="working_time_finish">
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">業務詳細</th>
+        <td>
+          <textarea name="business_detail"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">評価設定</th>
+        <td>
+          <select name="news_flg">
+            <option value="0">設定しない</option>
+            <option value="1">1以上</option>
+            <option value="2">2以上</option>
+            <option value="3">3</option>
+          </select>
+          <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-lg btn-primary pull-right" type="submit">作成</button>
+</form>
+
+{{ end }}
