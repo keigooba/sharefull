@@ -1,9 +1,0 @@
-ERROR 2021/02/12 06:31:50 utils.go:103: sql: no rows in result set Cannot find user
-ERROR 2021/02/12 06:31:51 utils.go:103: sql: no rows in result set Cannot find user
-ERROR 2021/02/12 06:31:52 utils.go:103: sql: no rows in result set Cannot find user
-ERROR 2021/02/12 06:31:53 utils.go:103: sql: no rows in result set Cannot find user
-ERROR 2021/02/12 06:31:53 utils.go:103: sql: no rows in result set Cannot find user
-WARNING 2021/02/12 06:32:13 utils.go:108: <nil> Failed to get cookie
-WARNING 2021/02/12 07:56:11 utils.go:106: <nil> Failed to get cookie
-ERROR 2021/02/13 09:03:25 utils.go:101: sql: no rows in result set Cannot find user
-WARNING 2021/02/13 09:03:43 utils.go:106: <nil> Failed to get cookie

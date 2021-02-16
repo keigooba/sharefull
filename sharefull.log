@@ -1,0 +1,213 @@
+2021/02/14 09:22:37 main.go:16: test
+2021/02/14 10:16:42 base.go:20: sql: unknown driver "sqlite3" (forgotten import?)
+2021/02/14 10:17:08 base.go:20: sql: unknown driver "sqlite3" (forgotten import?)
+2021/02/14 10:18:05 main.go:14: success
+2021/02/14 10:18:29 main.go:12: success
+2021/02/14 14:52:17 main.go:13: success
+2021/02/14 14:52:17 users.go:32: 5 values for 4 columns
+2021/02/14 14:53:41 main.go:13: success
+2021/02/14 14:53:41 users.go:32: 5 values for 4 columns
+2021/02/14 14:56:39 main.go:13: success
+2021/02/14 14:56:39 users.go:32: 5 values for 4 columns
+2021/02/14 14:57:18 users.go:32: 5 values for 4 columns
+2021/02/14 14:57:48 main.go:13: success
+2021/02/14 14:57:48 users.go:32: 5 values for 4 columns
+2021/02/14 15:01:03 main.go:13: success
+2021/02/14 15:01:03 users.go:32: 5 values for 4 columns
+2021/02/14 15:03:15 main.go:13: success
+2021/02/14 15:03:15 users.go:32: 5 values for 4 columns
+2021/02/14 15:04:03 main.go:13: success
+2021/02/14 15:24:52 main.go:13: success
+2021/02/14 15:26:14 main.go:13: success
+2021/02/14 15:27:08 main.go:13: success
+2021/02/14 16:19:19 main.go:13: success
+2021/02/14 16:19:19 users.go:56: near "password": syntax error
+2021/02/14 16:22:07 main.go:13: success
+2021/02/14 16:22:33 main.go:13: success
+2021/02/14 16:22:33 users.go:56: near "password": syntax error
+2021/02/14 16:23:47 main.go:13: success
+2021/02/14 16:23:47 users.go:56: near "password": syntax error
+2021/02/14 16:24:15 main.go:13: success
+2021/02/14 18:43:15 main.go:13: success
+2021/02/14 18:43:15 users.go:65: near "id": syntax error
+2021/02/14 18:44:30 main.go:13: success
+2021/02/14 19:07:27 main.go:13: success
+2021/02/14 19:43:54 main.go:13: success
+2021/02/14 19:46:29 main.go:13: success
+2021/02/14 19:47:03 main.go:13: success
+2021/02/14 19:55:33 main.go:13: success
+2021/02/14 19:55:33 works.go:31: table works has no column named user_id
+2021/02/14 19:56:16 main.go:12: success
+2021/02/14 19:57:01 main.go:12: success
+2021/02/14 19:58:12 main.go:12: success
+2021/02/14 19:58:47 main.go:12: success
+2021/02/15 06:34:48 main.go:13: success
+2021/02/15 06:36:02 main.go:13: success
+2021/02/15 06:36:55 main.go:13: success
+2021/02/15 07:28:41 main.go:13: success
+2021/02/15 07:30:04 main.go:13: success
+2021/02/15 08:17:03 main.go:13: success
+2021/02/15 08:19:20 main.go:13: success
+2021/02/15 08:19:33 main.go:13: success
+2021/02/15 08:24:05 main.go:13: success
+2021/02/15 08:24:39 main.go:13: success
+2021/02/15 08:24:47 main.go:13: success
+2021/02/15 09:14:53 main.go:13: success
+2021/02/15 09:16:45 main.go:13: success
+2021/02/15 09:43:24 main.go:13: success
+2021/02/15 09:43:58 main.go:12: success
+2021/02/15 10:39:24 main.go:13: success
+2021/02/15 16:27:13 server.go:3095: http: panic serving [::1]:60130: template: layout.html:11: unexpected <define> in command
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc00010b4a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc000012ed0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc0001540e0, 0x1381ee0, 0x1461960, 0xc00014fb38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc0001540e0, 0xc000150100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc0001540e0, 0xc000150100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc0001540e0, 0xc000150100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc0001540e0, 0xc000150100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b4a0, 0x1470780, 0xc000024400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:14 server.go:3095: http: panic serving [::1]:60135: template: layout.html:11: unexpected <define> in command
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc000208000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc000012f50)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc00022c000, 0x1381ee0, 0x1461960, 0xc00004cb38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc00022c000, 0xc000216000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc00022c000, 0xc000216000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc00022c000, 0xc000216000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc00022c000, 0xc000216000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000208000, 0x1470780, 0xc00020e000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:14 server.go:3095: http: panic serving [::1]:60136: template: layout.html:11: unexpected <define> in command
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc000096000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc000012fc0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc0000c8000, 0x1381ee0, 0x1461960, 0xc0000a4b38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc0000c8000, 0xc0000b2000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc0000c8000, 0xc0000b2000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc0000c8000, 0xc0000b2000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc0000c8000, 0xc0000b2000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000096000, 0x1470780, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:15 server.go:3095: http: panic serving [::1]:60141: template: layout.html:11: unexpected <define> in command
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0002080a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc000210150)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc00022c0e0, 0x1381ee0, 0x1461960, 0xc00004cb38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc00022c0e0, 0xc000216200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc00022c0e0, 0xc000216200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc00022c0e0, 0xc000216200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc00022c0e0, 0xc000216200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002080a0, 0x1470780, 0xc00020e1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:16 server.go:3095: http: panic serving [::1]:60146: template: layout.html:11: unexpected <define> in command
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc00010b540)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc0000130b0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc0001541c0, 0x1381ee0, 0x1461960, 0xc000051b38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc0001541c0, 0xc000150600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc0001541c0, 0xc000150600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc0001541c0, 0xc000150600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc0001541c0, 0xc000150600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b540, 0x1470780, 0xc000024600)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:21 server.go:3095: http: panic serving [::1]:60168: template: layout.html:11: unexpected <define> in command
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc0000960a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc0002101d0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc0000c80e0, 0x1381ee0, 0x1461960, 0xc0000a4b38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc0000c80e0, 0xc0000b2200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc0000c80e0, 0xc0000b2200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc0000c80e0, 0xc0000b2200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc0000c80e0, 0xc0000b2200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000960a0, 0x1470780, 0xc0000aa1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/15 16:27:51 server.go:3095: http: panic serving [::1]:60292: template: layout.html:11: unexpected <define> in command
+goroutine 24 [running]:
+net/http.(*conn).serve.func1(0xc000208140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x13945c0, 0xc0002102c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x146fdc0, 0xc00022c1c0, 0x1381ee0, 0x1461960, 0xc00004cb38, 0x2, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:17 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x146fdc0, 0xc00022c1c0, 0xc000216600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:8 +0xa5
+net/http.HandlerFunc.ServeHTTP(0x1414508, 0x146fdc0, 0xc00022c1c0, 0xc000216600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x167a2a0, 0x146fdc0, 0xc00022c1c0, 0xc000216600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000154000, 0x146fdc0, 0xc00022c1c0, 0xc000216600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000208140, 0x1470780, 0xc00020e340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
