@@ -16,9 +16,15 @@ var Db *sql.DB
 
 var err error
 
+type Data struct {
+	Works   []Work
+	User    User
+	NowDate string
+}
+
 const (
-	tableNameUser = "users"
-	tableNameWork = "works"
+	tableNameUser    = "users"
+	tableNameWork    = "works"
 	tableNameSession = "sessions"
 )
 

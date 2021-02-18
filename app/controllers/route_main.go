@@ -1,18 +1,36 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
 	"time"
+
+	"github.com/keigooba/sharefull/app/models"
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
-	time := time.Now()
+	data := models.Data{}
+	// 現在の日付
+	timedate := time.Now()
 	const layout = "2006/01/02"
+	now_date := timedate.Format(layout)
+	data.NowDate = now_date
 
-	_, err := session(w, r)
+	works, err := models.GetWorks()
 	if err != nil {
-		generateHTML(w, time.Format(layout), "layout", "public_navbar", "index")
+		log.Fatalln(err)
+	}
+	data.Works = works
+
+	sess, err := session(w, r)
+	if err != nil {
+		generateHTML(w, data, "layout", "public_navbar", "index")
 	} else {
-		generateHTML(w, time.Format(layout), "layout", "private_navbar", "index")
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Fatalln(err)
+		}
+		data.User = user
+		generateHTML(w, data, "layout", "private_navbar", "index")
 	}
 }

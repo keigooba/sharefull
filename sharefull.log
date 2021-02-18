@@ -1003,3 +1003,171 @@ created by net/http.(*Server).Serve
 2021/02/16 18:27:49 main.go:13: success
 2021/02/18 05:28:08 main.go:13: success
 2021/02/18 05:28:44 main.go:13: success
+2021/02/18 05:58:11 main.go:13: success
+2021/02/18 06:04:23 main.go:13: success
+2021/02/18 06:05:30 main.go:13: success
+2021/02/18 06:07:04 main.go:13: success
+2021/02/18 06:10:23 main.go:13: success
+2021/02/18 06:10:59 main.go:13: success
+2021/02/18 06:14:27 main.go:13: success
+2021/02/18 07:49:08 main.go:13: success
+2021/02/18 07:49:32 main.go:13: success
+2021/02/18 07:50:25 main.go:13: success
+2021/02/18 07:51:23 main.go:13: success
+2021/02/18 07:51:28 users.go:121: no such column: uuids
+2021/02/18 07:54:08 main.go:13: success
+2021/02/18 07:59:12 main.go:13: success
+2021/02/18 07:59:25 main.go:13: success
+2021/02/18 07:59:29 route_auth.go:50: sql: no rows in result set
+2021/02/18 07:59:37 route_auth.go:50: sql: no rows in result set
+2021/02/18 07:59:38 route_auth.go:50: sql: no rows in result set
+2021/02/18 08:39:33 main.go:13: success
+2021/02/18 13:03:15 main.go:13: success
+2021/02/18 13:37:35 main.go:13: success
+2021/02/18 13:37:41 users.go:132: no such column: id
+2021/02/18 13:38:30 main.go:13: success
+2021/02/18 13:38:31 users.go:132: no such column: id
+2021/02/18 13:38:46 main.go:13: success
+2021/02/18 13:38:49 users.go:132: no such column: id
+2021/02/18 13:40:52 main.go:13: success
+2021/02/18 13:40:57 users.go:132: no such column: id
+2021/02/18 13:41:15 main.go:13: success
+2021/02/18 13:41:19 users.go:132: no such column: id
+2021/02/18 13:42:30 main.go:13: success
+2021/02/18 13:43:07 main.go:13: success
+2021/02/18 15:11:55 main.go:13: success
+2021/02/18 16:05:28 main.go:13: success
+2021/02/18 16:06:31 server.go:3095: http: panic serving [::1]:59091: template: index.html:4: function "User" not defined
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc00010b540)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc0002178e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc00021a620, 0x452d140, 0xc000203200, 0xc00017b970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc00021a620, 0xc0000ed200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc00021a620, 0xc0000ed200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc00021a620, 0xc0000ed200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc00021a620, 0xc0000ed200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b540, 0x45ebde0, 0xc000024600)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 16:06:31 server.go:3095: http: panic serving [::1]:59345: template: index.html:4: function "User" not defined
+goroutine 79 [running]:
+net/http.(*conn).serve.func1(0xc00024a820)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc000217bf0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc00021a700, 0x452d140, 0xc000203560, 0xc000143970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc00021a700, 0xc000309400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc00021a700, 0xc000309400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc00021a700, 0xc000309400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc00021a700, 0xc000309400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00024a820, 0x45ebde0, 0xc0003162c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 16:06:32 server.go:3095: http: panic serving [::1]:59350: template: index.html:4: function "User" not defined
+goroutine 95 [running]:
+net/http.(*conn).serve.func1(0xc0000a28c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc000095cd0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc0000c4700, 0x452d140, 0xc0000bf560, 0xc000393970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc0000c4700, 0xc0000ed300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc0000c4700, 0xc0000ed300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc0000c4700, 0xc0000ed300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc0000c4700, 0xc0000ed300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a28c0, 0x45ebde0, 0xc0000fc680)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 16:06:37 server.go:3095: http: panic serving [::1]:59371: template: index.html:4: function "user" not defined
+goroutine 116 [running]:
+net/http.(*conn).serve.func1(0xc00024a8c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc000297170)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc00021a7e0, 0x452d140, 0xc0002038c0, 0xc000143970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc00021a7e0, 0xc000309c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc00021a7e0, 0xc000309c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc00021a7e0, 0xc000309c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc00021a7e0, 0xc000309c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00024a8c0, 0x45ebde0, 0xc000316700)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 16:06:38 server.go:3095: http: panic serving [::1]:59376: template: index.html:4: function "user" not defined
+goroutine 132 [running]:
+net/http.(*conn).serve.func1(0xc0000a2960)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc000217f10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc0000c47e0, 0x452d140, 0xc0000bf8c0, 0xc000393970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc0000c47e0, 0xc0000edb00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc0000c47e0, 0xc0000edb00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc0000c47e0, 0xc0000edb00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc0000c47e0, 0xc0000edb00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a2960, 0x45ebde0, 0xc0000fcac0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 16:06:38 server.go:3095: http: panic serving [::1]:59377: template: index.html:4: function "user" not defined
+goroutine 100 [running]:
+net/http.(*conn).serve.func1(0xc000284820)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x44fe900, 0xc00036c040)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45eb260, 0xc0002b2460, 0x452d140, 0xc0002ace10, 0xc00038f970, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:18 +0x2be
+github.com/keigooba/sharefull/app/controllers.index(0x45eb260, 0xc0002b2460, 0xc0002ee200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:34 +0x479
+net/http.HandlerFunc.ServeHTTP(0x4589800, 0x45eb260, 0xc0002b2460, 0xc0002ee200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x482bee0, 0x45eb260, 0xc0002b2460, 0xc0002ee200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000160000, 0x45eb260, 0xc0002b2460, 0xc0002ee200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000284820, 0x45ebde0, 0xc000281900)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/18 17:44:26 main.go:13: success
+2021/02/19 06:31:44 main.go:13: success

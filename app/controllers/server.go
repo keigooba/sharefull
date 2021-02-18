@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"net/http"
 
+	"github.com/keigooba/sharefull/app/models"
 	"github.com/keigooba/sharefull/config"
 )
 
@@ -18,6 +19,17 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	templates.ExecuteTemplate(w, "layout", data)
 }
 
+func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err error) {
+	cookie, err := r.Cookie("_cookie")
+	if err == nil {
+		sess = models.Session{UUID: cookie.Value}
+		if ok, _ := sess.CheckSession(); !ok {
+			err = fmt.Errorf("Invalid session")
+		}
+	}
+	return sess, err
+}
+
 func StartMainServer() error {
 	// app/views以下ファイル読み込み
 	files := http.FileServer(http.Dir(config.Config.Static))
@@ -26,5 +38,6 @@ func StartMainServer() error {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/logout", logout)
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }
