@@ -99,7 +99,7 @@ func (login_user *User) GetUserLogin() (user User, err error) {
 
 func (sess *Session) CheckSession() (valid bool, err error) {
 	cmd := `select id, uuid, email, user_id, created_at from sessions where uuid = ?`
-	err = Db.QueryRow(cmd, sess.UUID).Scan(&sess.ID, &sess.UUID, &sess.UserID, &sess.CreatedAt)
+	err = Db.QueryRow(cmd, sess.UUID).Scan(&sess.ID, &sess.UUID, &sess.Email, &sess.UserID, &sess.CreatedAt)
 
 	if err != nil {
 		valid = false
@@ -111,4 +111,23 @@ func (sess *Session) CheckSession() (valid bool, err error) {
 	}
 
 	return valid, err
+}
+
+func (sess *Session) DeleteSessionByUUID() error {
+	cmd := `delete from sessions where uuid = ?`
+	_, err = Db.Exec(cmd, sess.UUID)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return err
+}
+
+func (sess *Session) GetUserBySession() (user User, err error) {
+	user = User{}
+	cmd := `select id, uuid, name, email, password, created_at from users where id = ?`
+	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	return user, err
 }

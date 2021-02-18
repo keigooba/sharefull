@@ -14,6 +14,8 @@ type Work struct {
 	Evalution string
 	UserID    int
 	CreatedAt time.Time
+	Users     []User
+	NowDate   string
 }
 
 func (u *User) CreateWork(work *Work) (err error) {

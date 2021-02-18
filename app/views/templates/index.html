@@ -1,4 +1,8 @@
 {{define "content"}}
-<h1>インデックス</h1>
-<p class="center">{{.}}</p>
+<h1>現在の日付</h1>
+<p class="center">{{.NowDate}}</p>
+<p>名前：{{.User.Name}}</p>
+{{ range .Works }}
+{{.UUID}}
+{{end}}
 {{end}}
