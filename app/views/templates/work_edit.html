@@ -1,0 +1,55 @@
+{{ define "content" }}
+<form role="form" action="/work/edit/{{.ID}}" method="post" class="form">
+    <h3>求人編集</h3>
+    <table class="form-group">
+        <tbody>
+            <tr>
+                <th scope="row">日付</th>
+                <td>
+                    <input type="date" name="date" value="{{.Date}}">
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">タイトル</th>
+                <td>
+                    <textarea name="title">{{.Title}}</textarea>
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">金額</th>
+                <td>
+                    約<input type="text" name="money" class="twenty" value=" {{.Money}}">円
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">職種</th>
+                <td>
+                    <select name="job_id">
+                        <option value=""></option>
+                        {{range $index, $var := .Values}}
+                        <option value="{{$index}}">{{$var}}</option>
+                        {{end}}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">評価設定</th>
+                <td>
+                    <select name="evaluation">
+                        <option value="0">設定しない</option>
+                        <option value="1">1以上</option>
+                        <option value="2">2以上</option>
+                        <option value="3">3</option>
+                    </select>
+                    <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-lg btn-primary" type="submit">作成</button>
+</form>
+
+{{end}}
