@@ -1,8 +1,17 @@
 {{define "content"}}
-<h1>現在の日付</h1>
+
 <p class="center">{{.NowDate}}</p>
-<p>名前：{{.User.Name}}</p>
+<div class="text-center">
 {{ range .Works }}
-{{.UUID}}
+<hr>
+<p>日付：{{.Date}}</p>
+<p>タイトル：{{.Title}}</p>
+<p>金額：{{.Money}}円</p>
+<p>職種：{{.JobID}}</p>
+<a href="/work/edit/{{.ID}}">編集</a>
+<a href="/work/delete/{{.ID}}">削除</a>
+</hr>
 {{end}}
+</div>
+
 {{end}}

@@ -14,8 +14,8 @@ type Work struct {
 	Evalution string
 	UserID    int
 	CreatedAt time.Time
-	Users     []User
-	NowDate   string
+	User      User
+	JobList   []string
 }
 
 func (u *User) CreateWork(work *Work) (err error) {
@@ -104,8 +104,8 @@ func (u *User) GetWorksByUser() (works []Work, err error) {
 }
 
 func (w *Work) UpdateWork() (err error) {
-	cmd := `update works set date = ?, title = ? where id = ?`
-	_, err = Db.Exec(cmd, w.Date, w.Title, w.ID)
+	cmd := `update works set date = ?, title = ?, money = ?, job_id = ?, evalution = ? where id = ?`
+	_, err = Db.Exec(cmd, w.Date, w.Title, w.Money, w.JobID, w.Evalution, w.ID)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -119,4 +119,10 @@ func (w *Work) DeleteWork() (err error) {
 		log.Fatalln(err)
 	}
 	return err
+}
+
+func JobList() (work Work) {
+	job_list := []string{"エキストラ", "データ入力", "モニターバイト", "仕分けバイト", "工場バイト", "カフェ", "コールセンター", "イベントスタッフ", "試験監督"}
+	work = Work{JobList: job_list}
+	return work
 }

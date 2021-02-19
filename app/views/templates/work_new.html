@@ -1,0 +1,62 @@
+{{ define "content" }}
+
+<form role="form" action="/work/new" method="post" class="form">
+    <h3>求人内容</h3>
+    <table class="form-group">
+        <tbody>
+            <tr>
+                <th scope="row">日付</th>
+                <td>
+                    <input type="date" name="date">
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">タイトル</th>
+                <td>
+                    <textarea name="title"></textarea>
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">金額</th>
+                <td>
+                    約<input type="text" name="money" class="twenty">円
+                    <p class="bold">※求人一覧画面に表示されます。</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">職種</th>
+                <td>
+                    <select name="job_id">
+                        <option value=""></option>
+                        <option value="1">エキストラ</option>
+                        <option value="2">データ入力</option>
+                        <option value="3">モニターバイト</option>
+                        <option value="4">仕分けバイト</option>
+                        <option value="5">工場バイト</option>
+                        <option value="6">カフェ</option>
+                        <option value="7">コールセンター</option>
+                        <option value="8">イベントスタッフ</option>
+                        <option value="9">試験監督</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">評価設定</th>
+                <td>
+                    <select name="evaluation">
+                        <option value="0">設定しない</option>
+                        <option value="1">1以上</option>
+                        <option value="2">2以上</option>
+                        <option value="3">3</option>
+                    </select>
+                    <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-lg btn-primary" type="submit">作成</button>
+</form>
+
+{{ end }}
