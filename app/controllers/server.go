@@ -37,6 +37,8 @@ var validPathWork = regexp.MustCompile("^/work/(edit|delete|apply)/([0-9]+)$")
 
 var validPathUser = regexp.MustCompile("^/user/(edit|delete|status)/([0-9]+)$")
 
+var validPathApplyUser = regexp.MustCompile("^/apply/(status|delete)/([0-9]+)$")
+
 func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if strings.Contains(r.URL.Path, "work") {
@@ -65,6 +67,19 @@ func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc
 				return
 			}
 			fn(w, r, qi)
+		} else if strings.Contains(r.URL.Path, "apply") {
+			//apply/user/1
+			q := validPathApplyUser.FindStringSubmatch(r.URL.Path)
+			if q == nil {
+				http.NotFound(w, r)
+				return
+			}
+			qi, err := strconv.Atoi(q[2])
+			if err != nil {
+				http.NotFound(w, r)
+				return
+			}
+			fn(w, r, qi)
 		}
 	}
 }
@@ -81,9 +96,11 @@ func StartMainServer() error {
 	http.HandleFunc("/work/new", workNew)
 	http.HandleFunc("/work/edit/", parseURL(workEdit))
 	http.HandleFunc("/work/delete/", parseURL(workDelete))
-	http.HandleFunc("/work/apply/",parseURL(workApply))
+	http.HandleFunc("/work/apply/", parseURL(workApply))
 	http.HandleFunc("/user/edit/", parseURL(userEdit))
 	http.HandleFunc("/user/delete/", parseURL(userDelete))
 	http.HandleFunc("/user/status/", parseURL(userStatus))
+	http.HandleFunc("/apply/status/", parseURL(applyUser))
+	http.HandleFunc("/apply/delete/", parseURL(applyUserDelete))
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }

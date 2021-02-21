@@ -64,16 +64,18 @@ func userStatus(w http.ResponseWriter, r *http.Request, id int) {
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
-		user, err := sess.GetUserBySession()
+		u, err := sess.GetUserBySession()
 		if err != nil {
 			log.Println(err)
 		}
-		work_ids, err := models.GetApplyUsersWorkIDByUserID(id)
+		works_id, err := models.GetApplyUsersByUserID(id)
 		if err != nil {
 			log.Println(err)
 		}
+
+		// 応募した求人
 		var works []models.Work
-		for _, v := range work_ids {
+		for _, v := range works_id {
 			work, err := models.GetWork(v)
 			if err != nil {
 				log.Println(err)
@@ -81,7 +83,13 @@ func userStatus(w http.ResponseWriter, r *http.Request, id int) {
 			works = append(works, work)
 		}
 
-		data := models.Data{User: user, Works: works}
+		// 応募中の求人
+		a_works, err := u.GetWorksByUser()
+		if err != nil {
+			log.Println(err)
+		}
+
+		data := models.Data{Works: a_works, User: u}
 		generateHTML(w, data, "layout", "private_navbar", "user_status")
 	}
 }

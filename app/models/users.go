@@ -12,6 +12,7 @@ type User struct {
 	Email     string
 	PassWord  string
 	CreatedAt time.Time
+	ApplyID   int
 }
 
 type Session struct {
@@ -19,14 +20,6 @@ type Session struct {
 	UUID      string
 	Email     string
 	UserID    int
-	CreatedAt time.Time
-}
-
-type ApplyUser struct {
-	ID        int
-	UUID      string
-	UserID    int
-	WorkID    int
 	CreatedAt time.Time
 }
 
@@ -138,44 +131,4 @@ func (sess *Session) GetUserBySession() (user User, err error) {
 		log.Fatalln(err)
 	}
 	return user, err
-}
-
-func (u *User) CreateApplyUser(id int) error {
-	cmd := `insert into apply_users (
-		uuid,
-		work_id,
-		user_id,
-		created_at) values (?, ?, ?, ?)`
-
-	_, err = Db.Exec(cmd, createUUID(), id, u.ID, time.Now())
-	if err != nil {
-		log.Fatalln(err)
-	}
-	return err
-}
-
-func GetApplyUsersWorkIDByUserID(id int) (work_ids []int, err error) {
-	cmd := `select id, uuid, work_id, user_id, created_at from apply_users where user_id = ?`
-	rows, err := Db.Query(cmd, id)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	for rows.Next() {
-		var a_user ApplyUser
-		err = rows.Scan(
-			&a_user.ID,
-			&a_user.UUID,
-			&a_user.WorkID,
-			&a_user.UserID,
-			&a_user.CreatedAt)
-
-		if err != nil {
-			log.Fatalln(err)
-		}
-		work_id := a_user.WorkID
-		work_ids = append(work_ids, work_id)
-	}
-	rows.Close()
-
-	return work_ids, err
 }

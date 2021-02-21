@@ -13,5 +13,21 @@
     </div>
     {{end}}
   </div>
+  {{if .Works}}
+  <div class="bg-light pt-4 pb-4">
+    <h1 class="mb-4">応募中の求人</h1>
+  </div>
+  <div class="pt-4 pb-4">
+    {{ range .Works }}
+    <div class="mb-4">
+      <p>日付：{{.Date}}</p>
+      <p>タイトル：{{.Title}}</p>
+      <p>金額：{{.Money}}円</p>
+      <p>職種：{{.JobID}}</p>
+      <a href="/apply/status/{{.ID}}">応募中ユーザー</a>
+    </div>
+    {{end}}
+  </div>
+  {{end}}
 </div>
 {{end}}

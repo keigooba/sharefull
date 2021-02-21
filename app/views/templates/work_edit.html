@@ -29,9 +29,15 @@
                 <td>
                     <select name="job_id">
                         <option value=""></option>
-                        {{range $index, $var := .JobList}}
-                        <option value="{{$index}}">{{$var}}</option>
-                        {{end}}
+                        <option value="0"{{if eq .JobID "0"}}selected{{end}}>エキストラ</option>
+                        <option value="1"{{if eq .JobID "1"}}selected{{end}}>データ入力</option>
+                        <option value="2"{{if eq .JobID "2"}}selected{{end}}>モニターバイト</option>
+                        <option value="3"{{if eq .JobID "3"}}selected{{end}}>仕分けバイト</option>
+                        <option value="4"{{if eq .JobID "4"}}selected{{end}}>工場バイト</option>
+                        <option value="5"{{if eq .JobID "5"}}selected{{end}}>カフェ</option>
+                        <option value="6"{{if eq .JobID "6"}}selected{{end}}>コールセンター</option>
+                        <option value="7"{{if eq .JobID "7"}}selected{{end}}>イベントスタッフ</option>
+                        <option value="8"{{if eq .JobID "8"}}selected{{end}}>試験監督</option>
                     </select>
                 </td>
             </tr>
@@ -39,9 +45,10 @@
                 <th scope="row">評価設定</th>
                 <td>
                     <select name="evaluation">
-                        {{range $index, $var := .EvaluationList}}
-                        <option value="{{$index}}">{{$var}}</option>
-                        {{end}}
+                    <option value="0"{{if eq .Evaluation "0"}}selected{{end}}>設定しない</option>
+                    <option value="1"{{if eq .Evaluation "1"}}selected{{end}}>1以上</option>
+                    <option value="2"{{if eq .Evaluation "2"}}selected{{end}}>2以上</option>
+                    <option value="3"{{if eq .Evaluation "3"}}selected{{end}}>3</option>
                     </select>
                     <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
                 </td>

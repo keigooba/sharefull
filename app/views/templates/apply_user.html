@@ -1,0 +1,19 @@
+{{define "content"}}
+<div class="text-center">
+  <div class="bg-light pt-4 pb-4">
+    <h1 class="mb-4">応募されたユーザー情報</h1>
+  </div>
+  <div class="pt-4 pb-4">
+    {{range $i, $v := .ApplysID}}
+    <form action="/apply/delete/{{$v}}" method="post" id="delete_{{$i}}"></form>
+    {{end}}
+    {{range $i, $v :=.ApplyUsers}}
+    <div class="mb-4">
+      <p>名前：{{$v.Name}}</p>
+      <p>メールアドレス：{{$v.Email}}</p>
+      <a href="{{$i}}" class="btn btn-danger mt-2" onclick="$('#delete_{{$i}}').submit();return false;">不採用にする</a>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{end}}
