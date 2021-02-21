@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"regexp"
 	"strconv"
+	"strings"
 
 	"github.com/keigooba/sharefull/app/models"
 	"github.com/keigooba/sharefull/config"
@@ -32,22 +33,39 @@ func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err e
 	return sess, err
 }
 
-var validPath = regexp.MustCompile("^/work/(edit|delete)/([0-9]+)$")
+var validPathWork = regexp.MustCompile("^/work/(edit|delete|apply)/([0-9]+)$")
+
+var validPathUser = regexp.MustCompile("^/user/(edit|delete|status)/([0-9]+)$")
 
 func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		//work/edit/1
-		q := validPath.FindStringSubmatch(r.URL.Path)
-		if q == nil {
-			http.NotFound(w, r)
-			return
+		if strings.Contains(r.URL.Path, "work") {
+			//work/edit/1
+			q := validPathWork.FindStringSubmatch(r.URL.Path)
+			if q == nil {
+				http.NotFound(w, r)
+				return
+			}
+			qi, err := strconv.Atoi(q[2])
+			if err != nil {
+				http.NotFound(w, r)
+				return
+			}
+			fn(w, r, qi)
+		} else if strings.Contains(r.URL.Path, "user") {
+			//user/edit/1
+			q := validPathUser.FindStringSubmatch(r.URL.Path)
+			if q == nil {
+				http.NotFound(w, r)
+				return
+			}
+			qi, err := strconv.Atoi(q[2])
+			if err != nil {
+				http.NotFound(w, r)
+				return
+			}
+			fn(w, r, qi)
 		}
-		qi, err := strconv.Atoi(q[2])
-		if err != nil {
-			http.NotFound(w, r)
-			return
-		}
-		fn(w, r, qi)
 	}
 }
 
@@ -63,5 +81,9 @@ func StartMainServer() error {
 	http.HandleFunc("/work/new", workNew)
 	http.HandleFunc("/work/edit/", parseURL(workEdit))
 	http.HandleFunc("/work/delete/", parseURL(workDelete))
+	http.HandleFunc("/work/apply/",parseURL(workApply))
+	http.HandleFunc("/user/edit/", parseURL(userEdit))
+	http.HandleFunc("/user/delete/", parseURL(userDelete))
+	http.HandleFunc("/user/status/", parseURL(userStatus))
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }

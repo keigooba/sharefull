@@ -6,16 +6,23 @@ import (
 )
 
 type Work struct {
-	ID        int
-	Date      string
-	Title     string
-	Money     string
-	JobID     string
-	Evalution string
-	UserID    int
-	CreatedAt time.Time
-	User      User
-	JobList   []string
+	ID             int
+	Date           string
+	Title          string
+	Money          string
+	JobID          string
+	Evaluation     string
+	UserID         int
+	CreatedAt      time.Time
+	User           User
+	JobList        []string
+	EvaluationList []string
+}
+
+func (w *Work) WorkList() error {
+	w.JobList = []string{"エキストラ", "データ入力", "モニターバイト", "仕分けバイト", "工場バイト", "カフェ", "コールセンター", "イベントスタッフ", "試験監督"}
+	w.EvaluationList = []string{"設定しない", "1以上", "2以上", "3以上"}
+	return err
 }
 
 func (u *User) CreateWork(work *Work) (err error) {
@@ -24,11 +31,11 @@ func (u *User) CreateWork(work *Work) (err error) {
 		title,
 		money,
 		job_id,
-		evalution,
+		evaluation,
 		user_id,
 		created_at) values (?, ?, ?, ?, ?, ?, ?)`
 
-	_, err = Db.Exec(cmd, work.Date, work.Title, work.Money, work.JobID, work.Evalution, u.ID, time.Now())
+	_, err = Db.Exec(cmd, work.Date, work.Title, work.Money, work.JobID, work.Evaluation, u.ID, time.Now())
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -36,7 +43,7 @@ func (u *User) CreateWork(work *Work) (err error) {
 }
 
 func GetWork(id int) (work Work, err error) {
-	cmd := `select id, date, title, money, job_id, evalution, user_id, created_at from works
+	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works
 	where id = ?`
 	work = Work{}
 
@@ -46,7 +53,7 @@ func GetWork(id int) (work Work, err error) {
 		&work.Title,
 		&work.Money,
 		&work.JobID,
-		&work.Evalution,
+		&work.Evaluation,
 		&work.UserID,
 		&work.CreatedAt)
 
@@ -54,7 +61,7 @@ func GetWork(id int) (work Work, err error) {
 }
 
 func GetWorks() (works []Work, err error) {
-	cmd := `select id, date, title, money, job_id, evalution, user_id, created_at from works`
+	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works order by created_at desc`
 	rows, err := Db.Query(cmd)
 	if err != nil {
 		log.Fatalln(err)
@@ -67,10 +74,13 @@ func GetWorks() (works []Work, err error) {
 			&work.Title,
 			&work.Money,
 			&work.JobID,
-			&work.Evalution,
+			&work.Evaluation,
 			&work.UserID,
 			&work.CreatedAt)
 
+		if err != nil {
+			log.Fatalln(err)
+		}
 		works = append(works, work)
 	}
 	rows.Close()
@@ -79,7 +89,7 @@ func GetWorks() (works []Work, err error) {
 }
 
 func (u *User) GetWorksByUser() (works []Work, err error) {
-	cmd := `select id, date, title, money, job_id, evalution, user_id, created_at from works where user_id = ?`
+	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works where user_id = ?`
 	rows, err := Db.Query(cmd, u.ID)
 	if err != nil {
 		log.Fatalln(err)
@@ -92,10 +102,13 @@ func (u *User) GetWorksByUser() (works []Work, err error) {
 			&work.Title,
 			&work.Money,
 			&work.JobID,
-			&work.Evalution,
+			&work.Evaluation,
 			&work.UserID,
 			&work.CreatedAt)
 
+		if err != nil {
+			log.Fatalln(err)
+		}
 		works = append(works, work)
 	}
 	rows.Close()
@@ -104,8 +117,8 @@ func (u *User) GetWorksByUser() (works []Work, err error) {
 }
 
 func (w *Work) UpdateWork() (err error) {
-	cmd := `update works set date = ?, title = ?, money = ?, job_id = ?, evalution = ? where id = ?`
-	_, err = Db.Exec(cmd, w.Date, w.Title, w.Money, w.JobID, w.Evalution, w.ID)
+	cmd := `update works set date = ?, title = ?, money = ?, job_id = ?, evaluation = ? where id = ?`
+	_, err = Db.Exec(cmd, w.Date, w.Title, w.Money, w.JobID, w.Evaluation, w.ID)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -119,10 +132,4 @@ func (w *Work) DeleteWork() (err error) {
 		log.Fatalln(err)
 	}
 	return err
-}
-
-func JobList() (work Work) {
-	job_list := []string{"エキストラ", "データ入力", "モニターバイト", "仕分けバイト", "工場バイト", "カフェ", "コールセンター", "イベントスタッフ", "試験監督"}
-	work = Work{JobList: job_list}
-	return work
 }

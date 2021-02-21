@@ -1,0 +1,17 @@
+{{define "content"}}
+<div class="text-center">
+  <div class="bg-light pt-4 pb-4">
+    <h1 class="mb-4">応募した求人</h1>
+  </div>
+  <div class="pt-4 pb-4">
+    {{ range .Works }}
+    <div class="mb-4">
+      <p>日付：{{.Date}}</p>
+      <p>タイトル：{{.Title}}</p>
+      <p>金額：{{.Money}}円</p>
+      <p>職種：{{.JobID}}</p>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{end}}

@@ -13,7 +13,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			generateHTML(w, nil, "layout", "public_navbar", "signup")
 		} else {
-			http.Redirect(w, r, "/", 302)
+			http.Redirect(w, r, "/login", 302)
 		}
 	} else if r.Method == "POST" {
 		if err := r.ParseForm(); err != nil {
@@ -38,10 +38,12 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			log.Println(err)
 			http.Redirect(w, r, "/login", 302)
 		}
+
 		session, err := u.CreateSession()
 		if err != nil {
 			log.Fatalln(err)
 		}
+
 		cookie := http.Cookie{
 			Name:     "_cookie",
 			Value:    session.UUID,

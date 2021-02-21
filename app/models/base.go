@@ -17,15 +17,17 @@ var Db *sql.DB
 var err error
 
 type Data struct {
-	Works   []Work
-	User    User
-	NowDate string
+	Works      []Work
+	User       User
+	ApplyUsers []ApplyUser
+	NowDate    string
 }
 
 const (
-	tableNameUser    = "users"
-	tableNameWork    = "works"
-	tableNameSession = "sessions"
+	tableNameUser      = "users"
+	tableNameWork      = "works"
+	tableNameSession   = "sessions"
+	tableNameApplyUser = "apply_users"
 )
 
 func init() {
@@ -50,7 +52,7 @@ func init() {
 		title STRING,
 		money STRING,
 		job_id STRING,
-		evalution STRING,
+		evaluation STRING,
 		user_id INTERGER,
 		created_at DATETIME)`, tableNameWork)
 
@@ -64,6 +66,32 @@ func init() {
 		created_at DATETIME)`, tableNameSession)
 
 	Db.Exec(cmdS)
+
+	cmdA := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		work_id INTEGER,
+		user_id INTEGER,
+		created_at DATETIME)`, tableNameApplyUser)
+
+	Db.Exec(cmdA)
+}
+
+func Migration() {
+	u := User{}
+	u.Name = "test"
+	u.Email = "test@email.com"
+	u.PassWord = "testtest"
+	u.CreateUser()
+
+	work := &Work{
+		Date:       "02/20",
+		Title:      "テスト",
+		Money:      "3000",
+		JobID:      "1",
+		Evaluation: "1",
+	}
+	u.CreateWork(work)
 }
 
 func createUUID() (uuidobj uuid.UUID) {

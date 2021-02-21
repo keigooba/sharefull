@@ -1,59 +1,33 @@
-body {
-    background-color: #f5f5f5;
-}
-p {
-    margin: 0;
-}
-input[type="text"],textarea{
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-}
-input[type="date"],input[type="time"]{
-    line-height: inherit;
-}
-button[type="submit"] {
-    float: right;
-}
-label {
-    margin-right: 5px;
-}
-.lead {
-    background-color: #ffffff;
-}
-.bold {
-    font-weight: bold;
-}
 /* テキスト入力欄の大きさ設定 */
 .twenty {
-    width: 20% !important;
-    margin: 0px 3px;
+  width: 20% !important;
+  margin: 0px 3px;
 }
 .main {
-    width: 600px;
-    margin: 0 auto;
-    margin-bottom: 80px;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 80px;
 }
 .main h3 {
-    text-align: center;
+  text-align: center;
 }
 .form {
-    width: 70%;
-    margin-top: 30px;
-    overflow: hidden;
+  width: 70%;
+  margin-top: 30px;
+  overflow: hidden;
 }
 .form-group {
-    width: 100%;
-    margin: 20px 0;
+  width: 100%;
+  margin: 20px 0;
 }
 .form-group tbody tr:first-child {
-    border-top: 1px solid #cbcbcb;
+  border-top: 1px solid #cbcbcb;
 }
 .form-group tbody tr th{
-    padding: 15px 0;
-    border-bottom: 1px solid #cbcbcb;
+  padding: 15px 0;
+  border-bottom: 1px solid #cbcbcb;
 }
 .form-group tbody tr td{
-    padding: 15px 0;
-    border-bottom: 1px solid #cbcbcb;
+  padding: 15px 0;
+  border-bottom: 1px solid #cbcbcb;
 }
