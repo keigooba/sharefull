@@ -1915,3 +1915,449 @@ created by net/http.(*Server).Serve
 2021/02/21 08:50:34 main.go:13: success
 2021/02/21 08:51:48 main.go:13: success
 2021/02/21 08:55:21 main.go:13: success
+2021/02/21 09:56:07 main.go:13: success
+2021/02/21 09:58:35 main.go:13: success
+2021/02/21 10:27:44 main.go:13: success
+2021/02/21 10:30:06 main.go:13: success
+2021/02/21 10:47:27 main.go:13: success
+2021/02/21 10:47:30 users.go:138: sql: Scan error on column index 5, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/02/21 10:49:07 main.go:13: success
+2021/02/21 10:51:35 main.go:13: success
+2021/02/21 10:52:13 main.go:13: success
+2021/02/21 11:32:48 main.go:13: success
+2021/02/21 11:33:54 main.go:13: success
+2021/02/21 11:35:06 main.go:13: success
+2021/02/21 11:36:16 main.go:13: success
+2021/02/21 11:37:23 main.go:13: success
+2021/02/21 11:37:44 main.go:13: success
+2021/02/21 11:50:13 main.go:13: success
+2021/02/21 12:24:22 main.go:13: success
+2021/02/21 13:04:18 main.go:13: success
+2021/02/21 13:07:16 main.go:13: success
+2021/02/21 15:08:14 main.go:13: success
+2021/02/21 15:10:14 main.go:13: success
+2021/02/21 15:11:37 main.go:13: success
+2021/02/21 15:12:35 main.go:13: success
+2021/02/21 15:13:54 main.go:13: success
+2021/02/21 15:14:07 main.go:13: success
+2021/02/21 15:19:52 main.go:13: success
+2021/02/21 15:30:22 main.go:13: success
+2021/02/21 16:47:28 main.go:13: success
+2021/02/21 16:48:51 main.go:13: success
+2021/02/21 18:37:31 server.go:3095: http: panic serving [::1]:60238: template: apply_user.html:15: function "i" not defined
+goroutine 688 [running]:
+net/http.(*conn).serve.func1(0xc00010a320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc000352eb0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016c0e0, 0x45442c0, 0xc000096000, 0xc00020d848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc00016c0e0, 0xc0000b6600, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016c0e0, 0xc0000b6600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc00016c0e0, 0xc0000b6600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016c0e0, 0xc0000b6600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016c0e0, 0xc0000b6600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010a320, 0x45f24a0, 0xc000024040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 18:37:31 server.go:3095: http: panic serving [::1]:60245: template: apply_user.html:15: function "i" not defined
+goroutine 776 [running]:
+net/http.(*conn).serve.func1(0xc00010abe0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc0002aa6b0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0000ec000, 0x45442c0, 0xc0000f6000, 0xc00020f848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc0000ec000, 0xc0001e4600, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0000ec000, 0xc0001e4600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc0000ec000, 0xc0001e4600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0000ec000, 0xc0001e4600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0000ec000, 0xc0001e4600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010abe0, 0x45f24a0, 0xc000025000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 18:37:31 server.go:3095: http: panic serving [::1]:60246: template: apply_user.html:15: function "i" not defined
+goroutine 761 [running]:
+net/http.(*conn).serve.func1(0xc000198280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e570)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc000200000, 0x45442c0, 0xc00021a000, 0xc000213848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc000200000, 0xc0000b6c00, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc000200000, 0xc0000b6c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc000200000, 0xc0000b6c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc000200000, 0xc0000b6c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc000200000, 0xc0000b6c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000198280, 0x45f24a0, 0xc000184640)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 18:37:31 server.go:3095: http: panic serving [::1]:61927: template: apply_user.html:15: function "i" not defined
+goroutine 633 [running]:
+net/http.(*conn).serve.func1(0xc0001c60a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc0002a0ed0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc000344000, 0x45442c0, 0xc00037c000, 0xc000213848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc000344000, 0xc0003ee200, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc000344000, 0xc0003ee200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc000344000, 0xc0003ee200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc000344000, 0xc0003ee200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc000344000, 0xc0003ee200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001c60a0, 0x45f24a0, 0xc0001841c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 18:37:32 server.go:3095: http: panic serving [::1]:61932: template: apply_user.html:15: function "i" not defined
+goroutine 836 [running]:
+net/http.(*conn).serve.func1(0xc000198000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e680)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0002000e0, 0x45442c0, 0xc00021a0c0, 0xc000143848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc0002000e0, 0xc000224800, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0002000e0, 0xc000224800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc0002000e0, 0xc000224800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0002000e0, 0xc000224800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0002000e0, 0xc000224800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000198000, 0x45f24a0, 0xc0000a2840)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 18:37:37 server.go:3095: http: panic serving [::1]:61953: template: apply_user.html:15: function "i" not defined
+goroutine 637 [running]:
+net/http.(*conn).serve.func1(0xc0001c6140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e7b0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0003440e0, 0x45442c0, 0xc00037c0c0, 0xc000213848, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.applyUser(0x45f17e0, 0xc0003440e0, 0xc0003ee700, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_apply_users.go:32 +0x5a5
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0003440e0, 0xc0003ee700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:82 +0x3c8
+net/http.HandlerFunc.ServeHTTP(0xc000013090, 0x45f17e0, 0xc0003440e0, 0xc0003ee700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0003440e0, 0xc0003ee700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0003440e0, 0xc0003ee700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001c6140, 0x45f24a0, 0xc000184880)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:03 server.go:3095: http: panic serving [::1]:60547: template: work_edit.html:32: missing value for if
+goroutine 1049 [running]:
+net/http.(*conn).serve.func1(0xc000516000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc000353cc0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0003440e0, 0x4558500, 0xc000368900, 0xc000265700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc0003440e0, 0xc00029c700, 0x8)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0003440e0, 0xc00029c700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc0003440e0, 0xc00029c700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0003440e0, 0xc00029c700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0003440e0, 0xc00029c700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000516000, 0x45f24a0, 0xc000024040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:03 server.go:3095: http: panic serving [::1]:60548: template: work_edit.html:32: missing value for if
+goroutine 905 [running]:
+net/http.(*conn).serve.func1(0xc000564000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc0002af8e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00021c1c0, 0x4558500, 0xc0002787e0, 0xc0000c3700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00021c1c0, 0xc0000b7b00, 0x8)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00021c1c0, 0xc0000b7b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00021c1c0, 0xc0000b7b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00021c1c0, 0xc0000b7b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00021c1c0, 0xc0000b7b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000564000, 0x45f24a0, 0xc000566000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:03 server.go:3095: http: panic serving [::1]:60546: template: work_edit.html:32: missing value for if
+goroutine 769 [running]:
+net/http.(*conn).serve.func1(0xc00010a320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc0002afa70)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016c540, 0x4558500, 0xc0000e1680, 0xc0000c7700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016c540, 0xc0000d2200, 0x8)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016c540, 0xc0000d2200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016c540, 0xc0000d2200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016c540, 0xc0000d2200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016c540, 0xc0000d2200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010a320, 0x45f24a0, 0xc0000a2000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:03 server.go:3095: http: panic serving [::1]:60630: template: work_edit.html:32: missing value for if
+goroutine 1088 [running]:
+net/http.(*conn).serve.func1(0xc00010afa0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e410)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016c620, 0x4558500, 0xc0000e1b00, 0xc000187700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016c620, 0xc00041e100, 0x8)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016c620, 0xc00041e100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016c620, 0xc00041e100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016c620, 0xc00041e100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016c620, 0xc00041e100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010afa0, 0x45f24a0, 0xc0000a3cc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:04 server.go:3095: http: panic serving [::1]:60635: template: work_edit.html:32: missing value for if
+goroutine 1107 [running]:
+net/http.(*conn).serve.func1(0xc00010b540)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e690)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016c700, 0x4558500, 0xc0000e1e60, 0xc000143700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016c700, 0xc00041e400, 0x8)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016c700, 0xc00041e400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016c700, 0xc00041e400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016c700, 0xc00041e400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016c700, 0xc00041e400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b540, 0x45f24a0, 0xc0000a3ec0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:08 server.go:3095: http: panic serving [::1]:60636: template: work_edit.html:32: missing value for if
+goroutine 1110 [running]:
+net/http.(*conn).serve.func1(0xc00010b680)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009e7c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016c8c0, 0x4558500, 0xc00042bc20, 0xc000265700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016c8c0, 0xc00041ee00, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016c8c0, 0xc00041ee00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016c8c0, 0xc00041ee00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016c8c0, 0xc00041ee00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016c8c0, 0xc00041ee00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b680, 0x45f24a0, 0xc0004280c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:08 server.go:3095: http: panic serving [::1]:60654: template: work_edit.html:32: missing value for if
+goroutine 1069 [running]:
+net/http.(*conn).serve.func1(0xc0002da280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009ea30)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0003441c0, 0x4558500, 0xc000369320, 0xc000187700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc0003441c0, 0xc00029d600, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0003441c0, 0xc00029d600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc0003441c0, 0xc00029d600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0003441c0, 0xc00029d600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0003441c0, 0xc00029d600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002da280, 0x45f24a0, 0xc0005fd1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:09 server.go:3095: http: panic serving [::1]:60659: template: work_edit.html:32: missing value for if
+goroutine 1072 [running]:
+net/http.(*conn).serve.func1(0xc0002da320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc000303190)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc0003442a0, 0x4558500, 0xc000369680, 0xc000187700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc0003442a0, 0xc00029d900, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc0003442a0, 0xc00029d900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc0003442a0, 0xc00029d900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc0003442a0, 0xc00029d900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc0003442a0, 0xc00029d900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002da320, 0x45f24a0, 0xc0005fd440)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:10 server.go:3095: http: panic serving [::1]:60660: template: work_edit.html:32: missing value for if
+goroutine 1105 [running]:
+net/http.(*conn).serve.func1(0xc00026c140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc00009f190)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc000344460, 0x4558500, 0xc0003f4a20, 0xc000261700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc000344460, 0xc0003f2100, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc000344460, 0xc0003f2100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc000344460, 0xc0003f2100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc000344460, 0xc0003f2100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc000344460, 0xc0003f2100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00026c140, 0x45f24a0, 0xc000219f00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:10 server.go:3095: http: panic serving [::1]:60665: template: work_edit.html:32: missing value for if
+goroutine 1119 [running]:
+net/http.(*conn).serve.func1(0xc00010b9a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc000013650)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016ca80, 0x4558500, 0xc000454360, 0xc000185700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016ca80, 0xc00041fb00, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016ca80, 0xc00041fb00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016ca80, 0xc00041fb00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016ca80, 0xc00041fb00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016ca80, 0xc00041fb00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b9a0, 0x45f24a0, 0xc000428e00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 19:40:11 server.go:3095: http: panic serving [::1]:60670: template: work_edit.html:32: missing value for if
+goroutine 1156 [running]:
+net/http.(*conn).serve.func1(0xc00010ba40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4503e80, 0xc000013910)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x45f17e0, 0xc00016cb60, 0x4558500, 0xc000454a20, 0xc000185700, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workEdit(0x45f17e0, 0xc00016cb60, 0xc00046e400, 0x7)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_main.go:95 +0x8bc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x45f17e0, 0xc00016cb60, 0xc00046e400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000013030, 0x45f17e0, 0xc00016cb60, 0xc00046e400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f17e0, 0xc00016cb60, 0xc00046e400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f17e0, 0xc00016cb60, 0xc00046e400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010ba40, 0x45f24a0, 0xc000429400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/21 20:02:21 main.go:13: success
+2021/02/21 20:23:32 main.go:13: success
+2021/02/21 20:25:37 main.go:13: success
+2021/02/21 20:25:41 works.go:67: no such function: now
+2021/02/21 21:15:59 main.go:13: success
+2021/02/21 21:16:06 works.go:67: no such function: CURDATE
+2021/02/21 21:18:13 main.go:13: success
+2021/02/21 21:25:47 main.go:13: success
+2021/02/21 21:33:29 main.go:13: success

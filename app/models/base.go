@@ -19,7 +19,8 @@ var err error
 type Data struct {
 	Works      []Work
 	User       User
-	ApplyUsers []ApplyUser
+	ApplyUsers []User
+	ApplysID   []int
 	NowDate    string
 }
 
