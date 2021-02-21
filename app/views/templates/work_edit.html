@@ -29,7 +29,7 @@
                 <td>
                     <select name="job_id">
                         <option value=""></option>
-                        {{range $index, $var := .Values}}
+                        {{range $index, $var := .JobList}}
                         <option value="{{$index}}">{{$var}}</option>
                         {{end}}
                     </select>
@@ -39,10 +39,9 @@
                 <th scope="row">評価設定</th>
                 <td>
                     <select name="evaluation">
-                        <option value="0">設定しない</option>
-                        <option value="1">1以上</option>
-                        <option value="2">2以上</option>
-                        <option value="3">3</option>
+                        {{range $index, $var := .EvaluationList}}
+                        <option value="{{$index}}">{{$var}}</option>
+                        {{end}}
                     </select>
                     <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
                 </td>

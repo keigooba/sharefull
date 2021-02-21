@@ -1,8 +1,19 @@
 {{define "navbar"}}
-<div class="container mb-4">
-    <a href="/">Sharefull</a>
-    <a href="/work/new">求人作成</a>
-    <a href="/logout">ログアウト</a>
-    <a class="navbar-right">{{.User.Name}}</a>
+<div class="container h4 border-bottom pb-4 mb-0">
+  <a href="/">
+      <i class="far fa-smile"></i>Sharefull
+  </a>
+  <a href="/work/new">求人作成</a>
+  <a href="/logout">ログアウト</a>
+  <div class="menu navbar-right">
+      <div class="menu-title">{{.User.Name}}</div>
+      <div class="sub-menu">
+          <ul>
+              <li><a href="/user/status/{{.User.ID}}">応募状況</a></li>
+              <li><a href="user/edit/{{.User.ID}}">編集</a></li>
+              <li><a href="user/delete/{{.User.ID}}">削除</a></li>
+          </ul>
+      </div>
+  </div>
 </div>
 {{end}}

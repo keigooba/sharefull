@@ -1,7 +1,7 @@
 {{ define "content" }}
 
 <form role="form" action="/work/new" method="post" class="form">
-    <h3>求人内容</h3>
+    <h3>求人作成</h3>
     <table class="form-group">
         <tbody>
             <tr>
@@ -30,15 +30,9 @@
                 <td>
                     <select name="job_id">
                         <option value=""></option>
-                        <option value="1">エキストラ</option>
-                        <option value="2">データ入力</option>
-                        <option value="3">モニターバイト</option>
-                        <option value="4">仕分けバイト</option>
-                        <option value="5">工場バイト</option>
-                        <option value="6">カフェ</option>
-                        <option value="7">コールセンター</option>
-                        <option value="8">イベントスタッフ</option>
-                        <option value="9">試験監督</option>
+                        {{range $index, $var := .JobList}}
+                        <option value="{{$index}}">{{$var}}</option>
+                        {{end}}
                     </select>
                 </td>
             </tr>
@@ -46,10 +40,9 @@
                 <th scope="row">評価設定</th>
                 <td>
                     <select name="evaluation">
-                        <option value="0">設定しない</option>
-                        <option value="1">1以上</option>
-                        <option value="2">2以上</option>
-                        <option value="3">3</option>
+                        {{range $index, $var := .EvaluationList}}
+                        <option value="{{$index}}">{{$var}}</option>
+                        {{end}}
                     </select>
                     <p class="bold">※設定すると評価以上の方のみ応募できます。</p>
                 </td>

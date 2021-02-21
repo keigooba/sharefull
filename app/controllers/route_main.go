@@ -38,8 +38,17 @@ func workNew(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+
 		if r.Method == "GET" {
-			work := models.JobList()
+			work := models.Work{}
+			if err := work.WorkList(); err != nil {
+				log.Println(err)
+			}
+			work.User = user
 			generateHTML(w, work, "layout", "private_navbar", "work_new")
 		} else if r.Method == "POST" {
 			err := r.ParseForm()
@@ -47,17 +56,12 @@ func workNew(w http.ResponseWriter, r *http.Request) {
 				log.Println(err)
 			}
 
-			user, err := sess.GetUserBySession()
-			if err != nil {
-				log.Println(err)
-			}
-
 			work := &models.Work{
-				Date:      r.PostFormValue("date"),
-				Title:     r.PostFormValue("title"),
-				Money:     r.PostFormValue("money"),
-				JobID:     r.PostFormValue("job_id"),
-				Evalution: r.PostFormValue("evalution"),
+				Date:       r.PostFormValue("date"),
+				Title:      r.PostFormValue("title"),
+				Money:      r.PostFormValue("money"),
+				JobID:      r.PostFormValue("job_id"),
+				Evaluation: r.PostFormValue("evaluation"),
 			}
 			if err = user.CreateWork(work); err != nil {
 				log.Println(err)
@@ -76,22 +80,33 @@ func workEdit(w http.ResponseWriter, r *http.Request, id int) {
 		if err != nil {
 			log.Println(err)
 		}
+
 		if r.Method == "GET" {
 			work, err := models.GetWork(id)
 			if err != nil {
 				log.Println(err)
 			}
+
+			if err := work.WorkList(); err != nil {
+				log.Println(err)
+			}
+
 			work.User = user
 			generateHTML(w, work, "layout", "private_navbar", "work_edit")
 		} else if r.Method == "POST" {
+			err := r.ParseForm()
+			if err != nil {
+				log.Println(err)
+			}
+
 			work := &models.Work{
-				ID:        id,
-				Date:      r.PostFormValue("date"),
-				Title:     r.PostFormValue("title"),
-				Money:     r.PostFormValue("money"),
-				JobID:     r.PostFormValue("job_id"),
-				Evalution: r.PostFormValue("evalution"),
-				UserID:    user.ID,
+				ID:         id,
+				Date:       r.PostFormValue("date"),
+				Title:      r.PostFormValue("title"),
+				Money:      r.PostFormValue("money"),
+				JobID:      r.PostFormValue("job_id"),
+				Evaluation: r.PostFormValue("evaluation"),
+				UserID:     user.ID,
 			}
 			if err := work.UpdateWork(); err != nil {
 				log.Println(err)
@@ -115,6 +130,22 @@ func workDelete(w http.ResponseWriter, r *http.Request, id int) {
 			log.Println(err)
 		}
 		if err := work.DeleteWork(); err != nil {
+			log.Println(err)
+		}
+		http.Redirect(w, r, "/", 302)
+	}
+}
+
+func workApply(w http.ResponseWriter, r *http.Request, id int) {
+	sess, err := session(w, r)
+	if err != nil {
+		http.Redirect(w, r, "/login", 302)
+	} else {
+		user, err := sess.GetUserBySession()
+		if err != nil {
+			log.Println(err)
+		}
+		if err := user.CreateApplyUser(id); err != nil {
 			log.Println(err)
 		}
 		http.Redirect(w, r, "/", 302)

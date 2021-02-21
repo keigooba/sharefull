@@ -1,17 +1,19 @@
 {{define "content"}}
-
-<p class="center">{{.NowDate}}</p>
 <div class="text-center">
-{{ range .Works }}
-<hr>
-<p>日付：{{.Date}}</p>
-<p>タイトル：{{.Title}}</p>
-<p>金額：{{.Money}}円</p>
-<p>職種：{{.JobID}}</p>
-<a href="/work/edit/{{.ID}}">編集</a>
-<a href="/work/delete/{{.ID}}">削除</a>
-</hr>
-{{end}}
+    <div class="bg-light pt-4 pb-4">
+        <h1 class="mb-4">求人一覧</h1>
+        <span class="p-2 bg-white">期間：{{.NowDate}} 〜</span>
+    </div>
+    <div class="pt-4 pb-4">
+    {{ range .Works }}
+    <p>日付：{{.Date}}</p>
+    <p>タイトル：{{.Title}}</p>
+    <p>金額：{{.Money}}円</p>
+    <p>職種：{{.JobID}}</p>
+    <a href="/work/edit/{{.ID}}">編集</a>
+    <a href="/work/delete/{{.ID}}">削除</a>
+    <a href="work/apply/{{.ID}}" class="text-danger">応募</a>
+    {{end}}
+    </div>
 </div>
-
 {{end}}

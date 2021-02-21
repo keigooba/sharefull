@@ -1,6 +1,60 @@
+p {
+  margin: 0;
+}
+input[type="text"],textarea{
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+input[type="date"],input[type="time"]{
+  line-height: inherit;
+}
+button[type="submit"] {
+  float: right;
+}
+label {
+  margin-right: 5px;
+}
+.lead {
+  background-color: #ffffff;
+}
+.bold {
+  font-weight: bold;
+}
 .center {
-    text-align: center;
+  text-align: center;
 }
 .navbar-right {
-    float: right;
+  float: right;
+}
+.container {
+  padding-right: inherit;
+  padding-left: inherit;
+}
+/* ドロップダウンメニュー */
+.menu {
+  text-align: center;
+  color: navy;
+  width: 150px;
+}
+.sub-menu {
+  display: none;
+}
+li{
+  border: 1px solid navy;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+}
+
+.menu:hover .sub-menu {
+  display: block;
 }
