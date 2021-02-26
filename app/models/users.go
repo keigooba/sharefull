@@ -132,3 +132,14 @@ func (sess *Session) GetUserBySession() (user User, err error) {
 	}
 	return user, err
 }
+
+// Google認証
+func (u *User) AuthGetUser() (user User, err error) {
+	user = User{}
+	cmd := `select id, uuid, name, email, password, created_at from users where name = ? and email = ?`
+	err = Db.QueryRow(cmd, u.Name, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
+	if err !=  nil {
+		log.Println(err)
+	}
+	return user, err
+}

@@ -2361,3 +2361,486 @@ created by net/http.(*Server).Serve
 2021/02/21 21:18:13 main.go:13: success
 2021/02/21 21:25:47 main.go:13: success
 2021/02/21 21:33:29 main.go:13: success
+2021/02/25 11:12:46 main.go:13: success
+2021/02/25 11:13:09 main.go:13: success
+2021/02/25 16:02:14 main.go:13: success
+2021/02/25 16:02:38 route_auth.go:114: TODO: ログイン処理 google
+2021/02/25 16:04:05 server.go:3095: http: panic serving [::1]:58920: runtime error: index out of range [3] with length 3
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc00010b900)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x45476c0, 0xc000018ec0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.auth(0x45f16c0, 0xc00016c540, 0xc00014b500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_auth.go:99 +0x225
+net/http.HandlerFunc.ServeHTTP(0x458f1c0, 0x45f16c0, 0xc00016c540, 0xc00014b500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f16c0, 0xc00016c540, 0xc00014b500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f16c0, 0xc00016c540, 0xc00014b500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010b900, 0x45f2380, 0xc000024780)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/25 16:04:05 server.go:3095: http: panic serving [::1]:59358: runtime error: index out of range [3] with length 3
+goroutine 52 [running]:
+net/http.(*conn).serve.func1(0xc0000ca5a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x45476c0, 0xc0000bd5c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.auth(0x45f16c0, 0xc0000fa700, 0xc000268400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_auth.go:99 +0x225
+net/http.HandlerFunc.ServeHTTP(0x458f1c0, 0x45f16c0, 0xc0000fa700, 0xc000268400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f16c0, 0xc0000fa700, 0xc000268400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f16c0, 0xc0000fa700, 0xc000268400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ca5a0, 0x45f2380, 0xc0002589c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/25 16:04:06 server.go:3095: http: panic serving [::1]:59363: runtime error: index out of range [3] with length 3
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0xc00010bd60)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x45476c0, 0xc000018f60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.auth(0x45f16c0, 0xc00016c620, 0xc00014b600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_auth.go:99 +0x225
+net/http.HandlerFunc.ServeHTTP(0x458f1c0, 0x45f16c0, 0xc00016c620, 0xc00014b600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f16c0, 0xc00016c620, 0xc00014b600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f16c0, 0xc00016c620, 0xc00014b600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010bd60, 0x45f2380, 0xc000328100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/25 16:04:11 server.go:3095: http: panic serving [::1]:59385: runtime error: index out of range [3] with length 3
+goroutine 46 [running]:
+net/http.(*conn).serve.func1(0xc00029a3c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x45476c0, 0xc00028ec20)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.auth(0x45f16c0, 0xc0002c0540, 0xc0002b3a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_auth.go:99 +0x225
+net/http.HandlerFunc.ServeHTTP(0x458f1c0, 0x45f16c0, 0xc0002c0540, 0xc0002b3a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4833f00, 0x45f16c0, 0xc0002c0540, 0xc0002b3a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00016c000, 0x45f16c0, 0xc0002c0540, 0xc0002b3a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00029a3c0, 0x45f2380, 0xc0002fa900)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/25 16:04:15 route_auth.go:114: TODO: ログイン処理 test
+2021/02/25 16:05:23 route_auth.go:114: TODO: ログイン処理 test
+2021/02/25 16:09:00 main.go:13: success
+2021/02/25 16:09:14 route_auth.go:116: TODO: ログイン処理 google
+2021/02/25 16:10:33 route_auth.go:116: TODO: ログイン処理 google
+2021/02/25 16:10:36 route_auth.go:116: TODO: ログイン処理 google
+2021/02/25 17:02:08 main.go:17: success
+2021/02/25 17:02:40 main.go:17: success
+2021/02/25 17:02:55 main.go:17: success
+2021/02/25 17:03:03 main.go:17: success
+2021/02/25 17:03:15 main.go:17: success
+2021/02/25 17:27:01 main.go:16: success
+2021/02/25 18:06:13 main.go:16: success
+2021/02/26 06:19:36 main.go:16: success
+2021/02/26 06:21:51 main.go:16: success
+2021/02/26 06:23:09 main.go:16: success
+2021/02/26 06:28:37 main.go:16: success
+2021/02/26 06:29:32 main.go:16: success
+2021/02/26 06:30:29 main.go:16: success
+2021/02/26 06:31:39 main.go:16: success
+2021/02/26 06:45:03 main.go:16: success
+2021/02/26 06:46:24 main.go:16: success
+2021/02/26 06:50:30 main.go:16: success
+2021/02/26 06:57:25 main.go:15: success
+2021/02/26 07:21:14 main.go:15: success
+2021/02/26 07:23:29 main.go:15: success
+2021/02/26 07:23:49 main.go:15: success
+2021/02/26 07:24:34 main.go:15: success
+2021/02/26 07:26:09 main.go:15: success
+2021/02/26 07:44:22 main.go:15: success
+2021/02/26 07:44:28 users.go:142: near ",": syntax error
+2021/02/26 07:45:12 main.go:15: success
+2021/02/26 07:45:14 route_auth.go:130: 認証を完了できませんでした &{0xc000010030 0x4b06bd8} - gomniauth: Auth server responded with error 'Server replied with 400 Bad Request.'.
+2021/02/26 07:45:34 main.go:15: success
+2021/02/26 07:45:39 users.go:142: sql: no rows in result set
+2021/02/26 08:12:41 main.go:15: success
+2021/02/26 08:12:50 users.go:142: sql: no rows in result set
+2021/02/26 08:13:30 main.go:15: success
+2021/02/26 08:17:58 main.go:15: success
+2021/02/26 08:19:08 main.go:15: success
+2021/02/26 08:19:18 users.go:142: sql: no rows in result set
+2021/02/26 08:21:38 main.go:15: success
+2021/02/26 08:22:47 main.go:15: success
+2021/02/26 08:26:01 main.go:15: success
+2021/02/26 08:26:39 main.go:15: success
+2021/02/26 08:27:30 main.go:15: success
+2021/02/26 08:31:54 main.go:15: success
+2021/02/26 08:34:35 main.go:15: success
+2021/02/26 08:37:27 main.go:15: success
+2021/02/26 08:39:15 main.go:15: success
+2021/02/26 08:39:53 users.go:142: sql: no rows in result set
+2021/02/26 08:40:45 main.go:15: success
+2021/02/26 08:40:53 users.go:142: sql: no rows in result set
+2021/02/26 11:51:31 main.go:15: success
+2021/02/26 11:56:24 main.go:15: success
+2021/02/26 14:36:32 main.go:15: success
+2021/02/26 14:39:29 main.go:15: success
+2021/02/26 14:45:12 main.go:15: success
+2021/02/26 14:45:44 main.go:15: success
+2021/02/26 14:46:38 main.go:15: success
+2021/02/26 14:46:40 server.go:3095: http: panic serving [::1]:53545: open app/views/templates/chat.html: no such file or directory
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc0000a8320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d5c0, 0xc0002025d0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7a80, 0xc0000d60e0, 0x46e82a0, 0xc0000c21c0, 0xc0001519c8, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x34d
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7a80, 0xc0000d60e0, 0xc0000ce100, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:17 +0x2f9
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7a80, 0xc0000d60e0, 0xc0000ce100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:57 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096260, 0x47d7a80, 0xc0000d60e0, 0xc0000ce100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7a80, 0xc0000d60e0, 0xc0000ce100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7a80, 0xc0000d60e0, 0xc0000ce100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a8320, 0x47d9300, 0xc00009c180)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 14:46:41 server.go:3095: http: panic serving [::1]:53550: open app/views/templates/chat.html: no such file or directory
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d5c0, 0xc000185200)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7a80, 0xc000198000, 0x46e82a0, 0xc00016d180, 0xc0001559c8, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x34d
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7a80, 0xc000198000, 0xc000158200, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:17 +0x2f9
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7a80, 0xc000198000, 0xc000158200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:57 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096260, 0x47d7a80, 0xc000198000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7a80, 0xc000198000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7a80, 0xc000198000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47d9300, 0xc000033b00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 14:46:46 server.go:3095: http: panic serving [::1]:53571: open app/views/templates/chat.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0000a83c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d5c0, 0xc000093bc0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7a80, 0xc0000d61c0, 0x46e82a0, 0xc0000c2380, 0xc0001539c8, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x34d
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7a80, 0xc0000d61c0, 0xc0000ce600, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:17 +0x2f9
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7a80, 0xc0000d61c0, 0xc0000ce600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:57 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096260, 0x47d7a80, 0xc0000d61c0, 0xc0000ce600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7a80, 0xc0000d61c0, 0xc0000ce600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7a80, 0xc0000d61c0, 0xc0000ce600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a83c0, 0x47d9300, 0xc00009c480)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 14:47:12 main.go:15: success
+2021/02/26 14:48:08 main.go:15: success
+2021/02/26 14:50:53 main.go:15: success
+2021/02/26 14:51:03 main.go:15: success
+2021/02/26 14:51:35 main.go:15: success
+2021/02/26 14:52:06 main.go:15: success
+2021/02/26 15:37:24 main.go:15: success
+2021/02/26 15:37:39 server.go:3095: http: panic serving [::1]:49519: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 18 [running]:
+net/http.(*conn).serve.func1(0xc0000ac280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc000092e10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0000d60e0, 0x46ddc00, 0xc0000ec000, 0xc0001518b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0000d60e0, 0xc0000a4200, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0000d60e0, 0xc0000a4200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0000d60e0, 0xc0000a4200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0000d60e0, 0xc0000a4200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0000d60e0, 0xc0000a4200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ac280, 0x47d9320, 0xc00009e140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:37:40 server.go:3095: http: panic serving [::1]:49524: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0000ac320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc000093aa0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0000d61c0, 0x46ddc00, 0xc0000ec0c0, 0xc0001538b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0000d61c0, 0xc0000a4600, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0000d61c0, 0xc0000a4600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0000d61c0, 0xc0000a4600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0000d61c0, 0xc0000a4600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0000d61c0, 0xc0000a4600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ac320, 0x47d9320, 0xc00009e400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:37:44 server.go:3095: http: panic serving [::1]:49542: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc000200660)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc000198000, 0x46ddc00, 0xc00019c000, 0xc0001518b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc000198000, 0xc000158400, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc000198000, 0xc000158400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc000198000, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc000198000, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc000198000, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47d9320, 0xc000033d00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:37:45 server.go:3095: http: panic serving [::1]:49547: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0000ac3c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc0002a0c30)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0000d62a0, 0x46ddc00, 0xc0000ec180, 0xc0001538b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0000d62a0, 0xc0000a4e00, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0000d62a0, 0xc0000a4e00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0000d62a0, 0xc0000a4e00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0000d62a0, 0xc0000a4e00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0000d62a0, 0xc0000a4e00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ac3c0, 0x47d9320, 0xc00009eb80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:01 server.go:3095: http: panic serving [::1]:49564: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc00023e000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc00027d620)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0002582a0, 0x46ddc00, 0xc000260180, 0xc0001a78b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0002582a0, 0xc00021eb00, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0002582a0, 0xc00021eb00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0002582a0, 0xc00021eb00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0002582a0, 0xc00021eb00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0002582a0, 0xc00021eb00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e000, 0x47d9320, 0xc000216240)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:01 server.go:3095: http: panic serving [::1]:49616: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 42 [running]:
+net/http.(*conn).serve.func1(0xc00023e460)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc0002bd680)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc000258460, 0x46ddc00, 0xc000260240, 0xc0003358b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc000258460, 0xc00021f100, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc000258460, 0xc00021f100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc000258460, 0xc00021f100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc000258460, 0xc00021f100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc000258460, 0xc00021f100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e460, 0x47d9320, 0xc000217e40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:02 server.go:3095: http: panic serving [::1]:49621: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 56 [running]:
+net/http.(*conn).serve.func1(0xc0000ac460)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc0001c83c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0000d6700, 0x46ddc00, 0xc0000ec3c0, 0xc0003358b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0000d6700, 0xc0002c6800, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0000d6700, 0xc0002c6800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0000d6700, 0xc0002c6800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0000d6700, 0xc0002c6800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0000d6700, 0xc0002c6800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ac460, 0x47d9320, 0xc0002d01c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:11 server.go:3095: http: panic serving [::1]:49642: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0xc00023e500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc00034c420)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc000198380, 0x46ddc00, 0xc00019c240, 0xc0001a78b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc000198380, 0xc0002c7200, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc000198380, 0xc0002c7200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc000198380, 0xc0002c7200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc000198380, 0xc0002c7200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc000198380, 0xc0002c7200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e500, 0x47d9320, 0xc000217fc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:11 server.go:3095: http: panic serving [::1]:49659: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 84 [running]:
+net/http.(*conn).serve.func1(0xc00023e820)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc00034cd20)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0002587e0, 0x46ddc00, 0xc000260480, 0xc0003378b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0002587e0, 0xc000364000, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0002587e0, 0xc000364000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0002587e0, 0xc000364000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0002587e0, 0xc000364000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0002587e0, 0xc000364000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e820, 0x47d9320, 0xc00033b080)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:12 server.go:3095: http: panic serving [::1]:49664: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 87 [running]:
+net/http.(*conn).serve.func1(0xc00023e8c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc00034d9b0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0002588c0, 0x46ddc00, 0xc000260540, 0xc0003318b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0002588c0, 0xc000364400, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0002588c0, 0xc000364400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0002588c0, 0xc000364400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0002588c0, 0xc000364400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0002588c0, 0xc000364400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e8c0, 0x47d9320, 0xc00033b300)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:17 server.go:3095: http: panic serving [::1]:49685: open app/views/templates/chat/chat.html: no such file or directory
+goroutine 91 [running]:
+net/http.(*conn).serve.func1(0xc00023e960)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x469d600, 0xc0002e5a10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x47d7aa0, 0xc0002589a0, 0x46ddc00, 0xc000260600, 0xc0003318b0, 0x3, 0x3)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.workChat(0x47d7aa0, 0xc0002589a0, 0xc000364a00, 0x2)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/route_chat.go:22 +0x2dc
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x47d7aa0, 0xc0002589a0, 0xc000364a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:56 +0x102
+net/http.HandlerFunc.ServeHTTP(0xc000096280, 0x47d7aa0, 0xc0002589a0, 0xc000364a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4ad5f60, 0x47d7aa0, 0xc0002589a0, 0xc000364a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47d7aa0, 0xc0002589a0, 0xc000364a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00023e960, 0x47d9320, 0xc00033b800)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/02/26 15:38:26 main.go:15: success
+2021/02/26 15:38:35 main.go:15: success
+2021/02/27 08:12:01 main.go:15: success
+2021/02/27 08:15:43 main.go:15: success

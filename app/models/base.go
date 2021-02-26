@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"math/rand"
 
 	"github.com/keigooba/sharefull/config"
 
@@ -103,4 +104,14 @@ func createUUID() (uuidobj uuid.UUID) {
 func Encrypt(plaintext string) (cryptext string) {
 	cryptext = fmt.Sprintf("%x", sha1.Sum([]byte(plaintext)))
 	return cryptext
+}
+
+const rsLetters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+func RandString(n int) string {
+	b := make([]byte, n)
+	for i := range b {
+		b[i] = rsLetters[rand.Intn(len(rsLetters))]
+	}
+	return string(b)
 }
