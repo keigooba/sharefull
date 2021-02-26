@@ -58,3 +58,7 @@ a {
 .menu:hover .sub-menu {
   display: block;
 }
+
+.btn-dim:hover {
+  background-color: rgba(229,229,229,0.5)
+}

@@ -4,6 +4,10 @@
     <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
     <input type="password" name="password" class="form-control" placeholder="パスワード">
     <br />
-    <button class="btn btn-lg btn-primary btn-block" type="submit">ログイン</button>
+    <button class="btn btn-lg btn-primary btn-block mb-4" type="submit">ログイン</button>
 </form>
+<p class="form-signin center">
+    <button class="btn btn-lg border-secondary btn-block text-secondary btn-dim" onclick="location.href='/auth/login/google'"><i class="fab fa-google text-danger mr-2"></i>Googleログイン</button>
+</p>
 {{end}}
+

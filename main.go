@@ -5,6 +5,8 @@ import (
 
 	"github.com/keigooba/sharefull/app/controllers"
 	"github.com/keigooba/sharefull/app/models"
+	"github.com/stretchr/gomniauth"
+	"github.com/stretchr/gomniauth/providers/google"
 )
 
 func main() {
@@ -12,6 +14,12 @@ func main() {
 	if test != nil {
 		log.Println("success")
 	}
+
+	// Gomniauthのセットアップ
+	gomniauth.SetSecurityKey(models.RandString(20))
+	gomniauth.WithProviders(
+		google.New("587125882573-qc7jp6pmuvps29kd541qi0qds97480mt.apps.googleusercontent.com", "j409W6R1jm6kB8NNrEOWfFjk", "http://localhost:8080/auth/callback/google"),
+	)
 
 	// models.Migration()
 	controllers.StartMainServer()
