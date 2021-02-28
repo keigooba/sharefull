@@ -2844,3 +2844,124 @@ created by net/http.(*Server).Serve
 2021/02/26 15:38:35 main.go:15: success
 2021/02/27 08:12:01 main.go:15: success
 2021/02/27 08:15:43 main.go:15: success
+2021/02/27 14:09:36 main.go:15: success
+2021/02/27 14:43:43 main.go:15: success
+2021/02/27 14:45:01 users.go:142: sql: no rows in result set
+2021/02/27 14:48:50 main.go:15: success
+2021/02/27 14:50:42 main.go:15: success
+2021/02/27 14:51:34 main.go:15: success
+2021/02/27 14:53:34 main.go:15: success
+2021/02/27 14:56:06 main.go:15: success
+2021/02/27 15:56:04 main.go:15: success
+2021/02/27 15:58:31 main.go:15: success
+2021/02/27 15:58:56 main.go:15: success
+2021/02/27 15:59:55 main.go:15: success
+2021/02/27 16:00:27 main.go:15: success
+2021/02/27 16:11:44 main.go:15: success
+2021/02/27 16:27:02 main.go:15: success
+2021/02/27 16:30:05 main.go:15: success
+2021/02/27 16:30:13 main.go:15: success
+2021/02/27 16:32:11 main.go:15: success
+2021/02/27 16:55:19 main.go:15: success
+2021/02/27 18:14:29 main.go:15: success
+2021/02/27 18:24:55 main.go:15: success
+2021/02/27 18:25:17 main.go:15: success
+2021/02/27 18:27:41 main.go:15: success
+2021/02/28 14:19:29 main.go:15: success
+2021/02/28 14:19:34 users.go:131: sql: no rows in result set
+2021/02/28 14:19:45 main.go:15: success
+2021/02/28 14:19:47 users.go:131: sql: no rows in result set
+2021/02/28 14:19:56 main.go:15: success
+2021/02/28 14:20:07 users.go:131: sql: no rows in result set
+2021/02/28 14:22:07 main.go:15: success
+2021/02/28 14:22:16 r_auth.go:78: sql: no rows in result set
+2021/02/28 14:22:21 users.go:131: sql: no rows in result set
+2021/02/28 14:23:46 main.go:15: success
+2021/02/28 14:27:08 main.go:15: success
+2021/02/28 14:27:13 users.go:131: sql: no rows in result set
+2021/02/28 14:27:55 main.go:15: success
+2021/02/28 14:27:57 users.go:131: sql: no rows in result set
+2021/02/28 14:31:35 main.go:15: success
+2021/02/28 14:31:49 users.go:131: sql: no rows in result set
+2021/02/28 14:33:58 main.go:15: success
+2021/02/28 14:42:14 main.go:15: success
+2021/02/28 14:44:28 main.go:15: success
+2021/02/28 14:45:50 main.go:15: success
+2021/02/28 14:48:16 main.go:15: success
+2021/02/28 14:53:33 main.go:15: success
+2021/02/28 14:58:22 main.go:15: success
+2021/02/28 15:01:21 main.go:15: success
+2021/02/28 15:05:04 main.go:15: success
+2021/02/28 15:05:47 main.go:15: success
+2021/02/28 15:08:47 main.go:15: success
+2021/02/28 15:10:33 main.go:15: success
+2021/02/28 15:12:45 main.go:15: success
+2021/02/28 15:19:51 main.go:15: success
+2021/02/28 17:59:49 main.go:15: success
+2021/02/28 18:10:11 main.go:15: success
+2021/02/28 18:24:14 main.go:15: success
+2021/02/28 18:35:56 main.go:15: success
+2021/02/28 18:36:45 main.go:15: success
+2021/02/28 20:16:07 main.go:15: success
+2021/02/28 20:45:45 main.go:15: success
+2021/02/28 20:49:00 message.go:26: UNIQUE constraint failed: chats.uuid
+2021/02/28 20:55:09 main.go:15: success
+2021/02/28 20:55:26 message.go:27: table chats has no column named chat_uuid
+2021/02/28 20:57:08 main.go:15: success
+2021/02/28 20:57:28 message.go:27: 4 values for 5 columns
+2021/02/28 21:01:39 main.go:15: success
+2021/02/28 21:02:52 main.go:15: success
+2021/02/28 21:23:10 main.go:15: success
+2021/02/28 21:23:20 message.go:29: table messages has no column named work_id
+2021/02/28 21:24:33 main.go:15: success
+2021/02/28 21:24:42 message.go:29: table messages has no column named work_id
+2021/02/28 21:26:03 main.go:15: success
+2021/02/28 21:32:27 main.go:15: success
+2021/02/28 21:40:00 main.go:15: success
+2021/02/28 21:48:37 main.go:15: success
+2021/02/28 21:55:39 users.go:142: sql: no rows in result set
+2021/02/28 23:10:46 main.go:15: success
+2021/02/28 23:11:01 message.go:40: sql: no rows in result set
+2021/02/28 23:11:01 r_user.go:98: sql: no rows in result set
+2021/02/28 23:11:33 message.go:40: sql: no rows in result set
+2021/02/28 23:11:33 r_user.go:98: sql: no rows in result set
+2021/02/28 23:11:44 message.go:40: sql: no rows in result set
+2021/02/28 23:11:44 r_user.go:98: sql: no rows in result set
+2021/02/28 23:12:07 message.go:40: sql: no rows in result set
+2021/02/28 23:12:07 r_user.go:98: sql: no rows in result set
+2021/02/28 23:18:23 main.go:15: success
+2021/02/28 23:18:26 message.go:40: sql: no rows in result set
+2021/02/28 23:18:26 r_user.go:97: sql: no rows in result set
+2021/02/28 23:18:53 message.go:40: sql: no rows in result set
+2021/02/28 23:18:53 r_user.go:97: sql: no rows in result set
+2021/02/28 23:20:03 main.go:15: success
+2021/02/28 23:20:07 message.go:40: sql: no rows in result set
+2021/02/28 23:20:07 r_user.go:97: sql: no rows in result set
+2021/02/28 23:22:19 message.go:40: no such table: messages
+2021/02/28 23:22:19 r_user.go:97: no such table: messages
+2021/02/28 23:22:19 message.go:40: no such table: messages
+2021/02/28 23:22:19 r_user.go:97: no such table: messages
+2021/02/28 23:22:22 message.go:40: no such table: messages
+2021/02/28 23:22:22 r_user.go:97: no such table: messages
+2021/02/28 23:22:22 message.go:40: no such table: messages
+2021/02/28 23:22:22 r_user.go:97: no such table: messages
+2021/02/28 23:22:46 message.go:40: no such table: messages
+2021/02/28 23:22:46 r_user.go:97: no such table: messages
+2021/02/28 23:22:46 message.go:40: no such table: messages
+2021/02/28 23:22:46 r_user.go:97: no such table: messages
+2021/02/28 23:22:58 main.go:15: success
+2021/02/28 23:23:07 message.go:40: sql: no rows in result set
+2021/02/28 23:23:07 r_user.go:97: sql: no rows in result set
+2021/02/28 23:23:07 message.go:40: sql: no rows in result set
+2021/02/28 23:23:07 r_user.go:97: sql: no rows in result set
+2021/02/28 23:30:38 message.go:40: sql: no rows in result set
+2021/02/28 23:30:38 r_user.go:97: sql: no rows in result set
+2021/02/28 23:30:38 message.go:40: sql: no rows in result set
+2021/02/28 23:30:38 r_user.go:97: sql: no rows in result set
+2021/02/28 23:31:17 main.go:15: success
+2021/02/28 23:31:20 message.go:40: sql: no rows in result set
+2021/02/28 23:31:20 message.go:40: sql: no rows in result set
+2021/02/28 23:31:26 message.go:40: sql: no rows in result set
+2021/02/28 23:31:26 message.go:40: sql: no rows in result set
+2021/02/28 23:32:21 message.go:40: sql: no rows in result set
+2021/02/28 23:36:51 message.go:40: sql: no rows in result set

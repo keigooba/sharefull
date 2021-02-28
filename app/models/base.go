@@ -19,10 +19,14 @@ var err error
 
 type Data struct {
 	Works      []Work
+	WorkID     int
 	User       User
 	ApplyUsers []User
 	ApplysID   []int
+	ChatUUID   string
+	Messages    []Message
 	NowDate    string
+	Host       string
 }
 
 const (
@@ -30,6 +34,7 @@ const (
 	tableNameWork      = "works"
 	tableNameSession   = "sessions"
 	tableNameApplyUser = "apply_users"
+	tableNameMessage   = "messages"
 )
 
 func init() {
@@ -77,6 +82,17 @@ func init() {
 		created_at DATETIME)`, tableNameApplyUser)
 
 	Db.Exec(cmdA)
+
+	cmdM := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		uuid STRING NOT NULL UNIQUE,
+		text STRING,
+		user_id INTEGER,
+		work_id INTEGER,
+		chat_uuid STRING NOT NULL,
+		created_at DATETIME)`, tableNameMessage)
+
+	Db.Exec(cmdM)
 }
 
 func Migration() {

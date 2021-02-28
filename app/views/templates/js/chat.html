@@ -1,0 +1,39 @@
+{{define "script" }}
+<script>
+$(function () {
+    var socket = null;
+    var msgBox = $("#chatbox input[type='text']");
+    var uuid = $("#chatbox #uuid").val();
+    var id = $("#chatbox #id").val();
+    var messages = $("#messages");
+    $("#chatbox").submit(function () {
+      if (!msgBox.val()) return false;
+      if (!socket) {
+        alert("エラー : WebSocket接続が行われていません。");
+        return false;
+      }
+      socket.send(JSON.stringify({"Text": msgBox.val(), "ChatUUID": uuid, "WorkID": id})); //JSONで渡す
+      msgBox.val("");
+      return false;
+    });
+    if (!window["WebSocket"]) {
+      alert("エラー : WebSocketに対応していないブラウザです。")
+    } else {
+      socket = new WebSocket("ws://{{.Host}}/room");
+      socket.onclose = function () {
+        alert("接続が終了しました。");
+      }
+      socket.onmessage = function (e) { //e=client.sendのデータ
+        var msg = JSON.parse(e.data);
+        messages.append(
+        $("<p class='border border-secondary mt-3 p-4 rounded-pill lead'>").append(
+          $("<span class='mr-2'>").text(msg.Name + ":"),
+          $("<span class='mr-2'>").text(msg.Text),
+          $("<span style='float:right'>").text(msg.When)
+          )
+        );
+      }
+    }
+  });
+</script>
+{{end}}

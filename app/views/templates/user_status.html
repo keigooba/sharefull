@@ -1,5 +1,17 @@
 {{define "content"}}
 <div class="text-center">
+  {{if .Messages}}
+  <div class="bg-light pt-4 pb-4">
+    <h1 class="mb-4">求人からのメッセージ</h1>
+  </div>
+  <div class="pt-4 pb-4">
+    {{ range .Messages }}
+    <div class="mb-4">
+      <a href="/work/chat/{{.ChatUUID}}">メッセージ</a>
+    </div>
+    {{end}}
+  </div>
+  {{end}}
   <div class="bg-light pt-4 pb-4">
     <h1 class="mb-4">応募した求人</h1>
   </div>
