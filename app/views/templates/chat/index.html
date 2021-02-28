@@ -1,3 +1,12 @@
 {{define "content"}}
-ここfsa
+<div class="mb-4">
+  <h1 class="text-center mt-4">メッセージ</h1>
+  <p id="messages"></p>
+  <form id="chatbox">
+    <input type="text">
+    <input type="hidden" value="{{.ChatUUID}}" id="uuid">
+    <input type="hidden" value="{{.WorkID}}" id="id">
+    <input class="btn btn-primary" type="submit" value="送信" />
+  </form>
+</div>
 {{end}}

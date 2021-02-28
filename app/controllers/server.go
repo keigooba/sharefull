@@ -22,7 +22,7 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 	templates.ExecuteTemplate(w, "layout", data)
 }
 
-func session(w http.ResponseWriter, r *http.Request) (sess models.Session, err error) {
+func Session(w http.ResponseWriter, r *http.Request) (sess models.Session, err error) {
 	cookie, err := r.Cookie("_cookie")
 	if err == nil {
 		sess = models.Session{UUID: cookie.Value}
@@ -85,9 +85,15 @@ func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc
 }
 
 func StartMainServer() error {
+
 	// app/views以下ファイル読み込み
 	files := http.FileServer(http.Dir(config.Config.Static))
 	http.Handle("/static/", http.StripPrefix("/static/", files))
+
+	// チャットルームの作成
+	r := models.NewRoom()
+	http.Handle("/room", r)
+	go r.Run() //チャネルが入ると処理
 
 	http.HandleFunc("/", index)
 	http.HandleFunc("/signup", signup)
