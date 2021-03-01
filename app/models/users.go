@@ -11,6 +11,7 @@ type User struct {
 	Name      string
 	Email     string
 	PassWord  string
+	AvaterURL string
 	CreatedAt time.Time
 	ApplyID   int
 }
@@ -29,13 +30,15 @@ func (u *User) CreateUser() (err error) {
 		name,
 		email,
 		password,
-		created_at) values(?, ?, ?, ?, ?)`
+		avatar_url,
+		created_at) values(?, ?, ?, ?, ?, ?)`
 
 	_, err = Db.Exec(cmd,
 		createUUID(),
 		u.Name,
 		u.Email,
 		Encrypt(u.PassWord),
+		u.AvaterURL,
 		time.Now())
 
 	if err != nil {
@@ -138,7 +141,7 @@ func (u *User) AuthGetUser() (user User, err error) {
 	user = User{}
 	cmd := `select id, uuid, name, email, password, created_at from users where name = ? and email = ?`
 	err = Db.QueryRow(cmd, u.Name, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
-	if err !=  nil {
+	if err != nil {
 		log.Println(err)
 	}
 	return user, err

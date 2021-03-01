@@ -18,15 +18,16 @@ var Db *sql.DB
 var err error
 
 type Data struct {
-	Works      []Work
-	WorkID     int
-	User       User
-	ApplyUsers []User
-	ApplysID   []int
-	ChatUUID   string
-	Messages    []Message
-	NowDate    string
-	Host       string
+	Works        []Work
+	WorkID       interface{}
+	User         User
+	ApplyUsers   []User
+	ApplysID     []int
+	ChatUUID     string
+	Messages     []Message
+	SendMessages []Message
+	NowDate      string
+	Host         string
 }
 
 const (
@@ -49,6 +50,7 @@ func init() {
 		name STRING,
 		email STRING,
 		password STRING,
+		avatar_url STRING,
 		created_at DATETIME)`, tableNameUser)
 
 	Db.Exec(cmdU)
@@ -88,6 +90,7 @@ func init() {
 		uuid STRING NOT NULL UNIQUE,
 		text STRING,
 		user_id INTEGER,
+		user_name STRING,
 		work_id INTEGER,
 		chat_uuid STRING NOT NULL,
 		created_at DATETIME)`, tableNameMessage)

@@ -83,7 +83,7 @@ func userStatus(w http.ResponseWriter, r *http.Request, id int) {
 			works = append(works, work)
 		}
 
-		// 応募中の求人 応募なしもあるためerr表示なし
+		// 応募中の求人
 		a_works, _ := u.GetWorksByUser()
 
 		//応募中の求人からのメッセージ
@@ -94,7 +94,10 @@ func userStatus(w http.ResponseWriter, r *http.Request, id int) {
 				messages = append(messages, message)
 			}
 		}
-		data := models.Data{Works: a_works, User: u, Messages: messages}
+		// 送ったメッセージ
+		s_messages, _ := models.GetChatUUIDByUserID(u.ID)
+
+		data := models.Data{Works: a_works, User: u, Messages: messages, SendMessages: s_messages}
 		generateHTML(w, data, "layout", "private_navbar", "user_status", "js/index")
 	}
 }

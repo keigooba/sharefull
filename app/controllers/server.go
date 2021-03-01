@@ -106,6 +106,7 @@ func StartMainServer() error {
 	http.HandleFunc("/work/apply/", parseURL(workApply))
 	http.HandleFunc("/user/edit/", parseURL(userEdit))
 	http.HandleFunc("/work/chat/", parseURL(workChat))
+	http.HandleFunc("/chat/message/", chatMessage)
 	http.HandleFunc("/user/delete/", parseURL(userDelete))
 	http.HandleFunc("/user/status/", parseURL(userStatus))
 	http.HandleFunc("/apply/status/", parseURL(applyUser))

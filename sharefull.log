@@ -2965,3 +2965,1976 @@ created by net/http.(*Server).Serve
 2021/02/28 23:31:26 message.go:40: sql: no rows in result set
 2021/02/28 23:32:21 message.go:40: sql: no rows in result set
 2021/02/28 23:36:51 message.go:40: sql: no rows in result set
+2021/03/01 06:12:44 main.go:15: success
+2021/03/01 06:12:48 works.go:82: sql: Scan error on column index 7, name "strftime('%Y/%m/%d', created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 06:14:03 main.go:15: success
+2021/03/01 06:17:07 message.go:40: sql: no rows in result set
+2021/03/01 06:23:01 main.go:15: success
+2021/03/01 06:23:05 message.go:40: sql: no rows in result set
+2021/03/01 06:24:43 main.go:15: success
+2021/03/01 06:24:46 server.go:48: koko
+2021/03/01 06:24:46 server.go:49: []
+2021/03/01 06:24:48 server.go:48: koko
+2021/03/01 06:24:48 server.go:49: []
+2021/03/01 06:24:48 server.go:48: koko
+2021/03/01 06:24:48 server.go:49: []
+2021/03/01 06:24:49 server.go:48: koko
+2021/03/01 06:24:49 server.go:49: []
+2021/03/01 07:00:14 main.go:15: success
+2021/03/01 07:00:35 message.go:40: sql: no rows in result set
+2021/03/01 07:15:27 main.go:15: success
+2021/03/01 07:15:41 message.go:40: sql: no rows in result set
+2021/03/01 07:15:53 server.go:3095: http: panic serving [::1]:49897: interface conversion: interface {} is nil, not int
+goroutine 33 [running]:
+net/http.(*conn).serve.func1(0xc0000b0500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000506330)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000520000, 0xc000484300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000520000, 0xc000484300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000520000, 0xc000484300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc000520000, 0xc000484300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b0500, 0x47ffb60, 0xc0000a9ec0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:53 server.go:3095: http: panic serving [::1]:49896: interface conversion: interface {} is nil, not int
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0xc000246280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000506630)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0005200e0, 0xc000158c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0005200e0, 0xc000158c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0005200e0, 0xc000158c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0005200e0, 0xc000158c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000246280, 0x47ffb60, 0xc0002686c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:53 server.go:3095: http: panic serving [::1]:49895: interface conversion: interface {} is nil, not int
+goroutine 11 [running]:
+net/http.(*conn).serve.func1(0xc000119e00)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000506960)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0005201c0, 0xc000484000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0005201c0, 0xc000484000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0005201c0, 0xc000484000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0005201c0, 0xc000484000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119e00, 0x47ffb60, 0xc000198280)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:53 server.go:3095: http: panic serving [::1]:49894: interface conversion: interface {} is nil, not int
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000b01e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc0004bb440)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0004c4000, 0xc0003d2000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0004c4000, 0xc0003d2000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0004c4000, 0xc0003d2000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0004c4000, 0xc0003d2000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b01e0, 0x47ffb60, 0xc0000a8140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:53 server.go:3095: http: panic serving [::1]:49943: interface conversion: interface {} is nil, not int
+goroutine 70 [running]:
+net/http.(*conn).serve.func1(0xc00040e0a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc0004077d0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0004280e0, 0xc000414a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0004280e0, 0xc000414a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0004280e0, 0xc000414a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0004280e0, 0xc000414a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00040e0a0, 0x47ffb60, 0xc000404780)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:54 server.go:3095: http: panic serving [::1]:49948: interface conversion: interface {} is nil, not int
+goroutine 101 [running]:
+net/http.(*conn).serve.func1(0xc00056a000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000506d20)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0005202a0, 0xc00056c000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0005202a0, 0xc00056c000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0005202a0, 0xc00056c000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0005202a0, 0xc00056c000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00056a000, 0x47ffb60, 0xc000502280)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:15:59 server.go:3095: http: panic serving [::1]:49969: interface conversion: interface {} is nil, not int
+goroutine 114 [running]:
+net/http.(*conn).serve.func1(0xc0000b01e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc00019c390)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de0e0, 0xc000158000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de0e0, 0xc000158000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de0e0, 0xc000158000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de0e0, 0xc000158000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b01e0, 0x47ffb60, 0xc000198000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:16:29 server.go:3095: http: panic serving [::1]:50090: interface conversion: interface {} is nil, not int
+goroutine 13 [running]:
+net/http.(*conn).serve.func1(0xc000118320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc0002b0390)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000520000, 0xc00056c100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000520000, 0xc00056c100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000520000, 0xc00056c100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc000520000, 0xc00056c100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000118320, 0x47ffb60, 0xc0002c0000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:16:53 message.go:40: sql: no rows in result set
+2021/03/01 07:16:55 server.go:3095: http: panic serving [::1]:50128: interface conversion: interface {} is nil, not int
+goroutine 15 [running]:
+net/http.(*conn).serve.func1(0xc000118960)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc00019ff50)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0003f2540, 0xc00023e000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0003f2540, 0xc00023e000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0003f2540, 0xc00023e000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0003f2540, 0xc00023e000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000118960, 0x47ffb60, 0xc0002c01c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:16:55 server.go:3095: http: panic serving [::1]:50195: interface conversion: interface {} is nil, not int
+goroutine 186 [running]:
+net/http.(*conn).serve.func1(0xc000246500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000280330)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0003f2620, 0xc0000f7500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0003f2620, 0xc0000f7500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0003f2620, 0xc0000f7500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0003f2620, 0xc0000f7500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000246500, 0x47ffb60, 0xc000033c40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:16:56 server.go:3095: http: panic serving [::1]:50200: interface conversion: interface {} is nil, not int
+goroutine 188 [running]:
+net/http.(*conn).serve.func1(0xc0002465a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc0002806f0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0003f2700, 0xc0000f7600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0003f2700, 0xc0000f7600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0003f2700, 0xc0000f7600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0003f2700, 0xc0000f7600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002465a0, 0x47ffb60, 0xc000033d40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:17:21 server.go:3095: http: panic serving [::1]:50213: interface conversion: interface {} is nil, not int
+goroutine 190 [running]:
+net/http.(*conn).serve.func1(0xc000246640)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000637140)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de380, 0xc00023ec00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de380, 0xc00023ec00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de380, 0xc00023ec00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de380, 0xc00023ec00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000246640, 0x47ffb60, 0xc000033e80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:17:21 server.go:3095: http: panic serving [::1]:50303: interface conversion: interface {} is nil, not int
+goroutine 129 [running]:
+net/http.(*conn).serve.func1(0xc0000b0500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000637560)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de540, 0xc000638400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de540, 0xc000638400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de540, 0xc000638400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de540, 0xc000638400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b0500, 0x47ffb60, 0xc00020d000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:17:22 server.go:3095: http: panic serving [::1]:50308: interface conversion: interface {} is nil, not int
+goroutine 195 [running]:
+net/http.(*conn).serve.func1(0xc0000b0640)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000637920)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de620, 0xc000638500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de620, 0xc000638500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de620, 0xc000638500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de620, 0xc000638500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b0640, 0x47ffb60, 0xc00020d140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:17:27 server.go:3095: http: panic serving [::1]:50329: interface conversion: interface {} is nil, not int
+goroutine 197 [running]:
+net/http.(*conn).serve.func1(0xc0000b06e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc000637ce0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de700, 0xc000638600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de700, 0xc000638600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de700, 0xc000638600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de700, 0xc000638600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b06e0, 0x47ffb60, 0xc00020d280)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:17:57 server.go:3095: http: panic serving [::1]:50451: interface conversion: interface {} is nil, not int
+goroutine 52 [running]:
+net/http.(*conn).serve.func1(0xc00056a0a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f60, 0xc0002d4390)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002fe000, 0xc0002ee000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x5b0
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0002fe000, 0xc0002ee000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002fe000, 0xc0002ee000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0002fe000, 0xc0002ee000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00056a0a0, 0x47ffb60, 0xc0002e8000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:18:17 main.go:15: success
+2021/03/01 07:18:20 server.go:3095: http: panic serving [::1]:50548: interface conversion: interface {} is nil, not int
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc00021a280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc000186a50)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc000190000, 0xc000158300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x610
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc000190000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc000190000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1c0, 0xc000190000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00021a280, 0x47ffb40, 0xc000033b00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:18:21 server.go:3095: http: panic serving [::1]:50553: interface conversion: interface {} is nil, not int
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc000119d60)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc000186e10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0001900e0, 0xc000158400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x610
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc0001900e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0001900e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1c0, 0xc0001900e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119d60, 0x47ffb40, 0xc000033cc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:18:26 server.go:3095: http: panic serving [::1]:50574: interface conversion: interface {} is nil, not int
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000ac000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc000092570)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0000c2000, 0xc0000b0000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x610
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc0000c2000, 0xc0000b0000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0000c2000, 0xc0000b0000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1c0, 0xc0000c2000, 0xc0000b0000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ac000, 0x47ffb40, 0xc0000a6040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:18:57 server.go:3095: http: panic serving [::1]:50696: interface conversion: interface {} is nil, not int
+goroutine 20 [running]:
+net/http.(*conn).serve.func1(0xc00021a320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc000202a80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0002480e0, 0xc000240100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:50 +0x610
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1c0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00021a320, 0x47ffb40, 0xc00020a1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:19:28 main.go:15: success
+2021/03/01 07:19:31 server.go:3095: http: panic serving [::1]:50837: interface conversion: interface {} is nil, not int
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000b6280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc000092a80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0000e00e0, 0xc0000ac200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:51 +0x650
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc0000e00e0, 0xc0000ac200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0000e00e0, 0xc0000ac200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000e0000, 0x47fe1c0, 0xc0000e00e0, 0xc0000ac200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b6280, 0x47ffb40, 0xc00009a140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:20:31 server.go:3095: http: panic serving [::1]:51080: interface conversion: interface {} is nil, not int
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f20, 0xc0001868a0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0001900e0, 0xc000158200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:51 +0x650
+net/http.HandlerFunc.ServeHTTP(0x476abc8, 0x47fe1c0, 0xc0001900e0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0001900e0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000e0000, 0x47fe1c0, 0xc0001900e0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47ffb40, 0xc000033ac0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:21:12 main.go:15: success
+2021/03/01 07:21:49 message.go:40: sql: no rows in result set
+2021/03/01 07:22:07 message.go:40: sql: no rows in result set
+2021/03/01 07:40:18 main.go:15: success
+2021/03/01 07:40:54 main.go:15: success
+2021/03/01 07:42:09 main.go:15: success
+2021/03/01 07:43:20 main.go:15: success
+2021/03/01 07:43:25 server.go:3095: http: panic serving [::1]:56757: interface conversion: interface {} is int64, not int
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0002161e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f80, 0xc000200b10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002480e0, 0xc000240100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x57f
+net/http.HandlerFunc.ServeHTTP(0x476ac28, 0x47fe1e0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002161e0, 0x47ffb60, 0xc00020e100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:43:26 server.go:3095: http: panic serving [::1]:56762: interface conversion: interface {} is int64, not int
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000216280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f80, 0xc000200f60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002482a0, 0xc000240200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x57f
+net/http.HandlerFunc.ServeHTTP(0x476ac28, 0x47fe1e0, 0xc0002482a0, 0xc000240200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002482a0, 0xc000240200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0002482a0, 0xc000240200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000216280, 0x47ffb60, 0xc00020e2c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:43:31 server.go:3095: http: panic serving [::1]:56783: interface conversion: interface {} is int64, not int
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000a6000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f80, 0xc000092720)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000ba000, 0xc0000aa000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x57f
+net/http.HandlerFunc.ServeHTTP(0x476ac28, 0x47fe1e0, 0xc0000ba000, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000ba000, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0000ba000, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a6000, 0x47ffb60, 0xc0000a0140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:44:01 server.go:3095: http: panic serving [::1]:56904: interface conversion: interface {} is int64, not int
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119c20)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f80, 0xc0001849c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00019a000, 0xc000158300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x57f
+net/http.HandlerFunc.ServeHTTP(0x476ac28, 0x47fe1e0, 0xc00019a000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00019a000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc00019a000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119c20, 0x47ffb60, 0xc000033ac0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:45:01 server.go:3095: http: panic serving [::1]:57147: interface conversion: interface {} is int64, not int
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46b1f80, 0xc000184e10)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00019a1c0, 0xc000158400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x57f
+net/http.HandlerFunc.ServeHTTP(0x476ac28, 0x47fe1e0, 0xc00019a1c0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00019a1c0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc00019a1c0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47ffb60, 0xc000033c40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:49:33 main.go:15: success
+2021/03/01 07:56:19 main.go:15: success
+2021/03/01 07:58:13 server.go:3095: http: panic serving [::1]:59964: runtime error: index out of range [0] with length 0
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000119d60)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc000312560)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00031e2a0, 0xc000402a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc00031e2a0, 0xc000402a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00031e2a0, 0xc000402a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc00031e2a0, 0xc000402a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119d60, 0x47ffb60, 0xc000033e00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:13 server.go:3095: http: panic serving [::1]:59963: runtime error: index out of range [0] with length 0
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc000312700)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00031e460, 0xc000402000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc00031e460, 0xc000402000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00031e460, 0xc000402000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc00031e460, 0xc000402000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47ffb60, 0xc000033d40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:13 server.go:3095: http: panic serving [::1]:59961: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000a41e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc0003de700)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000d6620, 0xc0000cec00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc0000d6620, 0xc0000cec00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000d6620, 0xc0000cec00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc0000d6620, 0xc0000cec00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a41e0, 0x47ffb60, 0xc00009a140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:13 server.go:3095: http: panic serving [::1]:59962: runtime error: index out of range [0] with length 0
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc0000a43c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc0003de880)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000d67e0, 0xc000324100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc0000d67e0, 0xc000324100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000d67e0, 0xc000324100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc0000d67e0, 0xc000324100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a43c0, 0x47ffb60, 0xc00009a800)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:13 server.go:3095: http: panic serving [::1]:60410: runtime error: index out of range [0] with length 0
+goroutine 71 [running]:
+net/http.(*conn).serve.func1(0xc00045c140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc0004043c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0004201c0, 0xc000402b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc0004201c0, 0xc000402b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0004201c0, 0xc000402b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc0004201c0, 0xc000402b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00045c140, 0x47ffb60, 0xc00041a940)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:14 server.go:3095: http: panic serving [::1]:60415: runtime error: index out of range [0] with length 0
+goroutine 73 [running]:
+net/http.(*conn).serve.func1(0xc00045c1e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc000404540)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0004202a0, 0xc000402c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc0004202a0, 0xc000402c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0004202a0, 0xc000402c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc0004202a0, 0xc000402c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00045c1e0, 0x47ffb60, 0xc00041aa40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:19 server.go:3095: http: panic serving [::1]:60436: runtime error: index out of range [0] with length 0
+goroutine 75 [running]:
+net/http.(*conn).serve.func1(0xc00045c280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc0004046c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000420380, 0xc000402d00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc000420380, 0xc000402d00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000420380, 0xc000402d00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc000420380, 0xc000402d00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00045c280, 0x47ffb60, 0xc00041ab80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:58:49 server.go:3095: http: panic serving [::1]:60558: runtime error: index out of range [0] with length 0
+goroutine 56 [running]:
+net/http.(*conn).serve.func1(0xc000330140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc000312880)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00031e540, 0xc000324400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc00031e540, 0xc000324400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00031e540, 0xc000324400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc00031e540, 0xc000324400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000330140, 0x47ffb60, 0xc000316640)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 07:59:49 server.go:3095: http: panic serving [::1]:60802: runtime error: index out of range [0] with length 0
+goroutine 58 [running]:
+net/http.(*conn).serve.func1(0xc0003301e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035a0, 0xc000312a00)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00031e620, 0xc000324500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476abe8, 0x47fe1e0, 0xc00031e620, 0xc000324500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00031e620, 0xc000324500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d6000, 0x47fe1e0, 0xc00031e620, 0xc000324500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0003301e0, 0x47ffb60, 0xc000316780)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:00:50 main.go:15: success
+2021/03/01 08:00:54 server.go:3095: http: panic serving [::1]:61068: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc000206280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc000026300)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0002321c0, 0xc00022a100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1c0, 0xc0002321c0, 0xc00022a100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0002321c0, 0xc00022a100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000232000, 0x47fe1c0, 0xc0002321c0, 0xc00022a100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000206280, 0x47ffb40, 0xc000032180)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:00:55 server.go:3095: http: panic serving [::1]:61073: runtime error: index out of range [0] with length 0
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0000b9cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc0000be760)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc00013c000, 0xc0000fe200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1c0, 0xc00013c000, 0xc0000fe200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc00013c000, 0xc0000fe200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000232000, 0x47fe1c0, 0xc00013c000, 0xc0000fe200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b9cc0, 0x47ffb40, 0xc0000cdac0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:01:00 server.go:3095: http: panic serving [::1]:61094: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0001a0000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc0001981a0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0001c6000, 0xc00019a100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1c0, 0xc0001c6000, 0xc00019a100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0001c6000, 0xc00019a100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000232000, 0x47fe1c0, 0xc0001c6000, 0xc00019a100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a0000, 0x47ffb40, 0xc0001940c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:01:30 server.go:3095: http: panic serving [::1]:61216: runtime error: index out of range [0] with length 0
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000206320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc0000264a0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1c0, 0xc0002322a0, 0xc00022a200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1c0, 0xc0002322a0, 0xc00022a200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1c0, 0xc0002322a0, 0xc00022a200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000232000, 0x47fe1c0, 0xc0002322a0, 0xc00022a200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000206320, 0x47ffb40, 0xc000032340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:01:47 main.go:15: success
+2021/03/01 08:01:50 server.go:3095: http: panic serving [::1]:61298: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0002161e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc00021a240)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc0002460e0, 0xc00023e100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc0002460e0, 0xc00023e100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc0002460e0, 0xc00023e100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe180, 0xc0002460e0, 0xc00023e100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002161e0, 0x47ffac0, 0xc00020e100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:01:51 server.go:3095: http: panic serving [::1]:61303: runtime error: index out of range [0] with length 0
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000216280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc00021a3e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc0002461c0, 0xc00023e200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc0002461c0, 0xc00023e200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc0002461c0, 0xc00023e200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe180, 0xc0002461c0, 0xc00023e200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000216280, 0x47ffac0, 0xc00020e2c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:02:51 server.go:3095: http: panic serving [::1]:61548: runtime error: index out of range [0] with length 0
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc000216320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc0000b4160)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc0000ac0e0, 0xc00023e300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc0000ac0e0, 0xc00023e300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc0000ac0e0, 0xc00023e300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe180, 0xc0000ac0e0, 0xc00023e300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000216320, 0x47ffac0, 0xc00020e400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:02:57 main.go:15: success
+2021/03/01 08:03:01 server.go:3095: http: panic serving [::1]:61591: runtime error: index out of range [0] with length 0
+goroutine 22 [running]:
+net/http.(*conn).serve.func1(0xc0001a5ea0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc0001aa840)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc0002400e0, 0xc0001ee300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc0002400e0, 0xc0001ee300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc0002400e0, 0xc0001ee300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000240000, 0x47fe180, 0xc0002400e0, 0xc0001ee300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a5ea0, 0x47ffac0, 0xc0001bbb40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:03:02 server.go:3095: http: panic serving [::1]:61596: runtime error: index out of range [0] with length 0
+goroutine 24 [running]:
+net/http.(*conn).serve.func1(0xc0001a5f40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc0001aa9c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc0002401c0, 0xc0001ee400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc0002401c0, 0xc0001ee400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc0002401c0, 0xc0001ee400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000240000, 0x47fe180, 0xc0002401c0, 0xc0001ee400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a5f40, 0x47ffac0, 0xc0001bbd00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:03:02 server.go:3095: http: panic serving [::1]:61601: runtime error: index out of range [0] with length 0
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0xc00010c000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc000026220)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc00011e000, 0xc000110000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc00011e000, 0xc000110000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc00011e000, 0xc000110000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000240000, 0x47fe180, 0xc00011e000, 0xc000110000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00010c000, 0x47ffac0, 0xc0000320c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:08:02 server.go:3095: http: panic serving [::1]:62811: runtime error: index out of range [0] with length 0
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc00026a000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703520, 0xc0001aab40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe180, 0xc000240380, 0xc0001ee500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x5b5
+net/http.HandlerFunc.ServeHTTP(0x476ab68, 0x47fe180, 0xc000240380, 0xc0001ee500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe180, 0xc000240380, 0xc0001ee500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000240000, 0x47fe180, 0xc000240380, 0xc0001ee500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00026a000, 0x47ffac0, 0xc0001bbe40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:05 main.go:15: success
+2021/03/01 08:09:09 server.go:3095: http: panic serving [::1]:63178: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0002241e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc00021a260)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc0002500e0, 0xc00021c200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc0002500e0, 0xc00021c200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc0002500e0, 0xc00021c200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc0002500e0, 0xc00021c200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002241e0, 0x47ffb80, 0xc00020c100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:10 server.go:3095: http: panic serving [::1]:63183: runtime error: index out of range [0] with length 0
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119c20)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc000026840)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc000192000, 0xc000158200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc000192000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc000192000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc000192000, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119c20, 0x47ffb80, 0xc000033b40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:13 server.go:3095: http: panic serving [::1]:63192: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000a4000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc0000b2160)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc0000ac0e0, 0xc0000a8000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc0000ac0e0, 0xc0000a8000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc0000ac0e0, 0xc0000a8000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc0000ac0e0, 0xc0000a8000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a4000, 0x47ffb80, 0xc00009e0c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:19 message.go:40: sql: no rows in result set
+2021/03/01 08:09:25 server.go:3095: http: panic serving [::1]:63199: runtime error: index out of range [0] with length 0
+goroutine 22 [running]:
+net/http.(*conn).serve.func1(0xc000224320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc000027240)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc000192460, 0xc000159900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc000192460, 0xc000159900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc000192460, 0xc000159900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc000192460, 0xc000159900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000224320, 0x47ffb80, 0xc00020c340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:25 server.go:3095: http: panic serving [::1]:63248: runtime error: index out of range [0] with length 0
+goroutine 57 [running]:
+net/http.(*conn).serve.func1(0xc0001e0000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc0000273c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc000192620, 0xc000159a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc000192620, 0xc000159a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc000192620, 0xc000159a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc000192620, 0xc000159a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001e0000, 0x47ffb80, 0xc0001ab880)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:26 server.go:3095: http: panic serving [::1]:63255: runtime error: index out of range [0] with length 0
+goroutine 72 [running]:
+net/http.(*conn).serve.func1(0xc0000a4320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc0000b36a0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc0000ac700, 0xc000326800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc0000ac700, 0xc000326800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc0000ac700, 0xc000326800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc0000ac700, 0xc000326800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a4320, 0x47ffb80, 0xc000307c80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:09:31 server.go:3095: http: panic serving [::1]:63276: runtime error: index out of range [0] with length 0
+goroutine 86 [running]:
+net/http.(*conn).serve.func1(0xc000224960)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc00021ae40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc000250460, 0xc0002e0200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc000250460, 0xc0002e0200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc000250460, 0xc0002e0200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc000250460, 0xc0002e0200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000224960, 0x47ffb80, 0xc0002d2340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:01 server.go:3095: http: panic serving [::1]:63394: runtime error: index out of range [0] with length 0
+goroutine 74 [running]:
+net/http.(*conn).serve.func1(0xc0000a43c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703600, 0xc0000b3820)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe200, 0xc0000ac7e0, 0xc000326900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x492
+net/http.HandlerFunc.ServeHTTP(0x476ac20, 0x47fe200, 0xc0000ac7e0, 0xc000326900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe200, 0xc0000ac7e0, 0xc000326900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe200, 0xc0000ac7e0, 0xc000326900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a43c0, 0x47ffb80, 0xc000307dc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:19 main.go:15: success
+2021/03/01 08:10:25 server.go:3095: http: panic serving [::1]:63495: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0002221e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc00021a260)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002500e0, 0xc000248100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0002500e0, 0xc000248100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002500e0, 0xc000248100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc0002500e0, 0xc000248100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002221e0, 0x47ffb60, 0xc0002141c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:26 server.go:3095: http: panic serving [::1]:63500: runtime error: index out of range [0] with length 0
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000222280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc00021a3e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002501c0, 0xc000248200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0002501c0, 0xc000248200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002501c0, 0xc000248200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc0002501c0, 0xc000248200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000222280, 0x47ffb60, 0xc000214380)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:33 server.go:3095: http: panic serving [::1]:63511: runtime error: index out of range [0] with length 0
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc000222320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc00021a8e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000250460, 0xc000248900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc000250460, 0xc000248900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000250460, 0xc000248900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc000250460, 0xc000248900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000222320, 0x47ffb60, 0xc0002144c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:33 server.go:3095: http: panic serving [::1]:63532: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000a6000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000a2180)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000ae0e0, 0xc0000aa000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0000ae0e0, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000ae0e0, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc0000ae0e0, 0xc0000aa000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a6000, 0x47ffb60, 0xc00009c040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:34 server.go:3095: http: panic serving [::1]:63537: runtime error: index out of range [0] with length 0
+goroutine 36 [running]:
+net/http.(*conn).serve.func1(0xc0000a60a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000a2300)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000ae1c0, 0xc0000aa100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0000ae1c0, 0xc0000aa100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000ae1c0, 0xc0000aa100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc0000ae1c0, 0xc0000aa100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000a60a0, 0x47ffb60, 0xc00009c1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:10:39 server.go:3095: http: panic serving [::1]:63558: runtime error: index out of range [0] with length 0
+goroutine 28 [running]:
+net/http.(*conn).serve.func1(0xc000222500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc00021aa60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000250540, 0xc000248a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc000250540, 0xc000248a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000250540, 0xc000248a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc000250540, 0xc000248a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000222500, 0x47ffb60, 0xc000215140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:11:09 server.go:3095: http: panic serving [::1]:63680: runtime error: index out of range [0] with length 0
+goroutine 13 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc000026aa0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001900e0, 0xc000158900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:48 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0001900e0, 0xc000158900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001900e0, 0xc000158900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000250000, 0x47fe1e0, 0xc0001900e0, 0xc000158900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47ffb60, 0xc00019c0c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:11:29 main.go:15: success
+2021/03/01 08:11:33 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:11:33 server.go:3095: http: panic serving [::1]:63782: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc0002101e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc000026340)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00023a0e0, 0xc000232100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x5e5
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc00023a0e0, 0xc000232100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00023a0e0, 0xc000232100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x47fe1e0, 0xc00023a0e0, 0xc000232100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002101e0, 0x47ffb60, 0xc000032240)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:11:34 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:11:34 server.go:3095: http: panic serving [::1]:63788: runtime error: index out of range [0] with length 0
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000210280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000264e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00023a1c0, 0xc000232200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x5e5
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc00023a1c0, 0xc000232200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00023a1c0, 0xc000232200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x47fe1e0, 0xc00023a1c0, 0xc000232200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000210280, 0x47ffb60, 0xc000032400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:11:39 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:11:39 server.go:3095: http: panic serving [::1]:63809: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000ae000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000c4180)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000d4000, 0xc0000c2000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x5e5
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0000d4000, 0xc0000c2000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000d4000, 0xc0000c2000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x47fe1e0, 0xc0000d4000, 0xc0000c2000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ae000, 0x47ffb60, 0xc0000a00c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:12:09 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:12:09 server.go:3095: http: panic serving [::1]:63930: runtime error: index out of range [0] with length 0
+goroutine 36 [running]:
+net/http.(*conn).serve.func1(0xc0000ae0a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000c4320)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000d40e0, 0xc0000c2100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x5e5
+net/http.HandlerFunc.ServeHTTP(0x476ac08, 0x47fe1e0, 0xc0000d40e0, 0xc0000c2100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000d40e0, 0xc0000c2100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x47fe1e0, 0xc0000d40e0, 0xc0000c2100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000ae0a0, 0x47ffb60, 0xc0000a0240)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:12:49 main.go:15: success
+2021/03/01 08:12:52 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:12:52 server.go:3095: http: panic serving [::1]:64108: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc00021c1e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc000220260)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc00024e0e0, 0xc000246100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc00024e0e0, 0xc000246100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc00024e0e0, 0xc000246100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024e000, 0x47fe1a0, 0xc00024e0e0, 0xc000246100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00021c1e0, 0x47ffb20, 0xc000214100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:12:53 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:12:53 server.go:3095: http: panic serving [::1]:64114: runtime error: index out of range [0] with length 0
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119c20)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc000026880)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc000192000, 0xc000158300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc000192000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc000192000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024e000, 0x47fe1a0, 0xc000192000, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119c20, 0x47ffb20, 0xc000033b80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:12:58 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:12:58 server.go:3095: http: panic serving [::1]:64135: runtime error: index out of range [0] with length 0
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000119cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc000026a20)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc0001920e0, 0xc000158400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc0001920e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc0001920e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024e000, 0x47fe1a0, 0xc0001920e0, 0xc000158400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119cc0, 0x47ffb20, 0xc000033d00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:13:17 main.go:15: success
+2021/03/01 08:13:19 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:13:19 server.go:3095: http: panic serving [::1]:64232: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000aa280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc0000ae260)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc0000d80e0, 0xc0000d0100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc0000d80e0, 0xc0000d0100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc0000d80e0, 0xc0000d0100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d8000, 0x47fe1a0, 0xc0000d80e0, 0xc0000d0100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000aa280, 0x47ffb20, 0xc00009a1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:13:49 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:13:49 server.go:3095: http: panic serving [::1]:64362: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc00021a000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc00022a180)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc00022e0e0, 0xc000228000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc00022e0e0, 0xc000228000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc00022e0e0, 0xc000228000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d8000, 0x47fe1a0, 0xc00022e0e0, 0xc000228000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00021a000, 0x47ffb20, 0xc000214040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:14:49 server.go:3095: http: superfluous response.WriteHeader call from github.com/keigooba/sharefull/app/controllers.chatMessage (r_chat.go:46)
+2021/03/01 08:14:49 server.go:3095: http: panic serving [::1]:64604: runtime error: index out of range [0] with length 0
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000119c20)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x4703560, 0xc000026880)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1a0, 0xc0001900e0, 0xc000158300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:49 +0x665
+net/http.HandlerFunc.ServeHTTP(0x476aba8, 0x47fe1a0, 0xc0001900e0, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1a0, 0xc0001900e0, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000d8000, 0x47fe1a0, 0xc0001900e0, 0xc000158300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119c20, 0x47ffb20, 0xc000033b00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:14:59 main.go:15: success
+2021/03/01 08:15:03 message.go:40: sql: no rows in result set
+2021/03/01 08:15:58 main.go:15: success
+2021/03/01 08:16:02 message.go:40: sql: no rows in result set
+2021/03/01 08:16:09 server.go:3095: http: panic serving [::1]:64910: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc000216280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc00021a940)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000246460, 0xc00023ed00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000246460, 0xc00023ed00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000246460, 0xc00023ed00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc000246460, 0xc00023ed00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000216280, 0x47ffb60, 0xc00020a140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:16:09 server.go:3095: http: panic serving [::1]:64940: runtime error: index out of range [0] with length 0
+goroutine 52 [running]:
+net/http.(*conn).serve.func1(0xc0001d2000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000027020)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001ae2a0, 0xc000159b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0001ae2a0, 0xc000159b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001ae2a0, 0xc000159b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc0001ae2a0, 0xc000159b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001d2000, 0x47ffb60, 0xc0001acf80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:16:10 server.go:3095: http: panic serving [::1]:64945: runtime error: index out of range [0] with length 0
+goroutine 54 [running]:
+net/http.(*conn).serve.func1(0xc0001d20a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc0000271c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001ae380, 0xc000159d00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0001ae380, 0xc000159d00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001ae380, 0xc000159d00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc0001ae380, 0xc000159d00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001d20a0, 0x47ffb60, 0xc0001ad100)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:16:15 server.go:3095: http: panic serving [::1]:64966: runtime error: index out of range [0] with length 0
+goroutine 39 [running]:
+net/http.(*conn).serve.func1(0xc0000d0140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc0000aa5e0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e20e0, 0xc0000ac900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e20e0, 0xc0000ac900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e20e0, 0xc0000ac900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc0000e20e0, 0xc0000ac900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d0140, 0x47ffb60, 0xc0000a8cc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:16:45 server.go:3095: http: panic serving [::1]:65088: runtime error: index out of range [0] with length 0
+goroutine 41 [running]:
+net/http.(*conn).serve.func1(0xc0000d01e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc0000aa780)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e21c0, 0xc0000aca00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e21c0, 0xc0000aca00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e21c0, 0xc0000aca00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc0000e21c0, 0xc0000aca00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d01e0, 0x47ffb60, 0xc0000a8e00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:17:45 server.go:3095: http: panic serving [::1]:65326: runtime error: index out of range [0] with length 0
+goroutine 56 [running]:
+net/http.(*conn).serve.func1(0xc0001d2140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000027360)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001ae460, 0xc000159e00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0001ae460, 0xc000159e00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001ae460, 0xc000159e00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc0001ae460, 0xc000159e00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001d2140, 0x47ffb60, 0xc0001ad240)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:22:45 server.go:3095: http: panic serving [::1]:50164: runtime error: index out of range [0] with length 0
+goroutine 28 [running]:
+net/http.(*conn).serve.func1(0xc000216460)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc00021aae0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000246540, 0xc00023ee00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x57b
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000246540, 0xc00023ee00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000246540, 0xc00023ee00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000246000, 0x47fe1e0, 0xc000246540, 0xc00023ee00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000216460, 0x47ffb60, 0xc00020b740)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:24:03 main.go:15: success
+2021/03/01 08:24:11 message.go:40: sql: no rows in result set
+2021/03/01 08:25:12 main.go:15: success
+2021/03/01 08:25:19 message.go:40: sql: no rows in result set
+2021/03/01 08:26:15 main.go:15: success
+2021/03/01 08:26:22 message.go:40: sql: no rows in result set
+2021/03/01 08:28:16 main.go:15: success
+2021/03/01 08:28:22 message.go:40: sql: no rows in result set
+2021/03/01 08:28:31 server.go:3095: http: panic serving [::1]:51540: runtime error: index out of range [0] with length 0
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc0001101e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0001ab560)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000232380, 0xc000264400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000232380, 0xc000264400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000232380, 0xc000264400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc000232380, 0xc000264400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001101e0, 0x47ffb60, 0xc000032300)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:31 server.go:3095: http: panic serving [::1]:51589: runtime error: index out of range [0] with length 0
+goroutine 72 [running]:
+net/http.(*conn).serve.func1(0xc000268140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0001ab6c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000232540, 0xc000264500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000232540, 0xc000264500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000232540, 0xc000264500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc000232540, 0xc000264500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000268140, 0x47ffb60, 0xc000266600)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:32 server.go:3095: http: panic serving [::1]:51594: runtime error: index out of range [0] with length 0
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc0000d4320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000aeca0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e4380, 0xc00031c000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e4380, 0xc00031c000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e4380, 0xc00031c000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc0000e4380, 0xc00031c000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d4320, 0x47ffb60, 0xc00030aa80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:37 server.go:3095: http: panic serving [::1]:51615: runtime error: index out of range [0] with length 0
+goroutine 82 [running]:
+net/http.(*conn).serve.func1(0xc0000d43c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000aee00)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e4460, 0xc00031c100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e4460, 0xc00031c100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e4460, 0xc00031c100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc0000e4460, 0xc00031c100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d43c0, 0x47ffb60, 0xc00030abc0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:44 server.go:3095: http: panic serving [::1]:51625: runtime error: index out of range [0] with length 0
+goroutine 54 [running]:
+net/http.(*conn).serve.func1(0xc000110640)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000af280)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e4700, 0xc00031c500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e4700, 0xc00031c500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e4700, 0xc00031c500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc0000e4700, 0xc00031c500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000110640, 0x47ffb60, 0xc00029a280)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:44 server.go:3095: http: panic serving [::1]:51647: runtime error: index out of range [0] with length 0
+goroutine 89 [running]:
+net/http.(*conn).serve.func1(0xc0000d4640)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000af400)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e48c0, 0xc00031c600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e48c0, 0xc00031c600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e48c0, 0xc00031c600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc0000e48c0, 0xc00031c600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d4640, 0x47ffb60, 0xc00030b480)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:28:45 server.go:3095: http: panic serving [::1]:51652: runtime error: index out of range [0] with length 0
+goroutine 91 [running]:
+net/http.(*conn).serve.func1(0xc0000d46e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035c0, 0xc0000af580)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000e49a0, 0xc00031c700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:47 +0x585
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000e49a0, 0xc00031c700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000e49a0, 0xc00031c700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x47fe1e0, 0xc0000e49a0, 0xc00031c700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d46e0, 0x47ffb60, 0xc00030b580)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:29:26 main.go:15: success
+2021/03/01 08:29:30 message.go:40: sql: no rows in result set
+2021/03/01 08:32:06 main.go:15: success
+2021/03/01 08:32:44 message.go:40: sql: no rows in result set
+2021/03/01 08:32:54 main.go:15: success
+2021/03/01 08:32:56 message.go:40: sql: no rows in result set
+2021/03/01 08:34:21 main.go:15: success
+2021/03/01 08:34:40 server.go:3095: http: panic serving [::1]:53034: runtime error: index out of range [0] with length 0
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000b41e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc0000a8440)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0000de2a0, 0xc0000aa600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0000de2a0, 0xc0000aa600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0000de2a0, 0xc0000aa600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc0000de2a0, 0xc0000aa600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b41e0, 0x47ffb60, 0xc0000ac140)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:34:40 server.go:3095: http: panic serving [::1]:53104: runtime error: index out of range [0] with length 0
+goroutine 12 [running]:
+net/http.(*conn).serve.func1(0xc000119d60)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000026a80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00018c1c0, 0xc000158a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc00018c1c0, 0xc000158a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00018c1c0, 0xc000158a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc00018c1c0, 0xc000158a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119d60, 0x47ffb60, 0xc00019c300)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:34:41 server.go:3095: http: panic serving [::1]:53109: runtime error: index out of range [0] with length 0
+goroutine 14 [running]:
+net/http.(*conn).serve.func1(0xc000119e00)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000026c00)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00018c2a0, 0xc000158b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc00018c2a0, 0xc000158b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00018c2a0, 0xc000158b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc00018c2a0, 0xc000158b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119e00, 0x47ffb60, 0xc00019c440)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:34:46 server.go:3095: http: panic serving [::1]:53130: runtime error: index out of range [0] with length 0
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc000218000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000212280)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc000236000, 0xc000224000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc000236000, 0xc000224000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc000236000, 0xc000224000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x47fe1e0, 0xc000236000, 0xc000224000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000218000, 0x47ffb60, 0xc00020c4c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:35:34 main.go:15: success
+2021/03/01 08:35:38 server.go:3095: http: panic serving [::1]:53332: runtime error: index out of range [0] with length 0
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0001a5c20)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc000026520)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001421c0, 0xc000112700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc0001421c0, 0xc000112700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001421c0, 0xc000112700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000142000, 0x47fe1e0, 0xc0001421c0, 0xc000112700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a5c20, 0x47ffb60, 0xc0001bbb00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:35:38 server.go:3095: http: panic serving [::1]:53345: runtime error: index out of range [0] with length 0
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0001a5cc0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x47035e0, 0xc0001aaaa0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc00022c2a0, 0xc0001ee800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:46 +0x4f2
+net/http.HandlerFunc.ServeHTTP(0x476ac00, 0x47fe1e0, 0xc00022c2a0, 0xc0001ee800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc00022c2a0, 0xc0001ee800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000142000, 0x47fe1e0, 0xc00022c2a0, 0xc0001ee800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a5cc0, 0x47ffb60, 0xc00023c040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 08:36:31 main.go:15: success
+2021/03/01 08:37:41 message.go:40: sql: no rows in result set
+2021/03/01 08:39:31 main.go:15: success
+2021/03/01 08:39:35 message.go:40: sql: no rows in result set
+2021/03/01 08:39:41 message.go:40: sql: no rows in result set
+2021/03/01 08:45:37 main.go:15: success
+2021/03/01 08:45:45 message.go:40: sql: no rows in result set
+2021/03/01 11:56:03 main.go:15: success
+2021/03/01 11:56:09 message.go:41: sql: no rows in result set
+2021/03/01 11:56:09 message.go:41: sql: no rows in result set
+2021/03/01 11:56:19 message.go:41: sql: no rows in result set
+2021/03/01 11:56:19 message.go:41: sql: no rows in result set
+2021/03/01 11:56:30 message.go:41: sql: no rows in result set
+2021/03/01 11:56:32 message.go:50: unrecognized token: "'%H:%M:%S, created_at) from messages where chat_uuid = ?"
+2021/03/01 11:56:32 server.go:3095: http: panic serving [::1]:52554: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc000218280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46adba0, 0x4af6790)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0002329a0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000234e92, 0x1e, 0x47416b6, 0x1, 0x0, 0x3, 0xc000334680)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:54 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002487e0, 0xc0003b3800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x476abe0, 0x47fe1e0, 0xc0002487e0, 0xc0003b3800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002487e0, 0xc0003b3800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0002487e0, 0xc0003b3800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000218280, 0x47ffb60, 0xc0002041c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 11:56:32 message.go:50: unrecognized token: "'%H:%M:%S, created_at) from messages where chat_uuid = ?"
+2021/03/01 11:56:32 server.go:3095: http: panic serving [::1]:52663: runtime error: invalid memory address or nil pointer dereference
+goroutine 96 [running]:
+net/http.(*conn).serve.func1(0xc000218500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46adba0, 0x4af6790)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000232b60)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000235052, 0x1e, 0x47416b6, 0x1, 0x0, 0x3, 0xc0003347c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:54 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002488c0, 0xc000323800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x476abe0, 0x47fe1e0, 0xc0002488c0, 0xc000323800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002488c0, 0xc000323800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0002488c0, 0xc000323800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000218500, 0x47ffb60, 0xc0003346c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 11:56:33 message.go:50: unrecognized token: "'%H:%M:%S, created_at) from messages where chat_uuid = ?"
+2021/03/01 11:56:33 server.go:3095: http: panic serving [::1]:52668: runtime error: invalid memory address or nil pointer dereference
+goroutine 130 [running]:
+net/http.(*conn).serve.func1(0xc0002185a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46adba0, 0x4af6790)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000232d20)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000235212, 0x1e, 0x47416b6, 0x1, 0x0, 0x3, 0xc000334900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:54 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0002489a0, 0xc000323900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x476abe0, 0x47fe1e0, 0xc0002489a0, 0xc000323900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0002489a0, 0xc000323900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0002489a0, 0xc000323900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002185a0, 0x47ffb60, 0xc000334800)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 11:56:38 message.go:50: unrecognized token: "'%H:%M:%S, created_at) from messages where chat_uuid = ?"
+2021/03/01 11:56:38 server.go:3095: http: panic serving [::1]:52689: runtime error: invalid memory address or nil pointer dereference
+goroutine 111 [running]:
+net/http.(*conn).serve.func1(0xc0001c8aa0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46adba0, 0x4af6790)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0003ae4d0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0003bcd12, 0x1e, 0x47416b6, 0x1, 0x0, 0x3, 0xc0003e4680)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:54 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001d0620, 0xc0003b3900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x476abe0, 0x47fe1e0, 0xc0001d0620, 0xc0003b3900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001d0620, 0xc0003b3900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0001d0620, 0xc0003b3900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001c8aa0, 0x47ffb60, 0xc0003e4580)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 11:57:08 message.go:50: unrecognized token: "'%H:%M:%S, created_at) from messages where chat_uuid = ?"
+2021/03/01 11:57:08 server.go:3095: http: panic serving [::1]:52811: runtime error: invalid memory address or nil pointer dereference
+goroutine 113 [running]:
+net/http.(*conn).serve.func1(0xc0001c8b40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46adba0, 0x4af6790)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0003ae690)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0003bced2, 0x1e, 0x47416b6, 0x1, 0x0, 0x3, 0xc0003e47c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:54 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x47fe1e0, 0xc0001d0700, 0xc0003b3a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x476abe0, 0x47fe1e0, 0xc0001d0700, 0xc0003b3a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b0b100, 0x47fe1e0, 0xc0001d0700, 0xc0003b3a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x47fe1e0, 0xc0001d0700, 0xc0003b3a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001c8b40, 0x47ffb60, 0xc0003e46c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/01 11:57:59 main.go:15: success
+2021/03/01 11:58:10 message.go:41: sql: no rows in result set
+2021/03/01 11:58:12 message.go:57: sql: expected 2 destination arguments in Scan, not 3
+2021/03/01 12:01:51 main.go:15: success
+2021/03/01 12:01:59 message.go:41: sql: no rows in result set
+2021/03/01 12:02:00 message.go:57: sql: expected 3 destination arguments in Scan, not 4
+2021/03/01 12:02:53 main.go:15: success
+2021/03/01 12:05:28 main.go:15: success
+2021/03/01 12:05:34 message.go:41: sql: no rows in result set
+2021/03/01 12:47:59 main.go:15: success
+2021/03/01 12:48:29 main.go:15: success
+2021/03/01 12:50:04 main.go:15: success
+2021/03/01 12:52:59 message.go:41: sql: no rows in result set
+2021/03/01 13:00:02 main.go:15: success
+2021/03/01 13:00:50 message.go:41: sql: no rows in result set
+2021/03/01 13:06:33 main.go:15: success
+2021/03/01 13:08:34 main.go:15: success
+2021/03/01 13:11:28 main.go:15: success
+2021/03/01 13:14:47 main.go:15: success
+2021/03/01 13:15:42 main.go:15: success
+2021/03/01 13:22:26 main.go:15: success
+2021/03/01 13:22:31 message.go:57: sql: Scan error on column index 2, name "date(datetime('created_at'))": unsupported Scan, storing driver.Value type <nil> into type *time.Time
+2021/03/01 13:22:31 message.go:57: sql: Scan error on column index 2, name "date(datetime('created_at'))": unsupported Scan, storing driver.Value type <nil> into type *time.Time
+2021/03/01 13:22:31 message.go:57: sql: Scan error on column index 2, name "date(datetime('created_at'))": unsupported Scan, storing driver.Value type <nil> into type *time.Time
+2021/03/01 13:22:31 message.go:57: sql: Scan error on column index 2, name "date(datetime('created_at'))": unsupported Scan, storing driver.Value type <nil> into type *time.Time
+2021/03/01 13:22:31 message.go:57: sql: Scan error on column index 2, name "date(datetime('created_at'))": unsupported Scan, storing driver.Value type <nil> into type *time.Time
+2021/03/01 13:23:00 main.go:15: success
+2021/03/01 13:23:05 message.go:57: sql: Scan error on column index 2, name "date(datetime(created_at))": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:05 message.go:57: sql: Scan error on column index 2, name "date(datetime(created_at))": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:05 message.go:57: sql: Scan error on column index 2, name "date(datetime(created_at))": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:05 message.go:57: sql: Scan error on column index 2, name "date(datetime(created_at))": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:05 message.go:57: sql: Scan error on column index 2, name "date(datetime(created_at))": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:29 main.go:15: success
+2021/03/01 13:23:37 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:37 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:37 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:37 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:23:37 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:12 main.go:15: success
+2021/03/01 13:25:15 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:15 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:15 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:15 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:15 message.go:57: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *time.Time
+2021/03/01 13:25:37 main.go:15: success
+2021/03/01 13:27:13 main.go:15: success
+2021/03/01 13:27:56 main.go:15: success
+2021/03/01 13:35:40 main.go:15: success
+2021/03/01 13:35:47 message.go:57: sql: Scan error on column index 2, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/03/01 13:35:47 message.go:57: sql: Scan error on column index 2, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/03/01 13:35:47 message.go:57: sql: Scan error on column index 2, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/03/01 13:35:47 message.go:57: sql: Scan error on column index 2, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/03/01 13:35:47 message.go:57: sql: Scan error on column index 2, name "created_at": unsupported Scan, storing driver.Value type time.Time into type *models.jsonTime
+2021/03/01 13:41:04 main.go:15: success
+2021/03/01 13:41:08 message.go:58: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *models.jsonTime
+2021/03/01 13:41:08 message.go:58: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *models.jsonTime
+2021/03/01 13:41:08 message.go:58: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *models.jsonTime
+2021/03/01 13:41:08 message.go:58: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *models.jsonTime
+2021/03/01 13:41:08 message.go:58: sql: Scan error on column index 2, name "datetime(created_at)": unsupported Scan, storing driver.Value type string into type *models.jsonTime
+2021/03/01 13:41:48 main.go:15: success
+2021/03/01 13:45:05 main.go:15: success
+2021/03/01 13:45:09 message.go:58: sql: Scan error on column index 2, name "datetime('created_at', 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:09 message.go:58: sql: Scan error on column index 2, name "datetime('created_at', 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:09 message.go:58: sql: Scan error on column index 2, name "datetime('created_at', 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:09 message.go:58: sql: Scan error on column index 2, name "datetime('created_at', 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:09 message.go:58: sql: Scan error on column index 2, name "datetime('created_at', 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:36 main.go:15: success
+2021/03/01 13:45:39 message.go:58: sql: Scan error on column index 2, name "datetime(created_at, 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:39 message.go:58: sql: Scan error on column index 2, name "datetime(created_at, 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:39 message.go:58: sql: Scan error on column index 2, name "datetime(created_at, 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:39 message.go:58: sql: Scan error on column index 2, name "datetime(created_at, 'jst')": converting NULL to string is unsupported
+2021/03/01 13:45:39 message.go:58: sql: Scan error on column index 2, name "datetime(created_at, 'jst')": converting NULL to string is unsupported
+2021/03/01 13:46:16 main.go:15: success
+2021/03/01 13:47:04 main.go:15: success
+2021/03/01 13:49:23 main.go:15: success
+2021/03/01 13:50:58 main.go:15: success
+2021/03/01 13:52:19 message.go:42: sql: no rows in result set
+2021/03/01 13:52:30 message.go:42: sql: no rows in result set
+2021/03/01 13:55:47 message.go:42: sql: no rows in result set
+2021/03/01 13:56:22 message.go:42: sql: no rows in result set
+2021/03/01 13:58:06 message.go:42: sql: no rows in result set
+2021/03/01 14:00:38 message.go:42: sql: no rows in result set
+2021/03/01 14:01:00 message.go:42: sql: no rows in result set
+2021/03/01 14:01:01 message.go:42: sql: no rows in result set
+2021/03/01 14:01:58 message.go:42: sql: no rows in result set
+2021/03/01 14:02:00 message.go:42: sql: no rows in result set
+2021/03/01 14:02:45 message.go:42: sql: no rows in result set
+2021/03/01 14:03:10 message.go:42: sql: no rows in result set
+2021/03/01 14:04:16 main.go:15: success
+2021/03/01 14:06:58 message.go:42: sql: no rows in result set
+2021/03/01 14:07:13 message.go:42: sql: no rows in result set
+2021/03/01 14:07:20 message.go:42: sql: no rows in result set
+2021/03/01 14:07:52 message.go:42: sql: no rows in result set
+2021/03/01 14:09:54 main.go:15: success
+2021/03/01 14:22:54 main.go:15: success
+2021/03/01 14:29:47 message.go:41: sql: no rows in result set
+2021/03/01 14:30:50 main.go:15: success
+2021/03/01 14:30:55 message.go:41: sql: no rows in result set
+2021/03/01 14:30:55 message.go:41: sql: no rows in result set
+2021/03/01 14:33:13 main.go:15: success
+2021/03/01 14:33:20 message.go:41: sql: no rows in result set
+2021/03/01 14:36:31 main.go:15: success
+2021/03/01 14:36:56 main.go:15: success
+2021/03/01 14:38:53 main.go:15: success
+2021/03/01 16:15:57 main.go:15: success
+2021/03/01 16:16:04 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  }]
+2021/03/01 16:18:09 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  }]
+2021/03/01 16:18:27 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  }]
+2021/03/01 16:18:36 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  }]
+2021/03/01 16:23:35 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  } { 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:25:16 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  } { 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:25:30 r_user.go:99: [{ 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:25:59 r_user.go:99: [{ 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:26:02 r_user.go:99: [{ 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:26:07 r_user.go:99: [{ 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:27:17 r_user.go:99: [{ 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:27:43 r_user.go:99: [{ 0   JjPjzpfRFEgmotaFetHsbZRjxAwnwe  } { 0   NKAReKJyiXJrscctNswYNsGRussVma  } { 0   krBEmfdzdcEkXBAkjQZLCtTMtTCoaN  } { 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:28:22 r_user.go:99: [{ 0   NKAReKJyiXJrscctNswYNsGRussVma  } { 0   tcuAxhxKQFDaFpLSjFbcXoEFfRsWxP  }]
+2021/03/01 16:51:57 main.go:15: success

@@ -1,7 +1,16 @@
 {{define "content"}}
 <div class="mb-4">
   <h1 class="text-center mt-4">メッセージ</h1>
-  <p id="messages"></p>
+  <div class="mb-4">
+    {{range .Messages }}
+    <p class='border border-secondary mt-3 p-4 rounded-pill lead'>
+      <span class='mr-2'>{{.UserName}}</span>
+      <span class='mr-2'>{{.Text}}</span>
+      <span style="float:right">{{.CreatedAt}}</span>
+    </p>
+    {{end}}
+    <p id="messages"></p>
+  </div>
   <form id="chatbox">
     <input type="text">
     <input type="hidden" value="{{.ChatUUID}}" id="uuid">

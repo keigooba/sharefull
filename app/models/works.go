@@ -13,7 +13,7 @@ type Work struct {
 	JobID          string
 	Evaluation     string
 	UserID         int
-	CreatedAt      time.Time
+	CreatedAt      string
 	User           User
 	JobList        []string
 	EvaluationList []string
@@ -61,7 +61,7 @@ func GetWork(id int) (work Work, err error) {
 }
 
 func GetWorks() (works []Work, err error) {
-	cmd := `select id, strftime('%Y/%m/%d', date), title, money, job_id, evaluation, user_id, created_at from works where date >= date(CURRENT_TIMESTAMP) order by date asc`
+	cmd := `select id, strftime('%Y/%m/%d', date), title, money, job_id, evaluation, user_id, strftime('%Y/%m/%d', created_at) from works where date >= date(CURRENT_TIMESTAMP) order by date asc`
 	rows, err := Db.Query(cmd)
 	if err != nil {
 		log.Fatalln(err)
