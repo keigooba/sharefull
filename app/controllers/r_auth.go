@@ -135,9 +135,10 @@ func auth(w http.ResponseWriter, r *http.Request) {
 			log.Fatalln("ユーザーの取得に失敗しました", provider, "-", err)
 		}
 		user := models.User{
-			Name:     creds_user.Name(),
-			Email:    creds_user.Email(),
-			PassWord: models.RandString(5), //ランダムの5桁で生成
+			Name:      creds_user.Name(),
+			Email:     creds_user.Email(),
+			PassWord:  models.RandString(5), //ランダムの5桁で生成
+			AvaterURL: creds_user.AvatarURL(),
 		}
 		auth_user, err := user.AuthGetUser()
 		if err != nil { //ない場合生成

@@ -1,16 +1,14 @@
 {{define "content"}}
 <div class="text-center">
   {{if .Messages}}
-  <div class="bg-light pt-4 pb-4">
-    <h1 class="mb-4">求人からのメッセージ</h1>
-  </div>
-  <div class="pt-4 pb-4">
-    {{ range .Messages }}
-    <div class="mb-4">
-      <a href="/work/chat/{{.ChatUUID}}">メッセージ</a>
+    <div class="m-4">
+      {{ range .Messages }}
+      <a href="/chat/message/{{.ChatUUID}}" class="text-danger">受信したメッセージ</a><br>
+      {{end}}
+      {{ range .SendMessages }}
+      <a href="/chat/message/{{.ChatUUID}}" class="text-primary">送信したメッセージ</a><br>
+      {{end}}
     </div>
-    {{end}}
-  </div>
   {{end}}
   <div class="bg-light pt-4 pb-4">
     <h1 class="mb-4">応募した求人</h1>

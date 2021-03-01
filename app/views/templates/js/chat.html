@@ -27,7 +27,7 @@ $(function () {
         var msg = JSON.parse(e.data);
         messages.append(
         $("<p class='border border-secondary mt-3 p-4 rounded-pill lead'>").append(
-          $("<span class='mr-2'>").text(msg.Name + ":"),
+          $("<span class='mr-2'>").text(msg.UserName + ":"),
           $("<span class='mr-2'>").text(msg.Text),
           $("<span style='float:right'>").text(msg.When)
           )

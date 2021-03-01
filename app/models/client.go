@@ -20,7 +20,7 @@ func (c *client) read() {
 		var msg *Message
 		if err := c.socket.ReadJSON(&msg); err == nil {
 			msg.When = time.Now().Format("15:04")
-			msg.Name = c.user.Name
+			msg.UserName = c.user.Name
 			msg.UserID = c.user.ID
 			//ここでメッセージを保存する
 			if err := msg.CreateMessage(); err != nil {
