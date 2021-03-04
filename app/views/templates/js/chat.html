@@ -6,13 +6,18 @@ $(function () {
     var uuid = $("#chatbox #uuid").val();
     var id = $("#chatbox #id").val();
     var messages = $("#messages");
-    $("#chatbox").submit(function () {
+    $("#chatbox input[type='submit']").click(function () {
+      if ($(this).val() == "Gravatar送信") {
+        var gravar = "Gravatar送信";
+      } else {
+        var gravar = "送信";
+      };
       if (!msgBox.val()) return false;
       if (!socket) {
         alert("エラー : WebSocket接続が行われていません。");
         return false;
       }
-      socket.send(JSON.stringify({"Text": msgBox.val(), "ChatUUID": uuid, "WorkID": id})); //JSONで渡す
+      socket.send(JSON.stringify({"Text": msgBox.val(), "ChatUUID": uuid, "WorkID": id, "Gravar": gravar})); //JSONで渡す
       msgBox.val("");
       return false;
     });
@@ -27,9 +32,13 @@ $(function () {
         var msg = JSON.parse(e.data);
         messages.append(
         $("<p class='border border-secondary mt-3 p-4 rounded-pill lead'>").append(
-          $("<span class='mr-2'>").text(msg.UserName + ":"),
-          $("<span class='mr-2'>").text(msg.Text),
-          $("<span style='float:right'>").text(msg.When)
+          $("<img>").attr("title", msg.UserName).css({
+            width: 50,
+            verticalAlign: 'middle',
+            'border-radius': '10px',
+          }).attr("src", msg.AvatarURL),
+          $("<span class='ml-3'>").text(msg.Text),
+          $("<span style='float:right; margin-top: 8px;'>").text(msg.When)
           )
         );
       }

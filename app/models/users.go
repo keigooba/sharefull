@@ -11,7 +11,7 @@ type User struct {
 	Name      string
 	Email     string
 	PassWord  string
-	AvaterURL string
+	AvatarURL string
 	CreatedAt time.Time
 	ApplyID   int
 }
@@ -38,7 +38,7 @@ func (u *User) CreateUser() (err error) {
 		u.Name,
 		u.Email,
 		Encrypt(u.PassWord),
-		u.AvaterURL,
+		u.AvatarURL,
 		time.Now())
 
 	if err != nil {
@@ -128,10 +128,11 @@ func (sess *Session) DeleteSessionByUUID() error {
 
 func (sess *Session) GetUserBySession() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, created_at from users where id = ?`
-	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
+	cmd := `select id, uuid, name, email, password, avatar_url, created_at from users where id = ?`
+	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.AvatarURL,
+		&user.CreatedAt)
 	if err != nil {
-		log.Fatalln(err)
+		log.Println(err)
 	}
 	return user, err
 }
@@ -142,7 +143,7 @@ func (u *User) AuthGetUser() (user User, err error) {
 	cmd := `select id, uuid, name, email, password, created_at from users where name = ? and email = ?`
 	err = Db.QueryRow(cmd, u.Name, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 	if err != nil {
-		log.Println(err)
+		log.Println("Google認証の新規ユーザーです")
 	}
 	return user, err
 }

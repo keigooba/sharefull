@@ -6,24 +6,26 @@ import (
 	"net/http"
 
 	"github.com/gorilla/websocket"
-	"github.com/keigooba/sharefull/app/trace"
+	"github.com/keigooba/sharefull/app/test"
 )
 
 type room struct {
 	forward chan *Message    //メッセージの送信に使う
-	join    chan *client     //参加
-	leave   chan *client     //退室
-	clients map[*client]bool //クライアント保持
-	tracer  trace.Tracer
+	join    chan *Client     //参加
+	leave   chan *Client     //退室
+	clients map[*Client]bool //クライアント保持
+	tracer  test.Tracer
+	avatar  Avatar
 }
 
 func NewRoom() *room {
 	return &room{
 		forward: make(chan *Message),
-		join:    make(chan *client),
-		leave:   make(chan *client),
-		clients: make(map[*client]bool),
-		tracer:  trace.Off(), //値を返さない
+		join:    make(chan *Client),
+		leave:   make(chan *Client),
+		clients: make(map[*Client]bool),
+		tracer:  test.Off(), //値を返さない
+		avatar:  UseAvatar,
 	}
 }
 
@@ -78,6 +80,9 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	if err != nil {
 		http.Redirect(w, req, "/login", 302)
 	} else {
+		if cookie.Value == "" {
+			http.Redirect(w, req, "/", 302) //空の時リダイレクト
+		}
 		sess := Session{UUID: cookie.Value}
 		if ok, _ := sess.CheckSession(); !ok {
 			err = fmt.Errorf("Invalid session")
@@ -87,11 +92,11 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 			log.Println(err)
 		}
 
-		client := &client{
+		client := &Client{
 			socket: socket,
 			send:   make(chan *Message, messageBufferSize),
 			room:   r,
-			user:   u,
+			User:   u,
 		}
 		r.join <- client
 		defer func() { r.leave <- client }()

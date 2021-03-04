@@ -7,9 +7,8 @@ import (
 	"log"
 	"math/rand"
 
-	"github.com/keigooba/sharefull/config"
-
 	"github.com/google/uuid"
+	"github.com/keigooba/sharefull/config"
 	_ "github.com/mattn/go-sqlite3"
 )
 

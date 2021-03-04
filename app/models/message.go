@@ -13,6 +13,8 @@ type Message struct {
 	ChatUUID  string
 	CreatedAt string
 	When      string
+	AvatarURL string
+	Gravar    string
 }
 
 func (m *Message) CreateMessage() error {
