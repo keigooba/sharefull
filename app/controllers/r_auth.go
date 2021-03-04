@@ -134,13 +134,14 @@ func auth(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			log.Fatalln("ユーザーの取得に失敗しました", provider, "-", err)
 		}
+
 		user := models.User{
 			Name:      creds_user.Name(),
 			Email:     creds_user.Email(),
 			PassWord:  models.RandString(5), //ランダムの5桁で生成
-			AvaterURL: creds_user.AvatarURL(),
+			AvatarURL: creds_user.AvatarURL(),
 		}
-		auth_user, err := user.AuthGetUser()
+		auth_user, err := user.AuthGetUser() //名前とメールアドレスで検索
 		if err != nil { //ない場合生成
 			if err := user.CreateUser(); err != nil {
 				log.Fatalln(err)
@@ -181,5 +182,11 @@ func logout(w http.ResponseWriter, r *http.Request) {
 		sess := models.Session{UUID: cookie.Value}
 		sess.DeleteSessionByUUID()
 	}
+	http.SetCookie(w, &http.Cookie{
+		Name:   "_cookie",
+		Value:  "",
+		Path:   "/",
+		MaxAge: -1,
+	})
 	http.Redirect(w, r, "/", 302)
 }

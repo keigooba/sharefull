@@ -7,21 +7,26 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-type client struct {
+type Client struct {
 	socket *websocket.Conn //websocketの取得
 	send   chan *Message
 	room   *room
-	user   User
+	User   User
 }
 
-func (c *client) read() {
+func (c *Client) read() {
 	for { //呼び出し後無限ループ
 		// c.socket(websocket)からデータを読み込み、c.room.forwardチャネルに送る
 		var msg *Message
 		if err := c.socket.ReadJSON(&msg); err == nil {
 			msg.When = time.Now().Format("15:04")
-			msg.UserName = c.user.Name
-			msg.UserID = c.user.ID
+			msg.UserName = c.User.Name
+			msg.UserID = c.User.ID
+			if msg.Gravar == "Gravatar送信" { //Gravatarから画像受け取り
+				msg.AvatarURL, _ = c.room.avatar.GravatarAvatarURL(c)
+			} else {
+				msg.AvatarURL, _ = c.room.avatar.AvatarURL(c)
+			}
 			//ここでメッセージを保存する
 			if err := msg.CreateMessage(); err != nil {
 				log.Fatalln(err)
@@ -35,7 +40,7 @@ func (c *client) read() {
 }
 
 // read()と並列で処理する
-func (c *client) write() {
+func (c *Client) write() {
 	for msg := range c.send { //無限ループ バッファ（チャネル）が空の時はチャネルの受信をブロックする
 		if err := c.socket.WriteJSON(msg); err != nil {
 			break
