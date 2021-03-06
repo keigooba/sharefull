@@ -14,6 +14,7 @@ type ConfigList struct {
 	DbName    string
 	LogFile   string
 	Static    string
+	Url       string
 }
 
 var Config ConfigList
@@ -34,5 +35,6 @@ func LoadConfig() {
 		DbName:    cfg.Section("db").Key("name").String(),
 		LogFile:   cfg.Section("web").Key("logfile").String(),
 		Static:    cfg.Section("web").Key("static").String(),
+		Url:       cfg.Section("web").Key("url").String(),
 	}
 }

@@ -1,9 +1,10 @@
 {{define "content"}}
-<h1 class="text-center">ユーザー編集</h1>
-<form class="form-signin" role="form" action="/user/edit/{{.User.ID}}" method="post">
+<h1 class="text-center mt-4">ユーザー編集</h1>
+<form class="form-signin" role="form" action="/user/edit/{{.User.ID}}" method="post" enctype="multipart/form-data">
   <input id="name" type="text" name="name" class="form-control" placeholder="お名前" value="{{.User.Name}}" required autofocus>
   <input type="email" name="email" class="form-control" placeholder="メールアドレス" value="{{.User.Email}}" required>
   <input type="password" name="password" class="form-control" placeholder="パスワード" value="" required>
+  <input type="file" name="avatar_url" class="mb-4">
   <button class="btn btn-lg btn-primary btn-block" type="submit">変更</button>
 </form>
 {{end}}

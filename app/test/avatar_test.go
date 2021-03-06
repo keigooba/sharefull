@@ -1,34 +1,13 @@
 package test
 
 import (
-	"crypto/md5"
 	"errors"
-	"fmt"
-	"strings"
 	"testing"
 )
 
 // ErrNoAvatarはAvatarインスタンスがアバターのURLを返すことができない
 // 場合に発生するエラーです
 var ErrNoAvatarURL = errors.New("chat: アバターのURLを取得できません。")
-
-type Client struct {
-	// socket *websocket.Conn //websocketの取得
-	// send   chan *Message
-	// room   *room
-	User User
-}
-
-type User struct {
-	// ID        int
-	// UUID      string
-	// Name      string
-	Email string
-	// PassWord  string
-	AvatarURL string
-	// CreatedAt time.Time
-	// ApplyID   int
-}
 
 // Avatarはユーザーのプロフィール画像を表す型です。
 type Avatar interface {
@@ -38,9 +17,9 @@ type Avatar interface {
 	AvatarURL(c *Client) (string, error)
 }
 
-type AuthAvatar struct{}
+type AllAvatar struct{}
 
-func (_ AuthAvatar) AvatarURL(c *Client) (string, error) {
+func (_ AllAvatar) AvatarURL(c *Client) (string, error) {
 	url := c.User.AvatarURL
 	if url != "" {
 		return url, nil
@@ -48,9 +27,25 @@ func (_ AuthAvatar) AvatarURL(c *Client) (string, error) {
 	return "", ErrNoAvatarURL
 }
 
+func (_ AllAvatar) GravatarAvatarURL(c *Client) (string, error) {
+	avatar_id := c.User.AvatarID
+	if avatar_id != "" {
+		return "https://www.gravatar.com/avatar/" + avatar_id, nil
+	}
+	return "", ErrNoAvatarURL
+}
+
+func (_ AllAvatar) UploadAvatarURL(c *Client) (string, error) {
+	avatar_id := c.User.AvatarID
+	if avatar_id != "" {
+		return "/static/avatars/" + avatar_id + ".jpg", nil
+	}
+	return "", ErrNoAvatarURL
+}
+
 func TestAuthAvatar(t *testing.T) {
 	//値なしで確認
-	var authAvatar AuthAvatar
+	var authAvatar AllAvatar
 	client := new(Client)
 	url, err := authAvatar.AvatarURL(client)
 	if err != ErrNoAvatarURL {
@@ -70,31 +65,34 @@ func TestAuthAvatar(t *testing.T) {
 	}
 }
 
-type GravatarAvatar struct{}
-
-func (_ GravatarAvatar) AvatarURL(c *Client) (string, error) {
-	email := c.User.Email
-	if email != "" {
-		md5 := md5.Sum([]byte(strings.ToLower(email)))
-		return fmt.Sprintf("https://www.gravatar.com/avatar/%x", md5), nil
-	}
-	return "", ErrNoAvatarURL
-}
-
 const (
-	email     = "keigo2356@gmail.com"
+	avatar_id = "1c55860804895a165a6bf5eca7c3cf3e"
 	avatarurl = "https://www.gravatar.com/avatar/1c55860804895a165a6bf5eca7c3cf3e"
+	u_avatarurl = "/static/avatars/1c55860804895a165a6bf5eca7c3cf3e.jpg"
 )
 
 func TestGravatarAvatar(t *testing.T) {
-	var gravatarAvatar GravatarAvatar
+	var gravatarAvatar AllAvatar
 	client := new(Client)
-	client.User.Email = email
-	url, err := gravatarAvatar.AvatarURL(client)
+	client.User.AvatarID = avatar_id
+	url, err := gravatarAvatar.GravatarAvatarURL(client)
 	if err != nil {
 		t.Error("GravatarAvatar.AvatarURLはエラーを返すべきではありません")
 	}
 	if url != avatarurl {
 		t.Errorf("GravatarAvatar.AvatarURLが%sという誤った値を返しました", url)
+	}
+}
+
+func TestUploadAvatar(t *testing.T) {
+	var uploadAvatar AllAvatar
+	client := new(Client)
+	client.User.AvatarID = avatar_id
+	url, err := uploadAvatar.UploadAvatarURL(client)
+	if err != nil {
+		t.Error("UploadAvatar.AvatarURLはエラーを返すべきではありません")
+	}
+	if url != u_avatarurl {
+		t.Errorf("UploadAvatar.AvatarURLが%sという誤った値を返しました", url)
 	}
 }

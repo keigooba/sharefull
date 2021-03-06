@@ -7,7 +7,9 @@ $(function () {
     var id = $("#chatbox #id").val();
     var messages = $("#messages");
     $("#chatbox input[type='submit']").click(function () {
-      if ($(this).val() == "Gravatar送信") {
+      if ($(this).val() == "Google送信") {
+        var gravar = "Google送信";
+      } else if ($(this).val() == "Gravatar送信") {
         var gravar = "Gravatar送信";
       } else {
         var gravar = "送信";
@@ -34,6 +36,7 @@ $(function () {
         $("<p class='border border-secondary mt-3 p-4 rounded-pill lead'>").append(
           $("<img>").attr("title", msg.UserName).css({
             width: 50,
+            height: 50,
             verticalAlign: 'middle',
             'border-radius': '10px',
           }).attr("src", msg.AvatarURL),

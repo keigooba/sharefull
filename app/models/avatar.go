@@ -1,10 +1,9 @@
 package models
 
 import (
-	"crypto/md5"
 	"errors"
-	"fmt"
-	"strings"
+	"io/ioutil"
+	"path/filepath"
 )
 
 // ErrNoAvatarはAvatarインスタンスがアバターのURLを返すことができない
@@ -18,6 +17,7 @@ type Avatar interface {
 	// 場合にはErrNoAvatarURLを返します。
 	AvatarURL(c *Client) (string, error)
 	GravatarAvatarURL(c *Client) (string, error)
+	UploadAvatarURL(c *Client) (string, error)
 }
 
 type AllAvatar struct{}
@@ -33,10 +33,26 @@ func (_ AllAvatar) AvatarURL(c *Client) (string, error) {
 }
 
 func (_ AllAvatar) GravatarAvatarURL(c *Client) (string, error) {
-	email := c.User.Email
-	if email != "" {
-		md5 := md5.Sum([]byte(strings.ToLower(email)))
-		return fmt.Sprintf("https://www.gravatar.com/avatar/%x", md5), nil
+	avatar_id := c.User.AvatarID
+	if avatar_id != "" {
+		return "https://www.gravatar.com/avatar/" + avatar_id, nil
+	}
+	return "", ErrNoAvatarURL
+}
+
+func (_ AllAvatar) UploadAvatarURL(c *Client) (string, error) {
+	avatar_id := c.User.AvatarID
+	if avatar_id != "" {
+		if files, err := ioutil.ReadDir("app/views/avatars"); err == nil {
+			for _, file := range files {
+				if file.IsDir() {
+					continue
+				}
+				if match, _ := filepath.Match(avatar_id+"*", file.Name()); match {
+					return "/static/avatars/" + file.Name(), nil
+				}
+			}
+		}
 	}
 	return "", ErrNoAvatarURL
 }
