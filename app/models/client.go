@@ -22,10 +22,12 @@ func (c *Client) read() {
 			msg.When = time.Now().Format("15:04")
 			msg.UserName = c.User.Name
 			msg.UserID = c.User.ID
-			if msg.Gravar == "Gravatar送信" { //Gravatarから画像受け取り
+			if msg.Gravar == "Google送信" {
+				msg.AvatarURL, _ = c.room.avatar.AvatarURL(c)
+			} else if msg.Gravar == "Gravatar送信" {
 				msg.AvatarURL, _ = c.room.avatar.GravatarAvatarURL(c)
 			} else {
-				msg.AvatarURL, _ = c.room.avatar.AvatarURL(c)
+				msg.AvatarURL, _ = c.room.avatar.UploadAvatarURL(c)
 			}
 			//ここでメッセージを保存する
 			if err := msg.CreateMessage(); err != nil {

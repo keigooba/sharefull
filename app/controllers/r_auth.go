@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"crypto/md5"
 	"fmt"
 	"log"
 	"net/http"
@@ -135,14 +136,18 @@ func auth(w http.ResponseWriter, r *http.Request) {
 			log.Fatalln("ユーザーの取得に失敗しました", provider, "-", err)
 		}
 
+		//メールアドレスのハッシュ値の生成
+		avatar_byte := md5.Sum([]byte(strings.ToLower(creds_user.Email())))
+		avatar_id := fmt.Sprintf("%x", avatar_byte) //バイト型を文字列に変換する時は%x
 		user := models.User{
 			Name:      creds_user.Name(),
 			Email:     creds_user.Email(),
 			PassWord:  models.RandString(5), //ランダムの5桁で生成
 			AvatarURL: creds_user.AvatarURL(),
+			AvatarID:  avatar_id,
 		}
 		auth_user, err := user.AuthGetUser() //名前とメールアドレスで検索
-		if err != nil { //ない場合生成
+		if err != nil {                      //ない場合生成
 			if err := user.CreateUser(); err != nil {
 				log.Fatalln(err)
 			}

@@ -12,6 +12,7 @@ type User struct {
 	Email     string
 	PassWord  string
 	AvatarURL string
+	AvatarID  string
 	CreatedAt time.Time
 	ApplyID   int
 }
@@ -31,7 +32,8 @@ func (u *User) CreateUser() (err error) {
 		email,
 		password,
 		avatar_url,
-		created_at) values(?, ?, ?, ?, ?, ?)`
+		avatar_id,
+		created_at) values(?, ?, ?, ?, ?, ?, ?)`
 
 	_, err = Db.Exec(cmd,
 		createUUID(),
@@ -39,6 +41,7 @@ func (u *User) CreateUser() (err error) {
 		u.Email,
 		Encrypt(u.PassWord),
 		u.AvatarURL,
+		u.AvatarID,
 		time.Now())
 
 	if err != nil {
@@ -49,13 +52,14 @@ func (u *User) CreateUser() (err error) {
 
 func GetUser(id int) (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, created_at from users where id = ?`
+	cmd := `select id, uuid, name, email, password, avatar_id, created_at from users where id = ?`
 	err = Db.QueryRow(cmd, id).Scan(
 		&user.ID,
 		&user.UUID,
 		&user.Name,
 		&user.Email,
 		&user.PassWord,
+		&user.AvatarID,
 		&user.CreatedAt,
 	)
 	return user, err
@@ -128,9 +132,9 @@ func (sess *Session) DeleteSessionByUUID() error {
 
 func (sess *Session) GetUserBySession() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, avatar_url, created_at from users where id = ?`
+	cmd := `select id, uuid, name, email, password, avatar_url, avatar_id, created_at from users where id = ?`
 	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.AvatarURL,
-		&user.CreatedAt)
+		&user.AvatarID, &user.CreatedAt)
 	if err != nil {
 		log.Println(err)
 	}

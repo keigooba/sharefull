@@ -50,6 +50,7 @@ func init() {
 		email STRING,
 		password STRING,
 		avatar_url STRING,
+		avatar_id STRING,
 		created_at DATETIME)`, tableNameUser)
 
 	Db.Exec(cmdU)

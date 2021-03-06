@@ -1,8 +1,12 @@
 package controllers
 
 import (
+	"fmt"
+	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
+	"path/filepath"
 
 	"github.com/keigooba/sharefull/app/models"
 )
@@ -12,18 +16,37 @@ func userEdit(w http.ResponseWriter, r *http.Request, id int) {
 	if err != nil {
 		http.Redirect(w, r, "/login", 302)
 	} else {
+		user, err := models.GetUser(id)
+		if err != nil {
+			log.Println(err)
+		}
 		if r.Method == "GET" {
-			user, err := models.GetUser(id)
+			data := models.Data{User: user}
+			generateHTML(w, data, "layout", "private_navbar", "user_edit", "js/index")
+		} else if r.Method == "POST" {
+			err := r.ParseMultipartForm(32 << 20)
 			if err != nil {
 				log.Println(err)
 			}
 
-			data := models.Data{User: user}
-			generateHTML(w, data, "layout", "private_navbar", "user_edit", "js/index")
-		} else if r.Method == "POST" {
-			err := r.ParseForm()
+			// サーバー上に画像ファイルを保存
+			file, header, err := r.FormFile("avatar_url")
 			if err != nil {
-				log.Println(err)
+				io.WriteString(w, err.Error())
+				return
+			}
+			defer file.Close()
+			data, err := ioutil.ReadAll(file) //バイト列のデータをすべて持つ
+			if err != nil {
+				io.WriteString(w, err.Error())
+				return
+			}
+			filename := filepath.Join("app/views/avatars", user.AvatarID+filepath.Ext(header.Filename))
+			fmt.Println(filename)
+			err = ioutil.WriteFile(filename, data, 0777)
+			if err != nil {
+				io.WriteString(w, err.Error())
+				return
 			}
 
 			user := &models.User{
