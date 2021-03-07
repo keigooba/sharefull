@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"os"
 
 	"github.com/google/uuid"
 	"github.com/keigooba/sharefull/config"
+	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
 )
 
@@ -38,11 +40,13 @@ const (
 )
 
 func init() {
-	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+	Db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {
-		log.Fatalln(err)
+		Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+		if err != nil {
+			log.Fatalln(err)
+		}
 	}
-
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 		Uuid STRING NOT NULL UNIQUE,
