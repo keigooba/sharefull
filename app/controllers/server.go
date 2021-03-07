@@ -115,7 +115,7 @@ func StartMainServer() error {
 	http.HandleFunc("/apply/status/", parseURL(applyUser))
 	http.HandleFunc("/apply/delete/", parseURL(applyUserDelete))
 	// 本番用ポートがあるか確認
-	port := os.Getenv("PORT");
+	port := os.Getenv("PORT")
 	if port != "" {
 		return http.ListenAndServe(":"+port, nil)
 	} else {
