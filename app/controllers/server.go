@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"os"
 	"regexp"
 	"strconv"
 	"strings"
@@ -113,5 +114,7 @@ func StartMainServer() error {
 	http.HandleFunc("/user/status/", parseURL(userStatus))
 	http.HandleFunc("/apply/status/", parseURL(applyUser))
 	http.HandleFunc("/apply/delete/", parseURL(applyUserDelete))
-	return http.ListenAndServe(":"+config.Config.Port, nil)
+	// return http.ListenAndServe(":"+config.Config.Port, nil)
+	// 本番用ポート
+	return http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 }
