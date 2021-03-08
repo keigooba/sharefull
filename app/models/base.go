@@ -10,7 +10,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/keigooba/sharefull/config"
 	_ "github.com/lib/pq"
-	_ "github.com/mattn/go-sqlite3"
+	// _ "github.com/mattn/go-sqlite3"
 )
 
 var Db *sql.DB
