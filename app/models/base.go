@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"os"
 
 	"github.com/google/uuid"
 	_ "github.com/lib/pq"
@@ -38,7 +39,7 @@ const (
 )
 
 func init() {
-	Db, err := sql.Open("postgres", "host=ec2-54-242-43-231.compute-1.amazonaws.com user=xbvbdmyqrzdjno dbname=d1kg7305bvf6n6 sslmode=disable password=0627faa9325b1a74827905a36003c023334a4ea5072ebef0114eae4ca979bfa1")
+	Db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	// if err != nil {
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
