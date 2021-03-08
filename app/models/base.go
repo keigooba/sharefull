@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
-	"os"
 
 	"github.com/google/uuid"
 	"github.com/keigooba/sharefull/config"
@@ -40,7 +39,7 @@ const (
 )
 
 func init() {
-	Db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	Db, err := sql.Open("postgres", "dbname=sharefull sslmode=disable")
 	if err != nil {
 		Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 		if err != nil {
