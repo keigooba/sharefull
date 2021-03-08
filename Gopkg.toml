@@ -24,6 +24,10 @@
 #   go-tests = true
 #   unused-packages = true
 
+[metadata.heroku]
+  root-package = "github.com/heroku/sharefull"
+  go-version = "1.15.6"
+  install = [ "./..." ]
 
 [[constraint]]
   name = "github.com/google/uuid"
