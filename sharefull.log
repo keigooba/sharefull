@@ -5520,3 +5520,201 @@ created by net/http.(*Server).Serve
 2021/03/05 17:31:28 main.go:15: success
 2021/03/05 17:31:38 main.go:15: success
 2021/03/08 16:46:50 main.go:15: success
+2021/03/08 17:19:34 server.go:3095: http: panic serving [::1]:58423: runtime error: invalid memory address or nil pointer dereference
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0000b8be0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x1591f60, 0x19eac80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x16e97e0, 0xc000024078, 0x10cef01, 0x162c535, 0x9, 0xc0002113c0)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc00009ec93, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0002116b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc009956588bb65b8, 0x35daf1cec, 0x19fd100, 0x162c971, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x16e78e0, 0xc0000fe0e0, 0xc0000ec300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x16525c8, 0x16e78e0, 0xc0000fe0e0, 0xc0000ec300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e78e0, 0xc0000fe0e0, 0xc0000ec300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000fe000, 0x16e78e0, 0xc0000fe0e0, 0xc0000ec300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b8be0, 0x16e97a0, 0xc0000b1700)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:19:35 server.go:3095: http: panic serving [::1]:58431: runtime error: invalid memory address or nil pointer dereference
+goroutine 51 [running]:
+net/http.(*conn).serve.func1(0xc000119400)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x1591f60, 0x19eac80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x16e97e0, 0xc000024078, 0x164c801, 0x2, 0xa, 0xa)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc00009ec93, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0001556b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc0099565cb685960, 0x39bf66367, 0x19fd100, 0x162c971, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x16e78e0, 0xc0002180e0, 0xc000158100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x16525c8, 0x16e78e0, 0xc0002180e0, 0xc000158100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e78e0, 0xc0002180e0, 0xc000158100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000fe000, 0x16e78e0, 0xc0002180e0, 0xc000158100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119400, 0x16e97a0, 0xc000036a40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:19:40 server.go:3095: http: panic serving [::1]:58444: runtime error: invalid memory address or nil pointer dereference
+goroutine 53 [running]:
+net/http.(*conn).serve.func1(0xc0001194a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x1591f60, 0x19eac80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x16e97e0, 0xc000024078, 0x164c801, 0x2, 0xa, 0xa)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc00009ec93, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0001556b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc00995670cfc4f70, 0x4c78dfc03, 0x19fd100, 0x162c971, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x16e78e0, 0xc0002182a0, 0xc000158200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x16525c8, 0x16e78e0, 0xc0002182a0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e78e0, 0xc0002182a0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000fe000, 0x16e78e0, 0xc0002182a0, 0xc000158200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001194a0, 0x16e97a0, 0xc000036b80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:20:10 server.go:3095: http: panic serving [::1]:58537: runtime error: invalid memory address or nil pointer dereference
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc0001a0000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x1591f60, 0x19eac80)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x16e97e0, 0xc000024078, 0x164c801, 0x2, 0xa, 0xa)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc00009ec93, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x16e97e0, 0xc000024078, 0x164c111, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0001556b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc009956e8e2e43a8, 0xbc4d5df22, 0x19fd100, 0x162c971, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x16e78e0, 0xc0001a80e0, 0xc0001a4000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x16525c8, 0x16e78e0, 0xc0001a80e0, 0xc0001a4000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e78e0, 0xc0001a80e0, 0xc0001a4000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000fe000, 0x16e78e0, 0xc0001a80e0, 0xc0001a4000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a0000, 0x16e97a0, 0xc00019c080)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:21:10 server.go:3095: http: panic serving [::1]:58718: runtime error: invalid memory address or nil pointer dereference
+goroutine 51 [running]:
+net/http.(*conn).serve.func1(0xc0002a0280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a00, 0x4b56a60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x4833ac0, 0xc00019c008, 0x40cf101, 0x4772b4d, 0x9, 0xc00028b3c0)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc000282143, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc00028b6b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc009957d8fa4fd58, 0x2eb2e2d15, 0x4b6b860, 0x4772f89, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x4831bc0, 0xc0002c61c0, 0xc0002be100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x4799b50, 0x4831bc0, 0xc0002c61c0, 0xc0002be100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b620, 0x4831bc0, 0xc0002c61c0, 0xc0002be100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0002c6000, 0x4831bc0, 0xc0002c61c0, 0xc0002be100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002a0280, 0x4833a80, 0xc0002941c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:21:46 server.go:3095: http: panic serving [::1]:58825: runtime error: invalid memory address or nil pointer dereference
+goroutine 46 [running]:
+net/http.(*conn).serve.func1(0xc0000d4000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a00, 0x4b56a60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x4833ac0, 0xc00019c008, 0x1, 0x0, 0x0, 0x0)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc000282143, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0001e76b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc0099586a81e3bb0, 0xb655b27fe, 0x4b6b860, 0x4772f89, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x4831bc0, 0xc0000dc0e0, 0xc0000d8000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x4799b50, 0x4831bc0, 0xc0000dc0e0, 0xc0000d8000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b620, 0x4831bc0, 0xc0000dc0e0, 0xc0000d8000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0002c6000, 0x4831bc0, 0xc0000dc0e0, 0xc0000d8000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d4000, 0x4833a80, 0xc00009a3c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:21:47 server.go:3095: http: panic serving [::1]:58826: runtime error: invalid memory address or nil pointer dereference
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc0000d40a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a00, 0x4b56a60)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*DB).conn(0x0, 0x4833ac0, 0xc00019c008, 0x1, 0x0, 0x0, 0x0)
+	/usr/local/go/src/database/sql/sql.go:1190 +0x41
+database/sql.(*DB).query(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x1, 0xc000282143, ...)
+	/usr/local/go/src/database/sql/sql.go:1616 +0x66
+database/sql.(*DB).QueryContext(0x0, 0x4833ac0, 0xc00019c008, 0x4793678, 0xb5, 0x0, 0x0, 0x0, 0x2, 0xc0001e76b0, ...)
+	/usr/local/go/src/database/sql/sql.go:1598 +0xd1
+database/sql.(*DB).Query(...)
+	/usr/local/go/src/database/sql/sql.go:1612
+github.com/keigooba/sharefull/app/models.GetWorks(0xc0099586ea17e8d0, 0xba2ef2595, 0x4b6b860, 0x4772f89, 0xa)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/works.go:65 +0x85
+github.com/keigooba/sharefull/app/controllers.index(0x4831bc0, 0xc0000dc2a0, 0xc0000d8100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_main.go:18 +0x91
+net/http.HandlerFunc.ServeHTTP(0x4799b50, 0x4831bc0, 0xc0000dc2a0, 0xc0000d8100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b620, 0x4831bc0, 0xc0000dc2a0, 0xc0000d8100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0002c6000, 0x4831bc0, 0xc0000dc2a0, 0xc0000d8100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d40a0, 0x4833a80, 0xc00009a500)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/08 17:21:58 main.go:15: success
+2021/03/08 17:23:05 main.go:15: success
