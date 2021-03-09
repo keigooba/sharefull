@@ -4,11 +4,11 @@ import (
 	"crypto/sha1"
 	"database/sql"
 	"fmt"
-	"log"
 	"math/rand"
 	"os"
 
 	"github.com/google/uuid"
+	"github.com/lib/pq"
 	_ "github.com/lib/pq"
 	/// _ "github.com/mattn/go-sqlite3"
 )
@@ -39,12 +39,15 @@ const (
 )
 
 func init() {
-	Db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	url := os.Getenv("DATABASE_URL")
+	connection, err := pq.ParseURL(url)
 	// if err != nil {
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
-		log.Fatalf("db接続でエラー %v", err)
+		panic(err.Error())
 	}
+	connection += " sslmode=require"
+	Db, _ := sql.Open("postgres", connection)
 	// }
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 		id INTEGER PRIMARY KEY AUTOINCREMENT,
