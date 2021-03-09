@@ -43,7 +43,7 @@ func init() {
 	// if err != nil {
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatalf("db接続でエラー %v", err)
 	}
 	// }
 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
