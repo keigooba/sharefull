@@ -9,7 +9,6 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/lib/pq"
-	_ "github.com/lib/pq"
 	/// _ "github.com/mattn/go-sqlite3"
 )
 
@@ -40,12 +39,12 @@ const (
 
 func init() {
 	url := os.Getenv("DATABASE_URL")
-	connection, err := pq.ParseURL(url)
+	connection, _ := pq.ParseURL(url)
 	// if err != nil {
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
-	if err != nil {
-		panic(err.Error())
-	}
+	// if err != nil {
+	// 	panic(err.Error())
+	// }
 	connection += " sslmode=require"
 	Db, _ := sql.Open("postgres", connection)
 	// }
