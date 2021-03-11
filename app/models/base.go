@@ -7,7 +7,7 @@ import (
 	"math/rand"
 
 	"github.com/google/uuid"
-	_ "github.com/mattn/go-sqlite3"
+	// _ "github.com/mattn/go-sqlite3"
 )
 
 var Db *sql.DB
