@@ -18,7 +18,7 @@ func (u *User) CreateApplyUser(id int) error {
 		uuid,
 		work_id,
 		user_id,
-		created_at) values (?, ?, ?, ?)`
+		created_at) values ($1, $2, $3, $4)`
 
 	_, err = Db.Exec(cmd, createUUID(), id, u.ID, time.Now())
 	if err != nil {
@@ -28,7 +28,7 @@ func (u *User) CreateApplyUser(id int) error {
 }
 
 func GetApplyUsersByUserID(id int) (works_id []int, err error) {
-	cmd := `select work_id from apply_users where user_id = ?`
+	cmd := `select work_id from apply_users where user_id = $1`
 	rows, err := Db.Query(cmd, id)
 	if err != nil {
 		log.Println(err)
@@ -50,7 +50,7 @@ func GetApplyUsersByUserID(id int) (works_id []int, err error) {
 }
 
 func GetApplyUsersByWorkID(id int) (applys_id []int, users_id []int, err error) {
-	cmd := `select id, user_id from apply_users where work_id = ?`
+	cmd := `select id, user_id from apply_users where work_id = $1`
 	rows, err := Db.Query(cmd, id)
 	if err != nil {
 		log.Fatalln(err)
@@ -71,7 +71,7 @@ func GetApplyUsersByWorkID(id int) (applys_id []int, users_id []int, err error) 
 }
 
 func ApplyUserDelete(id int) error {
-	cmd := `delete from apply_users where id = ?`
+	cmd := `delete from apply_users where id = $1`
 	_, err := Db.Exec(cmd, id)
 	if err != nil {
 		log.Fatalln(err)

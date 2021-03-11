@@ -5718,3 +5718,722 @@ created by net/http.(*Server).Serve
 	/usr/local/go/src/net/http/server.go:2969 +0x36c
 2021/03/08 17:21:58 main.go:15: success
 2021/03/08 17:23:05 main.go:15: success
+2021/03/11 16:21:41 main.go:15: success
+2021/03/11 16:23:31 main.go:15: success
+2021/03/11 16:24:18 users.go:150: Google認証の新規ユーザーです
+2021/03/11 16:24:18 users.go:48: pq: syntax error at or near ","
+2021/03/11 16:28:26 main.go:15: success
+2021/03/11 16:28:53 r_auth.go:43: pq: syntax error at or near "and"
+2021/03/11 16:28:53 users.go:91: pq: syntax error at or near ","
+2021/03/11 17:10:10 main.go:15: success
+2021/03/11 17:10:33 r_auth.go:43: pq: syntax error at or near "and"
+2021/03/11 17:10:33 users.go:92: pq: syntax error at or near ","
+2021/03/11 17:12:06 main.go:15: success
+2021/03/11 17:12:19 users.go:92: pq: syntax error at or near ","
+2021/03/11 17:13:25 main.go:15: success
+2021/03/11 18:05:43 main.go:15: success
+2021/03/11 18:06:22 works.go:40: pq: syntax error at or near ","
+2021/03/11 18:09:09 main.go:15: success
+2021/03/11 18:21:45 users.go:160: Google認証の新規ユーザーです
+2021/03/11 18:32:48 works.go:72: dial tcp 54.242.43.231:5432: connect: operation timed out
+2021/03/11 19:35:36 main.go:15: success
+2021/03/11 19:35:57 r_auth.go:79: sql: no rows in result set
+2021/03/11 19:36:09 r_auth.go:79: sql: no rows in result set
+2021/03/11 19:39:43 r_auth.go:79: sql: no rows in result set
+2021/03/11 19:39:49 r_auth.go:79: sql: no rows in result set
+2021/03/11 20:12:15 main.go:15: success
+2021/03/11 20:17:53 main.go:15: success
+2021/03/11 20:20:44 main.go:15: success
+2021/03/11 20:23:01 main.go:15: success
+2021/03/11 20:26:49 main.go:15: success
+2021/03/11 20:26:51 works.go:72: no such function: to_date
+2021/03/11 20:27:31 main.go:15: success
+2021/03/11 20:33:52 main.go:15: success
+2021/03/11 20:36:17 works.go:72: dial tcp 54.242.43.231:5432: connect: operation timed out
+2021/03/11 20:36:31 main.go:15: success
+2021/03/11 20:37:32 main.go:15: success
+2021/03/11 20:39:55 main.go:15: success
+2021/03/12 04:58:05 main.go:15: success
+2021/03/12 05:05:35 main.go:15: success
+2021/03/12 05:13:46 main.go:15: success
+2021/03/12 05:15:09 main.go:15: success
+2021/03/12 05:15:37 main.go:15: success
+2021/03/12 05:15:44 main.go:15: success
+2021/03/12 05:24:55 main.go:15: success
+2021/03/12 05:26:54 main.go:15: success
+2021/03/12 05:27:11 message.go:70: no such function: to_char
+2021/03/12 05:27:11 server.go:3095: http: panic serving [::1]:50465: runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc0001121e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000144510)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc00002cad2, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc000034f80)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00013a1c0, 0xc00010cd00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00013a1c0, 0xc00010cd00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00013a1c0, 0xc00010cd00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00013a1c0, 0xc00010cd00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001121e0, 0x4833ac0, 0xc0000341c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:11 message.go:70: no such function: to_char
+2021/03/12 05:27:11 server.go:3095: http: panic serving [::1]:50467: runtime error: invalid memory address or nil pointer dereference
+goroutine 54 [running]:
+net/http.(*conn).serve.func1(0xc000336140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0000bb5f0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000bc752, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc0000a5a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc0002801c0, 0xc00030eb00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc0002801c0, 0xc00030eb00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc0002801c0, 0xc00030eb00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc0002801c0, 0xc00030eb00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000336140, 0x4833ac0, 0xc0003010c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:12 message.go:70: no such function: to_char
+2021/03/12 05:27:12 server.go:3095: http: panic serving [::1]:50468: runtime error: invalid memory address or nil pointer dereference
+goroutine 46 [running]:
+net/http.(*conn).serve.func1(0xc0000d4140)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0000bb830)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000bc912, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc0000a5b40)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc0002802a0, 0xc0000b9700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc0002802a0, 0xc0000b9700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc0002802a0, 0xc0000b9700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc0002802a0, 0xc0000b9700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d4140, 0x4833ac0, 0xc0000a5a40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:15 message.go:70: no such function: to_char
+2021/03/12 05:27:15 server.go:3095: http: panic serving [::1]:50470: runtime error: invalid memory address or nil pointer dereference
+goroutine 55 [running]:
+net/http.(*conn).serve.func1(0xc0003361e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000144750)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc00002cfd2, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc000035600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00013a2a0, 0xc00010d000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00013a2a0, 0xc00010d000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00013a2a0, 0xc00010d000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00013a2a0, 0xc00010d000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0003361e0, 0x4833ac0, 0xc000301180)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:15 message.go:70: no such function: to_char
+2021/03/12 05:27:15 server.go:3095: http: panic serving [::1]:50472: runtime error: invalid memory address or nil pointer dereference
+goroutine 60 [running]:
+net/http.(*conn).serve.func1(0xc000336280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc00032e7e0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000314b52, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc000301a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00034a1c0, 0xc00030f600)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00034a1c0, 0xc00030f600)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00034a1c0, 0xc00030f600)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00034a1c0, 0xc00030f600)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000336280, 0x4833ac0, 0xc000301900)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:16 message.go:70: no such function: to_char
+2021/03/12 05:27:16 server.go:3095: http: panic serving [::1]:50473: runtime error: invalid memory address or nil pointer dereference
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc0000d41e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0000bba70)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000bcad2, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc0000a5f80)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc000280380, 0xc0000b9800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc000280380, 0xc0000b9800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc000280380, 0xc0000b9800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc000280380, 0xc0000b9800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d41e0, 0x4833ac0, 0xc0000a5e80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:19 message.go:70: no such function: to_char
+2021/03/12 05:27:19 server.go:3095: http: panic serving [::1]:50474: runtime error: invalid memory address or nil pointer dereference
+goroutine 62 [running]:
+net/http.(*conn).serve.func1(0xc000336320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000144990)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc00002d112, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc0000357c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00013a380, 0xc0000b9c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00013a380, 0xc0000b9c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00013a380, 0xc0000b9c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00013a380, 0xc0000b9c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000336320, 0x4833ac0, 0xc000301a40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:19 message.go:70: no such function: to_char
+2021/03/12 05:27:19 server.go:3095: http: panic serving [::1]:50475: runtime error: invalid memory address or nil pointer dereference
+goroutine 67 [running]:
+net/http.(*conn).serve.func1(0xc0000d43c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000144bd0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc00002d252, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc000035880)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00013a460, 0xc0000b9d00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00013a460, 0xc0000b9d00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00013a460, 0xc0000b9d00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00013a460, 0xc0000b9d00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000d43c0, 0x4833ac0, 0xc0002e2a40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:27:20 message.go:70: no such function: to_char
+2021/03/12 05:27:20 server.go:3095: http: panic serving [::1]:50476: runtime error: invalid memory address or nil pointer dereference
+goroutine 98 [running]:
+net/http.(*conn).serve.func1(0xc0003363c0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc00032ecf0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000314e92, 0x1e, 0x476d356, 0x1, 0x0, 0x3, 0xc00037e000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831c00, 0xc00034a380, 0xc00030fc00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799bb0, 0x4831c00, 0xc00034a380, 0xc00030fc00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00034a380, 0xc00030fc00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00013a000, 0x4831c00, 0xc00034a380, 0xc00030fc00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0003363c0, 0x4833ac0, 0xc000301f00)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:28:13 main.go:15: success
+2021/03/12 05:29:13 server.go:3095: http: panic serving [::1]:50480: runtime error: invalid memory address or nil pointer dereference
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc00021a280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0x4833b00)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetChatUUIDByUserID(0x1, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:51 +0x138
+github.com/keigooba/sharefull/app/controllers.userStatus(0x4831c00, 0xc00024a380, 0xc0000ab400, 0x1)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:119 +0x5a6
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x4831c00, 0xc00024a380, 0xc0000ab400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:71 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000208260, 0x4831c00, 0xc00024a380, 0xc0000ab400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc00024a380, 0xc0000ab400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024a000, 0x4831c00, 0xc00024a380, 0xc0000ab400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00021a280, 0x4833ac0, 0xc0002041c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:29:13 server.go:3095: http: panic serving [::1]:50490: runtime error: invalid memory address or nil pointer dereference
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000119e00)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0x4833b00)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetChatUUIDByUserID(0x1, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:51 +0x138
+github.com/keigooba/sharefull/app/controllers.userStatus(0x4831c00, 0xc0001ac000, 0xc000158700, 0x1)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:119 +0x5a6
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x4831c00, 0xc0001ac000, 0xc000158700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:71 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000208260, 0x4831c00, 0xc0001ac000, 0xc000158700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc0001ac000, 0xc000158700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024a000, 0x4831c00, 0xc0001ac000, 0xc000158700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119e00, 0x4833ac0, 0xc00019e9c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:29:14 server.go:3095: http: panic serving [::1]:50491: runtime error: invalid memory address or nil pointer dereference
+goroutine 12 [running]:
+net/http.(*conn).serve.func1(0xc000119ea0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d6a60, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0x4833b00)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetChatUUIDByUserID(0x1, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:51 +0x138
+github.com/keigooba/sharefull/app/controllers.userStatus(0x4831c00, 0xc0001ac0e0, 0xc000158800, 0x1)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:119 +0x5a6
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x4831c00, 0xc0001ac0e0, 0xc000158800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:71 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000208260, 0x4831c00, 0xc0001ac0e0, 0xc000158800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831c00, 0xc0001ac0e0, 0xc000158800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00024a000, 0x4831c00, 0xc0001ac0e0, 0xc000158800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000119ea0, 0x4833ac0, 0xc00019eb40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:29:22 main.go:15: success
+2021/03/12 05:34:09 main.go:15: success
+2021/03/12 05:38:45 message.go:70: no such function: to_char
+2021/03/12 05:38:45 server.go:3095: http: panic serving [::1]:50533: runtime error: invalid memory address or nil pointer dereference
+goroutine 15 [running]:
+net/http.(*conn).serve.func1(0xc00020e500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0001aabd0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440012, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc00042c800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0001c0380, 0xc000195700)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0001c0380, 0xc000195700)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0001c0380, 0xc000195700)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0001c0380, 0xc000195700)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00020e500, 0x4833a40, 0xc0000354c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:38:45 message.go:70: no such function: to_char
+2021/03/12 05:38:45 server.go:3095: http: panic serving [::1]:50534: runtime error: invalid memory address or nil pointer dereference
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc0000b9d60)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0001aad80)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440152, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc00042c880)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0001c0460, 0xc000494000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0001c0460, 0xc000494000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0001c0460, 0xc000494000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0001c0460, 0xc000494000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b9d60, 0x4833a40, 0xc000156000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:38:45 message.go:70: no such function: to_char
+2021/03/12 05:38:45 server.go:3095: http: panic serving [::1]:50532: runtime error: invalid memory address or nil pointer dereference
+goroutine 14 [running]:
+net/http.(*conn).serve.func1(0xc00020e460)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0000c8ab0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000b4392, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000156380)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc00015c1c0, 0xc0003a2200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc00015c1c0, 0xc0003a2200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc00015c1c0, 0xc0003a2200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc00015c1c0, 0xc0003a2200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00020e460, 0x4833a40, 0xc000035400)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:38:45 message.go:70: no such function: to_char
+2021/03/12 05:38:45 server.go:3095: http: panic serving [::1]:50517: runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+net/http.(*conn).serve.func1(0xc00020e280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0001aaf30)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440292, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc00042c940)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0001c0540, 0xc000195400)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0001c0540, 0xc000195400)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0001c0540, 0xc000195400)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0001c0540, 0xc000195400)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00020e280, 0x4833a40, 0xc000034180)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:38:45 message.go:70: no such function: to_char
+2021/03/12 05:38:45 server.go:3095: http: panic serving [::1]:50540: runtime error: invalid memory address or nil pointer dereference
+goroutine 70 [running]:
+net/http.(*conn).serve.func1(0xc00048e0a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000498480)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0004a0212, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc0004848c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0004a80e0, 0xc000494900)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0004a80e0, 0xc000494900)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0004a80e0, 0xc000494900)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0004a80e0, 0xc000494900)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00048e0a0, 0x4833a40, 0xc0004847c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:38:46 message.go:70: no such function: to_char
+2021/03/12 05:38:46 server.go:3095: http: panic serving [::1]:50541: runtime error: invalid memory address or nil pointer dereference
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0xc0001ac500)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0001ab170)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440452, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc00042ca80)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0001c0620, 0xc000195800)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0001c0620, 0xc000195800)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0001c0620, 0xc000195800)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0001c0620, 0xc000195800)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001ac500, 0x4833a40, 0xc00042c980)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:07 message.go:70: no such function: to_char
+2021/03/12 05:39:07 server.go:3095: http: panic serving [::1]:50546: runtime error: invalid memory address or nil pointer dereference
+goroutine 30 [running]:
+net/http.(*conn).serve.func1(0xc0000b9ea0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0000c8000)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0004a0912, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000485c40)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0004a8380, 0xc000101a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0004a8380, 0xc000101a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0004a8380, 0xc000101a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0004a8380, 0xc000101a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b9ea0, 0x4833a40, 0xc000156980)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:07 message.go:70: no such function: to_char
+2021/03/12 05:39:07 server.go:3095: http: panic serving [::1]:50542: runtime error: invalid memory address or nil pointer dereference
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc0000b9e00)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000498120)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000b4012, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000156140)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc00023a0e0, 0xc000101200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc00023a0e0, 0xc000101200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc00023a0e0, 0xc000101200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc00023a0e0, 0xc000101200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b9e00, 0x4833a40, 0xc0001563c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:07 message.go:70: no such function: to_char
+2021/03/12 05:39:07 server.go:3095: http: panic serving [::1]:50545: runtime error: invalid memory address or nil pointer dereference
+goroutine 48 [running]:
+net/http.(*conn).serve.func1(0xc0001ac6e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0004982d0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000b4192, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000156240)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc00023a1c0, 0xc000101000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc00023a1c0, 0xc000101000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc00023a1c0, 0xc000101000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc00023a1c0, 0xc000101000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001ac6e0, 0x4833a40, 0xc00042d340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:07 message.go:70: no such function: to_char
+2021/03/12 05:39:07 server.go:3095: http: panic serving [::1]:50547: runtime error: invalid memory address or nil pointer dereference
+goroutine 116 [running]:
+net/http.(*conn).serve.func1(0xc00020e280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc00058e1b0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440092, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000034240)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0004a8000, 0xc000100000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0004a8000, 0xc000100000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0004a8000, 0xc000100000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0004a8000, 0xc000100000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00020e280, 0x4833a40, 0xc000034040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:08 message.go:70: no such function: to_char
+2021/03/12 05:39:08 server.go:3095: http: panic serving [::1]:50548: runtime error: invalid memory address or nil pointer dereference
+goroutine 132 [running]:
+net/http.(*conn).serve.func1(0xc0001ac000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000498510)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000b4352, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000156380)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc00023a2a0, 0xc000194100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc00023a2a0, 0xc000194100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc00023a2a0, 0xc000194100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc00023a2a0, 0xc000194100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001ac000, 0x4833a40, 0xc000156280)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:13 message.go:70: no such function: to_char
+2021/03/12 05:39:13 server.go:3095: http: panic serving [::1]:50549: runtime error: invalid memory address or nil pointer dereference
+goroutine 51 [running]:
+net/http.(*conn).serve.func1(0xc0003b60a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc0003d01b0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0004a0092, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc00042c1c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0003dc000, 0xc0003a2100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0003dc000, 0xc0003a2100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0003dc000, 0xc0003a2100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0003dc000, 0xc0003a2100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0003b60a0, 0x4833a40, 0xc00042c000)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:39:43 message.go:70: no such function: to_char
+2021/03/12 05:39:43 server.go:3095: http: panic serving [::1]:50552: runtime error: invalid memory address or nil pointer dereference
+goroutine 134 [running]:
+net/http.(*conn).serve.func1(0xc0001ac0a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc000498750)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc0000b4592, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc000156580)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc00023a380, 0xc000194200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc00023a380, 0xc000194200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc00023a380, 0xc000194200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc00023a380, 0xc000194200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001ac0a0, 0x4833a40, 0xc000156440)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:40:43 message.go:70: no such function: to_char
+2021/03/12 05:40:43 server.go:3095: http: panic serving [::1]:50555: runtime error: invalid memory address or nil pointer dereference
+goroutine 118 [running]:
+net/http.(*conn).serve.func1(0xc00020e320)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46d69a0, 0x4b56a40)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+database/sql.(*Rows).Next(0x0, 0xc00058e3f0)
+	/usr/local/go/src/database/sql/sql.go:2835 +0x30
+github.com/keigooba/sharefull/app/models.GetMessagesByUUID(0xc000440292, 0x1e, 0x476d296, 0x1, 0x0, 0x3, 0xc0000343c0)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/models/message.go:74 +0x1d3
+github.com/keigooba/sharefull/app/controllers.chatMessage(0x4831b80, 0xc0004a80e0, 0xc000100200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_chat.go:45 +0x229
+net/http.HandlerFunc.ServeHTTP(0x4799af0, 0x4831b80, 0xc0004a80e0, 0xc000100200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831b80, 0xc0004a80e0, 0xc000100200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00023a000, 0x4831b80, 0xc0004a80e0, 0xc000100200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00020e320, 0x4833a40, 0xc0000342c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 05:41:50 main.go:15: success
+2021/03/12 05:43:50 main.go:15: success
+2021/03/12 05:50:14 main.go:15: success
+2021/03/12 05:55:26 main.go:15: success
+2021/03/12 05:55:39 users.go:150: Google認証の新規ユーザーです
+2021/03/12 06:02:24 main.go:15: success
+2021/03/12 06:11:11 main.go:15: success
+2021/03/12 06:11:53 main.go:15: success
+2021/03/12 06:12:03 works.go:69: pq: operator does not exist: character >= date
+2021/03/12 06:12:30 main.go:15: success
+2021/03/12 06:14:14 main.go:15: success
+2021/03/12 06:15:02 main.go:15: success
+2021/03/12 06:15:03 works.go:69: pq: function to_char(character, unknown) does not exist
+2021/03/12 06:16:23 main.go:15: success
+2021/03/12 06:16:26 works.go:69: pq: invalid value "03-17" for "Mon"
+2021/03/12 06:16:48 main.go:15: success
+2021/03/12 06:16:51 works.go:69: pq: date/time field value out of range: "2021-03-17"
+2021/03/12 06:18:23 main.go:15: success
+2021/03/12 06:23:10 main.go:15: success
+2021/03/12 06:24:10 main.go:15: success
+2021/03/12 06:26:58 main.go:15: success
+2021/03/12 06:30:05 server.go:3095: http: panic serving [::1]:51118: template: user_status.html:23: unterminated quoted string
+goroutine 32 [running]:
+net/http.(*conn).serve.func1(0xc0001e00a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46c7020, 0xc000332800)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x4831ae0, 0xc00017a620, 0x47457a0, 0xc000300c80, 0xc0002d3380, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x4831ae0, 0xc00017a620, 0xc0001f0a00, 0x5)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:122 +0x79c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x4831ae0, 0xc00017a620, 0xc0001f0a00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:71 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0000212f0, 0x4831ae0, 0xc00017a620, 0xc0001f0a00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831ae0, 0xc00017a620, 0xc0001f0a00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00017a000, 0x4831ae0, 0xc00017a620, 0xc0001f0a00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001e00a0, 0x48339e0, 0xc0001bf440)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 06:30:12 server.go:3095: http: panic serving [::1]:51123: template: user_status.html:23: unterminated quoted string
+goroutine 70 [running]:
+net/http.(*conn).serve.func1(0xc0001e0b40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x46c7020, 0xc000390520)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x4831ae0, 0xc0001bc1c0, 0x47457a0, 0xc0000e5b80, 0xc0000f3380, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:21 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x4831ae0, 0xc0001bc1c0, 0xc0001f0b00, 0x5)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:122 +0x79c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x4831ae0, 0xc0001bc1c0, 0xc0001f0b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:71 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0000212f0, 0x4831ae0, 0xc0001bc1c0, 0xc0001f0b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x4b6b600, 0x4831ae0, 0xc0001bc1c0, 0xc0001f0b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc00017a000, 0x4831ae0, 0xc0001bc1c0, 0xc0001f0b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001e0b40, 0x48339e0, 0xc0001fe380)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/12 06:35:42 main.go:15: success
+2021/03/12 07:08:10 main.go:15: success
+2021/03/12 07:25:16 main.go:15: success

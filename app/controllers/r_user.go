@@ -31,22 +31,20 @@ func userEdit(w http.ResponseWriter, r *http.Request, id int) {
 
 			// サーバー上に画像ファイルを保存
 			file, header, err := r.FormFile("avatar_url")
-			if err != nil {
-				io.WriteString(w, err.Error())
-				return
-			}
-			defer file.Close()
-			data, err := ioutil.ReadAll(file) //バイト列のデータをすべて持つ
-			if err != nil {
-				io.WriteString(w, err.Error())
-				return
-			}
-			filename := filepath.Join("app/views/avatars", user.AvatarID+filepath.Ext(header.Filename))
-			fmt.Println(filename)
-			err = ioutil.WriteFile(filename, data, 0777)
-			if err != nil {
-				io.WriteString(w, err.Error())
-				return
+			if err == nil { //画像送信をチェック
+				defer file.Close()
+				data, err := ioutil.ReadAll(file) //バイト列のデータをすべて持つ
+				if err != nil {
+					io.WriteString(w, err.Error())
+					return
+				}
+				filename := filepath.Join("app/views/avatars", user.AvatarID+filepath.Ext(header.Filename))
+				fmt.Println(filename)
+				err = ioutil.WriteFile(filename, data, 0777)
+				if err != nil {
+					io.WriteString(w, err.Error())
+					return
+				}
 			}
 
 			user := &models.User{
