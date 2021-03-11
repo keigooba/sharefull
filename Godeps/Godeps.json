@@ -34,11 +34,6 @@
 			"Rev": "4604d39ddc9f62e2ca152114c73aec99b77a3468"
 		},
 		{
-			"ImportPath": "github.com/mattn/go-sqlite3",
-			"Comment": "v1.14.6-1-g3cbdae7",
-			"Rev": "3cbdae750e52afa881060732446298f98131e834"
-		},
-		{
 			"ImportPath": "github.com/stretchr/codecs",
 			"Rev": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4"
 		},
