@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"html/template"
 	"net/http"
-	"os"
 	"regexp"
 	"strconv"
 	"strings"
@@ -115,10 +114,10 @@ func StartMainServer() error {
 	http.HandleFunc("/apply/status/", parseURL(applyUser))
 	http.HandleFunc("/apply/delete/", parseURL(applyUserDelete))
 	// 本番用ポートがあるか確認
-	port := os.Getenv("PORT")
+	// port := os.Getenv("PORT")
 	// if port != "" {
-		return http.ListenAndServe(":"+port, nil)
+	// return http.ListenAndServe(":"+port, nil)
 	// } else {
-	// 	return http.ListenAndServe(":"+config.Config.Port, nil)
+	return http.ListenAndServe(":"+config.Config.Port, nil)
 	// }
 }

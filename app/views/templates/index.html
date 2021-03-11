@@ -10,17 +10,7 @@
             <p>日付：{{.Date}}</p>
             <p>タイトル：{{.Title}}</p>
             <p>金額：{{.Money}}円</p>
-            <p>職種：
-                {{if eq .JobID "0"}}エキストラ{{end}}
-                {{if eq .JobID "1"}}データ入力{{end}}
-                {{if eq .JobID "2"}}モニターバイト{{end}}
-                {{if eq .JobID "3"}}仕分けバイト{{end}}
-                {{if eq .JobID "4"}}工場バイト{{end}}
-                {{if eq .JobID "5"}}カフェ{{end}}
-                {{if eq .JobID "6"}}コールセンター{{end}}
-                {{if eq .JobID "7"}}イベントスタッフ{{end}}
-                {{if eq .JobID "8"}}試験監督{{end}}
-            </p>
+            <p>職種：{{.JobID}}</p>
             <a href="/work/edit/{{.ID}}">編集</a>
             <a href="/work/delete/{{.ID}}">削除</a>
             <a href="work/apply/{{.ID}}" class="text-danger">応募</a>

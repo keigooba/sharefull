@@ -33,7 +33,7 @@ func (u *User) CreateUser() (err error) {
 		password,
 		avatar_url,
 		avatar_id,
-		created_at) values(?, ?, ?, ?, ?, ?, ?)`
+		created_at) values($1, $2, $3, $4, $5, $6, $7)`
 
 	_, err = Db.Exec(cmd,
 		createUUID(),
@@ -52,7 +52,7 @@ func (u *User) CreateUser() (err error) {
 
 func GetUser(id int) (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, avatar_id, created_at from users where id = ?`
+	cmd := `select id, uuid, name, email, password, avatar_id, created_at from users where id = $1`
 	err = Db.QueryRow(cmd, id).Scan(
 		&user.ID,
 		&user.UUID,
@@ -66,7 +66,7 @@ func GetUser(id int) (user User, err error) {
 }
 
 func (u *User) UpdateUser() error {
-	cmd := `update users set name = ?, email = ?, password = ? where id = ?`
+	cmd := `update users set name = $1, email = $2, password = $3 where id = $4`
 	_, err = Db.Exec(cmd, u.Name, u.Email, Encrypt(u.PassWord), u.ID)
 	if err != nil {
 		log.Fatalln(err)
@@ -75,7 +75,7 @@ func (u *User) UpdateUser() error {
 }
 
 func (u *User) DeleteUser() error {
-	cmd := `delete from users where id = ?`
+	cmd := `delete from users where id = $1`
 	_, err = Db.Exec(cmd, u.ID)
 	if err != nil {
 		log.Fatalln(err)
@@ -85,13 +85,13 @@ func (u *User) DeleteUser() error {
 
 func (u *User) CreateSession() (session Session, err error) {
 	session = Session{}
-	cmd1 := `insert into sessions (uuid, email, user_id, created_at) values(?, ?, ?, ?)`
+	cmd1 := `insert into sessions (uuid, email, user_id, created_at) values($1, $2, $3, $4)`
 	_, err = Db.Exec(cmd1, createUUID(), u.Email, u.ID, time.Now())
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	cmd2 := `select id, uuid, email, user_id, created_at from sessions where email = ? and user_id = ?`
+	cmd2 := `select id, uuid, email, user_id, created_at from sessions where email = $1 and user_id = $2`
 	err = Db.QueryRow(cmd2, u.Email, u.ID).Scan(&session.ID, &session.UUID, &session.Email, &session.UserID, &session.CreatedAt)
 
 	return session, err
@@ -99,14 +99,14 @@ func (u *User) CreateSession() (session Session, err error) {
 
 func (login_user *User) GetUserLogin() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, created_at from users where email = ? and password = ?`
+	cmd := `select id, uuid, name, email, password, created_at from users where email = $1 and password = $2`
 	err = Db.QueryRow(cmd, login_user.Email, Encrypt(login_user.PassWord)).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 
 	return user, err
 }
 
 func (sess *Session) CheckSession() (valid bool, err error) {
-	cmd := `select id, uuid, email, user_id, created_at from sessions where uuid = ?`
+	cmd := `select id, uuid, email, user_id, created_at from sessions where uuid = $1`
 	err = Db.QueryRow(cmd, sess.UUID).Scan(&sess.ID, &sess.UUID, &sess.Email, &sess.UserID, &sess.CreatedAt)
 
 	if err != nil {
@@ -122,7 +122,7 @@ func (sess *Session) CheckSession() (valid bool, err error) {
 }
 
 func (sess *Session) DeleteSessionByUUID() error {
-	cmd := `delete from sessions where uuid = ?`
+	cmd := `delete from sessions where uuid = $1`
 	_, err = Db.Exec(cmd, sess.UUID)
 	if err != nil {
 		log.Fatalln(err)
@@ -132,7 +132,7 @@ func (sess *Session) DeleteSessionByUUID() error {
 
 func (sess *Session) GetUserBySession() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, avatar_url, avatar_id, created_at from users where id = ?`
+	cmd := `select id, uuid, name, email, password, avatar_url, avatar_id, created_at from users where id = $1`
 	err = Db.QueryRow(cmd, sess.UserID).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.AvatarURL,
 		&user.AvatarID, &user.CreatedAt)
 	if err != nil {
@@ -144,7 +144,7 @@ func (sess *Session) GetUserBySession() (user User, err error) {
 // Google認証
 func (u *User) AuthGetUser() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, created_at from users where name = ? and email = ?`
+	cmd := `select id, uuid, name, email, password, created_at from users where name = $1 and email = $2`
 	err = Db.QueryRow(cmd, u.Name, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 	if err != nil {
 		log.Println("Google認証の新規ユーザーです")

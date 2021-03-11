@@ -25,7 +25,7 @@ func (m *Message) CreateMessage() error {
 		user_name,
 		work_id,
 		chat_uuid,
-		created_at) values(?, ?, ?, ?, ?, ?, ?)`
+		created_at) values($1, $2, $3, $4, $5, $6, $7)`
 
 	_, err = Db.Exec(cmd, createUUID(), m.Text, m.UserID, m.UserName, m.WorkID, m.ChatUUID, time.Now())
 
@@ -37,13 +37,13 @@ func (m *Message) CreateMessage() error {
 
 func GetChatUUIDByWorkID(id int) (m Message, err error) {
 	m = Message{}
-	cmd := `select chat_uuid from messages where work_id = ? group by chat_uuid`
+	cmd := `select chat_uuid from messages where work_id = $1 group by chat_uuid`
 	err = Db.QueryRow(cmd, id).Scan(&m.ChatUUID)
 	return m, err
 }
 
 func GetChatUUIDByUserID(id int) (s_m []Message, err error) {
-	cmd := `select chat_uuid from messages where user_id = ? group by chat_uuid`
+	cmd := `select chat_uuid from messages where user_id = $1 group by chat_uuid`
 	rows, err := Db.Query(cmd, id)
 	for rows.Next() {
 		var m Message
@@ -59,7 +59,9 @@ func GetChatUUIDByUserID(id int) (s_m []Message, err error) {
 }
 
 func GetMessagesByUUID(uuid string) (messages []Message, err error) {
-	cmd := `select text, user_name, work_id, strftime('%m/%d %H:%M', created_at, 'localtime') from messages where chat_uuid = ?`
+	// cmd := `select text, user_name, work_id, strftime('%m/%d %H:%M', created_at, 'localtime') from messages where chat_uuid = ?`
+	// postgres用
+	cmd := `select text, user_name, work_id, to_char(created_at, 'yyyy/mm/dd') from messages where chat_uuid = $1`
 	rows, err := Db.Query(cmd, uuid)
 	if err != nil {
 		log.Println(err)

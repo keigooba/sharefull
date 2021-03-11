@@ -5,11 +5,9 @@ import (
 	"database/sql"
 	"fmt"
 	"math/rand"
-	"os"
 
 	"github.com/google/uuid"
-	"github.com/lib/pq"
-	/// _ "github.com/mattn/go-sqlite3"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 var Db *sql.DB
@@ -37,71 +35,66 @@ const (
 	tableNameMessage   = "messages"
 )
 
-func init() {
-	url := os.Getenv("DATABASE_URL")
-	connection, _ := pq.ParseURL(url)
-	// if err != nil {
-	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
-	// if err != nil {
-	// 	panic(err.Error())
-	// }
-	connection += " sslmode=require"
-	Db, _ := sql.Open("postgres", connection)
-	// }
-	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		Uuid STRING NOT NULL UNIQUE,
-		name STRING,
-		email STRING,
-		password STRING,
-		avatar_url STRING,
-		avatar_id STRING,
-		created_at DATETIME)`, tableNameUser)
+// func init() {
+// 	Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+// 	if err != nil {
+// 		log.Fatalln(err)
+// 	}
+// 	// }
+// 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
+// 		Uuid STRING NOT NULL UNIQUE,
+// 		name STRING,
+// 		email STRING,
+// 		password STRING,
+// 		avatar_url STRING,
+// 		avatar_id STRING,
+// 		created_at DATETIME)`, tableNameUser)
 
-	Db.Exec(cmdU)
+// 	Db.Exec(cmdU)
 
-	cmdW := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		date STRING,
-		title STRING,
-		money STRING,
-		job_id STRING,
-		evaluation STRING,
-		user_id INTERGER,
-		created_at DATETIME)`, tableNameWork)
+// 	cmdW := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
+// 		date STRING,
+// 		title STRING,
+// 		money STRING,
+// 		job_id STRING,
+// 		evaluation STRING,
+// 		user_id INTERGER,
+// 		created_at DATETIME)`, tableNameWork)
 
-	Db.Exec(cmdW)
+// 	Db.Exec(cmdW)
 
-	cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		uuid STRING NOT NULL UNIQUE,
-		email STRING,
-		user_id INTEGER,
-		created_at DATETIME)`, tableNameSession)
+// 	cmdS := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
+// 		uuid STRING NOT NULL UNIQUE,
+// 		email STRING,
+// 		user_id INTEGER,
+// 		created_at DATETIME)`, tableNameSession)
 
-	Db.Exec(cmdS)
+// 	Db.Exec(cmdS)
 
-	cmdA := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		uuid STRING NOT NULL UNIQUE,
-		work_id INTEGER,
-		user_id INTEGER,
-		created_at DATETIME)`, tableNameApplyUser)
+// 	cmdA := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
+// 		uuid STRING NOT NULL UNIQUE,
+// 		work_id INTEGER,
+// 		user_id INTEGER,
+// 		created_at DATETIME)`, tableNameApplyUser)
 
-	Db.Exec(cmdA)
+// 	Db.Exec(cmdA)
 
-	cmdM := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
-		id INTEGER PRIMARY KEY AUTOINCREMENT,
-		uuid STRING NOT NULL UNIQUE,
-		text STRING,
-		user_id INTEGER,
-		user_name STRING,
-		work_id INTEGER,
-		chat_uuid STRING NOT NULL,
-		created_at DATETIME)`, tableNameMessage)
+// 	cmdM := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
+// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
+// 		uuid STRING NOT NULL UNIQUE,
+// 		text STRING,
+// 		user_id INTEGER,
+// 		user_name STRING,
+// 		work_id INTEGER,
+// 		chat_uuid STRING NOT NULL,
+// 		created_at DATETIME)`, tableNameMessage)
 
-	Db.Exec(cmdM)
-}
+// 	Db.Exec(cmdM)
+// }
 
 func Migration() {
 	u := User{}

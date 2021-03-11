@@ -76,7 +76,6 @@ func login(w http.ResponseWriter, r *http.Request) {
 		}
 		u, err := login_user.GetUserLogin()
 		if err != nil {
-			log.Println(err)
 			http.Redirect(w, r, "/login", 302)
 		} else {
 			session, err := u.CreateSession()
