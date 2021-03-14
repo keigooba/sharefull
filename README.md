@@ -27,7 +27,7 @@
 1. Go1.15.6
 2. Heroku
 3. postgres(開発ではsqlite3、本番ではpostgresを採用）
-４. Bootstrap4.5.0
+4. Bootstrap4.5.0
 5. jQuery3.5.1
 
 ## 参考文献・作成物
