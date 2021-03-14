@@ -1,6 +1,6 @@
-# sharefull
+# Sharefull
 ## 概要
-既存のサービスをベースにして作成した求人サービスsharefull
+既存のサービスをベースにして作成した求人サービスSharefull
 
 基本的なCRUD機能に加え、チャット、画像アップロード、googleログインなどの機能を実装したサイトをHerokuへデプロイ
 
