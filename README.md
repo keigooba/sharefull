@@ -32,10 +32,10 @@
 
 ## 学習記録・作成物
 1. [A Tour of Go](https://go-tour-jp.appspot.com/welcome/1) ・ [はじめてのGo](https://gihyo.jp/dev/feature/01/go_4beginners) 12月28日~1月20日  
-2. [現役シリコンバレーエンジニアが教えるGo入門 + 応用でビットコインのシストレFintechアプリの開発](https://www.udemy.com/share/101XCSAEEedFtXR3wH/) 1月21日~2月6日  
-3. [Udemy【Go入門】Golang(Go言語)基礎〜応用 + 各種ライブラリ+ webアプリ開発コース(CRUD処理)](https://www.udemy.com/share/103TVaAEEedFtXR3wH/) 2月7日~2月21日  
+2. Udemy[現役シリコンバレーエンジニアが教えるGo入門 + 応用でビットコインのシストレFintechアプリの開発](https://www.udemy.com/share/101XCSAEEedFtXR3wH/) 1月21日~2月6日  
+3. Udemy[【Go入門】Golang(Go言語)基礎〜応用 + 各種ライブラリ+ webアプリ開発コース(CRUD処理)](https://www.udemy.com/share/103TVaAEEedFtXR3wH/) 2月7日~2月21日  
    Todoリスト  
    https://github.com/keigooba/todo_app
-4. [オライリーの書籍「Go言語によるWebアプリケーション開発」](https://www.oreilly.co.jp/books/9784873117522/)  2月22日~現在  
+4. オライリーの書籍[「Go言語によるWebアプリケーション開発」](https://www.oreilly.co.jp/books/9784873117522/)  2月22日~現在  
    チャットアプリケーション・ドメイン名を検索するコマンドラインツール  
    https://github.com/keigooba/goblueprints
