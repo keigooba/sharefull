@@ -88,10 +88,6 @@ func workEdit(w http.ResponseWriter, r *http.Request, id int) {
 				log.Println(err)
 			}
 
-			// if err := work.WorkList(); err != nil {
-			// 	log.Println(err)
-			// }
-
 			work.User = user
 			generateHTML(w, work, "layout", "private_navbar", "work_edit", "js/index")
 		} else if r.Method == "POST" {

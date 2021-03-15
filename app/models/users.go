@@ -141,11 +141,11 @@ func (sess *Session) GetUserBySession() (user User, err error) {
 	return user, err
 }
 
-// Google認証
+// Google認証・登録済みユーザーの取得
 func (u *User) AuthGetUser() (user User, err error) {
 	user = User{}
-	cmd := `select id, uuid, name, email, password, created_at from users where email = $1`
-	err = Db.QueryRow(cmd, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
+	cmd := `select id, uuid, name, email, password, created_at from users where name = $1 and email = $2`
+	err = Db.QueryRow(cmd, u.Name, u.Email).Scan(&user.ID, &user.UUID, &user.Name, &user.Email, &user.PassWord, &user.CreatedAt)
 
 	//errorも返すことがある為、errorハンドリングなし
 	return user, err
