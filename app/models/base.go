@@ -16,6 +16,7 @@ var err error
 
 type Data struct {
 	Works        []Work
+	ApplyWorks   []Work
 	WorkID       interface{}
 	User         User
 	ApplyUsers   []User

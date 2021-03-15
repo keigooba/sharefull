@@ -63,7 +63,7 @@ func GetWork(id int) (work Work, err error) {
 func GetWorks() (works []Work, err error) {
 	// cmd := `select id, strftime('%Y/%m/%d', date), title, money, job_id, evaluation, user_id, strftime('%Y/%m/%d', created_at) from works where date >= datetime('now', '+9 hours') order by date asc`
 	// postgres用
-	cmd := `select id, date, title, money, job_id, evaluation, user_id, to_char(created_at, 'yyyy/mm/dd') from works where to_date(date, 'yyyy/mm/dd') >= date(CURRENT_DATE) order by date asc`
+	cmd := `select id, to_date(date,'yyyy/mm/dd'), title, money, job_id, evaluation, user_id, to_char(created_at, 'yyyy/mm/dd') from works where to_date(date, 'yyyy/mm/dd') >= date(CURRENT_DATE) order by date asc`
 	rows, err := Db.Query(cmd)
 	if err != nil {
 		log.Fatalln(err)
