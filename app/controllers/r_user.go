@@ -89,36 +89,30 @@ func userStatus(w http.ResponseWriter, r *http.Request, id int) {
 		if err != nil {
 			log.Println(err)
 		}
-		works_id, err := models.GetApplyUsersByUserID(id)
-		if err != nil {
-			log.Println(err)
-		}
 
-		// 応募した求人
-		var works []models.Work
+		// 応募中求人(なければ非表示)
+		works_id, _ := models.GetApplyUsersByUserID(id)
+		var a_works []models.Work
 		for _, v := range works_id {
-			work, err := models.GetWork(v)
-			if err != nil {
-				log.Println(err)
-			}
-			works = append(works, work)
+			work, _ := models.GetWork(v)
+			a_works = append(a_works, work)
 		}
 
-		// 応募中の求人
-		a_works, _ := u.GetWorksByUser()
+		// 募集中求人(なければ非表示)
+		works, _ := u.GetWorksByUser()
 
-		//応募中の求人からのメッセージ
+		//募集中求人から受信したメッセージ(なければ非表示)
 		var messages []models.Message
-		for _, v := range a_works {
+		for _, v := range works {
 			message, err := models.GetChatUUIDByWorkID(v.ID)
 			if err == nil {
 				messages = append(messages, message)
 			}
 		}
-		// 送ったメッセージ
+		// 募集中求人へ送信したメッセージ(なければ非表示)
 		s_messages, _ := models.GetChatUUIDByUserID(u.ID)
 
-		data := models.Data{Works: a_works, User: u, Messages: messages, SendMessages: s_messages}
+		data := models.Data{Works: works, ApplyWorks: a_works, User: u, Messages: messages, SendMessages: s_messages}
 		generateHTML(w, data, "layout", "private_navbar", "user_status", "js/index")
 	}
 }

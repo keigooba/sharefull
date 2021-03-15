@@ -9,21 +9,33 @@
       {{end}}
     </div>
   <div class="bg-light pt-4 pb-4">
-    <h1 class="mb-4">応募した求人</h1>
+    <h1 class="mb-4">応募中求人</h1>
   </div>
+  {{if .ApplyWorks}}
   <div class="pt-4 pb-4">
-    {{ range .Works }}
+    {{ range .ApplyWorks }}
     <div class="mb-4">
       <p>日付：{{.Date}}</p>
       <p>タイトル：{{.Title}}</p>
       <p>金額：{{.Money}}円</p>
-      <p>職種：{{.JobID}}</p>
+      <p>職種：
+      {{if eq .JobID "0" }}エキストラ{{end}}
+      {{if eq .JobID "1" }}データ入力{{end}}
+      {{if eq .JobID "2" }}モニターバイト{{end}}
+      {{if eq .JobID "3" }}仕分けバイト{{end}}
+      {{if eq .JobID "4" }}工場バイト{{end}}
+      {{if eq .JobID "5" }}カフェ{{end}}
+      {{if eq .JobID "6" }}コールセンター{{end}}
+      {{if eq .JobID "7" }}イベントスタッフ{{end}}
+      {{if eq .JobID "8" }}試験監督{{end}}
+      </p>
     </div>
     {{end}}
   </div>
+  {{end}}
   {{if .Works}}
   <div class="bg-light pt-4 pb-4">
-    <h1 class="mb-4">応募中の求人</h1>
+    <h1 class="mb-4">募集中求人</h1>
   </div>
   <div class="pt-4 pb-4">
     {{ range .Works }}
@@ -31,7 +43,17 @@
       <p>日付：{{.Date}}</p>
       <p>タイトル：{{.Title}}</p>
       <p>金額：{{.Money}}円</p>
-      <p>職種：{{.JobID}}</p>
+      <p>職種：
+      {{if eq .JobID "0" }}エキストラ{{end}}
+      {{if eq .JobID "1" }}データ入力{{end}}
+      {{if eq .JobID "2" }}モニターバイト{{end}}
+      {{if eq .JobID "3" }}仕分けバイト{{end}}
+      {{if eq .JobID "4" }}工場バイト{{end}}
+      {{if eq .JobID "5" }}カフェ{{end}}
+      {{if eq .JobID "6" }}コールセンター{{end}}
+      {{if eq .JobID "7" }}イベントスタッフ{{end}}
+      {{if eq .JobID "8" }}試験監督{{end}}
+      </p>
       <a href="/apply/status/{{.ID}}">応募中ユーザー</a>
     </div>
     {{end}}
