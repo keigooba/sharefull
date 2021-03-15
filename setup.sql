@@ -1,15 +1,15 @@
 drop table messages;
--- drop table apply_users;
--- drop table sessions;
--- drop table works;
--- drop table users;
+drop table apply_users;
+drop table sessions;
+drop table works;
+drop table users;
 
 
 create table users (
   id         serial primary key,
   uuid       varchar(64) not null unique,
   name       varchar(255),
-  email      varchar(255) not null unique,
+  email      varchar(255) not null,
   password   varchar(255) not null,
   avatar_url varchar(255),
   avatar_id  varchar(255),
