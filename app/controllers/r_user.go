@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -39,7 +38,6 @@ func userEdit(w http.ResponseWriter, r *http.Request, id int) {
 					return
 				}
 				filename := filepath.Join("app/views/avatars", user.AvatarID+filepath.Ext(header.Filename))
-				fmt.Println(filename)
 				err = ioutil.WriteFile(filename, data, 0777)
 				if err != nil {
 					io.WriteString(w, err.Error())
