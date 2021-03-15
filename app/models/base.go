@@ -44,9 +44,9 @@ func init() {
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
 
 	// ローカル postgres
-	// Db, err = sql.Open("postgres", "host=ec2-54-242-43-231.compute-1.amazonaws.com port=5432 user=xbvbdmyqrzdjno password=password dbname=d1kg7305bvf6n6 sslmode=require")
+	Db, err = sql.Open("postgres", "host=ec2-54-242-43-231.compute-1.amazonaws.com port=5432 user=xbvbdmyqrzdjno password=0627faa9325b1a74827905a36003c023334a4ea5072ebef0114eae4ca979bfa1 dbname=d1kg7305bvf6n6 sslmode=require")
 	// 本番 postgres
-	Db, err = sql.Open("postgres", os.Getenv("DATABASE_URL"))
+	// Db, err = sql.Open("postgres", os.Getenv("DATABASE_URL"))
 
 	if err != nil {
 		log.Fatalf("db接続でエラー %v", err)
