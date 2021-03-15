@@ -43,7 +43,7 @@ func (u *User) CreateWork(work *Work) (err error) {
 }
 
 func GetWork(id int) (work Work, err error) {
-	cmd := `select id, replace(date, '-', '/'), title, money, job_id, evaluation, user_id, created_at from works
+	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works
 	where id = $1`
 	work = Work{}
 
