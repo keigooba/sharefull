@@ -10,7 +10,7 @@ type ChatUser interface {
 
 type chatUser struct {
 	gomniauthcommon.User //これはインターフェース。この中にUserフィールド・メソッドAvatarURL()も含まれている。
-	uniqueID string
+	uniqueID             string
 }
 
 func (u chatUser) UniqueID() string {
