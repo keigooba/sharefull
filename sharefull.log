@@ -6454,3 +6454,11 @@ created by net/http.(*Server).Serve
 2021/03/15 17:20:47 works.go:40: pq: insert or update on table "works" violates foreign key constraint "works_user_id_fkey"
 2021/03/15 17:21:54 main.go:16: success
 2021/03/15 17:33:52 main.go:16: success
+2021/03/16 04:40:12 main.go:16: success
+2021/03/16 04:40:29 works.go:69: dial tcp [::1]:5432: connect: connection refused
+2021/03/16 04:41:27 main.go:16: success
+2021/03/16 04:42:21 main.go:16: success
+2021/03/16 05:47:37 main.go:16: success
+2021/03/16 05:52:13 main.go:16: success
+2021/03/16 05:52:20 main.go:16: success
+2021/03/16 05:53:59 main.go:16: success

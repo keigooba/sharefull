@@ -1,8 +1,8 @@
 drop table messages;
-drop table apply_users;
-drop table sessions;
-drop table works;
-drop table users;
+-- drop table apply_users;
+-- drop table sessions;
+-- drop table works;
+-- drop table users;
 
 
 create table users (
@@ -50,6 +50,6 @@ create table messages (
   user_id    integer references users(id),
   user_name  varchar(255),
   work_id    integer references works(id),
-  chat_uuid  varchar(64) not null unique,
+  chat_uuid  varchar(64) not null,
   created_at timestamp not null
 );

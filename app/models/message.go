@@ -61,7 +61,7 @@ func GetChatUUIDByUserID(id int) (s_m []Message, err error) {
 func GetMessagesByUUID(uuid string) (messages []Message, err error) {
 	// cmd := `select text, user_name, work_id, strftime('%m/%d %H:%M', created_at, 'localtime') from messages where chat_uuid = ?`
 	// postgres用
-	cmd := `select text, user_name, work_id, to_char(created_at, 'yyyy/mm/dd') from messages where chat_uuid = $1`
+	cmd := `select text, user_name, work_id, to_char(created_at, 'mm/dd HH:MI') from messages where chat_uuid = $1`
 	rows, err := Db.Query(cmd, uuid)
 	if err != nil {
 		log.Println(err)
