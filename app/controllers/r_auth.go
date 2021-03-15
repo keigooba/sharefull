@@ -36,7 +36,7 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			AvatarID:  avatar_id,
 		}
 		// 同じ名前・メールアドレスの登録があるかを確認 あればリダイレクト
-		user, err := user.AuthGetUser()
+		_, err := user.AuthGetUser()
 		if err == nil {
 			http.Redirect(w, r, "/login", 302)
 		}
