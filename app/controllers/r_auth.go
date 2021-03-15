@@ -35,6 +35,13 @@ func signup(w http.ResponseWriter, r *http.Request) {
 			PassWord: r.PostFormValue("password"),
 			AvatarID:  avatar_id,
 		}
+		// メールアドレスの登録があるかを確認 あればリダイレクト
+		_, err := user.AuthGetUser()
+		if err == nil {
+			http.Redirect(w, r, "/login", 302)
+		}
+
+		// ユーザー登録
 		if err := user.CreateUser(); err != nil {
 			log.Fatalln(err)
 		}
@@ -151,7 +158,7 @@ func auth(w http.ResponseWriter, r *http.Request) {
 			AvatarURL: creds_user.AvatarURL(),
 			AvatarID:  avatar_id,
 		}
-		auth_user, err := user.AuthGetUser() //名前とメールアドレスで検索
+		auth_user, err := user.AuthGetUser() //メールアドレスで検索
 		if err != nil {                      //ない場合生成
 			if err := user.CreateUser(); err != nil {
 				log.Fatalln(err)
