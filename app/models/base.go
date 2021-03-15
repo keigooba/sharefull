@@ -7,7 +7,6 @@ import (
 	"math/rand"
 
 	"github.com/google/uuid"
-	"github.com/keigooba/sharefull/config"
 	// _ "github.com/mattn/go-sqlite3"
 )
 
