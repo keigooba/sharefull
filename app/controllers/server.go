@@ -101,19 +101,20 @@ func StartMainServer() error {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
+	http.HandleFunc("/g_login", g_login) //ゲストログイン
 	http.HandleFunc("/auth/", auth)
 	http.HandleFunc("/logout", logout)
 	http.HandleFunc("/work/new", workNew)
 	http.HandleFunc("/work/edit/", parseURL(workEdit))
 	http.HandleFunc("/work/delete/", parseURL(workDelete))
 	http.HandleFunc("/work/apply/", parseURL(workApply))
-	http.HandleFunc("/user/edit/", parseURL(userEdit))
 	http.HandleFunc("/work/chat/", parseURL(workChat))
-	http.HandleFunc("/chat/message/", chatMessage)
+	http.HandleFunc("/user/edit/", parseURL(userEdit))
 	http.HandleFunc("/user/delete/", parseURL(userDelete))
 	http.HandleFunc("/user/status/", parseURL(userStatus))
 	http.HandleFunc("/apply/status/", parseURL(applyUser))
 	http.HandleFunc("/apply/delete/", parseURL(applyUserDelete))
+	http.HandleFunc("/chat/message/", chatMessage)
 	// 本番用ポートがあるか確認
 	port := os.Getenv("PORT")
 	if port != "" {

@@ -22,6 +22,6 @@ func main() {
 		google.New("587125882573-qc7jp6pmuvps29kd541qi0qds97480mt.apps.googleusercontent.com", "j409W6R1jm6kB8NNrEOWfFjk", config.Config.Url+"auth/callback/google"),
 	)
 
-	models.Migration()
+	// models.Migration()
 	controllers.StartMainServer()
 }

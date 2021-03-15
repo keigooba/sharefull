@@ -107,22 +107,22 @@ func init() {
 	// 	Db.Exec(cmdM)
 }
 
-func Migration() {
-	u := User{}
-	u.Name = "test"
-	u.Email = "test@email.com"
-	u.PassWord = "testtest"
-	u.CreateUser()
+// func Migration() {
+// 	u := User{}
+// 	u.Name = "test"
+// 	u.Email = "test@email.com"
+// 	u.PassWord = "testtest"
+// 	u.CreateUser()
 
-	work := &Work{
-		Date:       "02/20",
-		Title:      "テスト",
-		Money:      "3000",
-		JobID:      "1",
-		Evaluation: "1",
-	}
-	u.CreateWork(work)
-}
+// 	work := &Work{
+// 		Date:       "02/20",
+// 		Title:      "テスト",
+// 		Money:      "3000",
+// 		JobID:      "1",
+// 		Evaluation: "1",
+// 	}
+// 	u.CreateWork(work)
+// }
 
 func createUUID() (uuidobj uuid.UUID) {
 	uuidobj, _ = uuid.NewUUID()

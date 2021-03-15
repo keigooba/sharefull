@@ -200,3 +200,29 @@ func logout(w http.ResponseWriter, r *http.Request) {
 	})
 	http.Redirect(w, r, "/", 302)
 }
+
+// ゲストログイン
+func g_login(w http.ResponseWriter, r *http.Request) {
+	login_user := models.User{
+		Email:    "guest@mail.com",
+		PassWord: "guest",
+	}
+	u, err := login_user.GetUserLogin()
+	if err != nil {
+		http.Redirect(w, r, "/login", 302)
+	} else {
+		session, err := u.CreateSession()
+		if err != nil {
+			log.Fatalln(err)
+		}
+
+		cookie := http.Cookie{
+			Name:     "_cookie",
+			Value:    session.UUID,
+			HttpOnly: true,
+		}
+		http.SetCookie(w, &cookie)
+
+		http.Redirect(w, r, "/", 302)
+	}
+}
