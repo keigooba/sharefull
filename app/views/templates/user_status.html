@@ -1,5 +1,6 @@
 {{define "content"}}
 <div class="text-center">
+    {{if .Messages || .SendMessages}}
     <div class="m-4">
       {{ range .Messages }}
       <a href="/chat/message/{{.ChatUUID}}" class="text-danger">受信したメッセージ</a><br>
@@ -8,6 +9,7 @@
       <a href="/chat/message/{{.ChatUUID}}" class="text-primary">送信したメッセージ</a><br>
       {{end}}
     </div>
+    {{end}}
   {{if .ApplyWorks}}
   <div class="bg-light pt-4 pb-4">
     <h1 class="mb-4">応募中求人</h1>
