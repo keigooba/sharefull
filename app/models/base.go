@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"math/rand"
+	"os"
 
 	"github.com/google/uuid"
 	// _ "github.com/mattn/go-sqlite3"
