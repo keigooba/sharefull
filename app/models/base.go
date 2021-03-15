@@ -4,10 +4,12 @@ import (
 	"crypto/sha1"
 	"database/sql"
 	"fmt"
+	"log"
 	"math/rand"
 
 	"github.com/google/uuid"
 	// _ "github.com/mattn/go-sqlite3"
+	_ "github.com/lib/pq"
 )
 
 var Db *sql.DB
@@ -39,14 +41,16 @@ const (
 func init() {
 	// ローカル sqlite3 (処理の修正も必要有り)
 	// Db, err = sql.Open(config.Config.SQLDriver, config.Config.DbName)
+
 	// ローカル postgres
 	Db, err = sql.Open("postgres", "host=ec2-54-242-43-231.compute-1.amazonaws.com port=5432 user=xbvbdmyqrzdjno password=password dbname=d1kg7305bvf6n6 sslmode=require")
+
 	// 本番
 	// Db, err = sql.Open("postgres", os.Getenv("DATABASE_URL"))
-	// if err != nil {
-	// 	log.Fatalf("db接続でエラー %v", err)
-	// }
-	// 	// }
+	if err != nil {
+		log.Fatalf("db接続でエラー %v", err)
+	}
+
 	// 	cmdU := fmt.Sprintf(`CREATE TABLE IF NOT EXISTS %s(
 	// 		id INTEGER PRIMARY KEY AUTOINCREMENT,
 	// 		Uuid STRING NOT NULL UNIQUE,
