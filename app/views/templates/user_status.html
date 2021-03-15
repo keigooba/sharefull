@@ -1,6 +1,6 @@
 {{define "content"}}
 <div class="text-center">
-    {{if .Messages || .SendMessages}}
+    {{if .Messages | .SendMessages}}
     <div class="m-4">
       {{ range .Messages }}
       <a href="/chat/message/{{.ChatUUID}}" class="text-danger">受信したメッセージ</a><br>
