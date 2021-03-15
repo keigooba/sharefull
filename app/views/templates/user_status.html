@@ -8,10 +8,10 @@
       <a href="/chat/message/{{.ChatUUID}}" class="text-primary">送信したメッセージ</a><br>
       {{end}}
     </div>
+  {{if .ApplyWorks}}
   <div class="bg-light pt-4 pb-4">
     <h1 class="mb-4">応募中求人</h1>
   </div>
-  {{if .ApplyWorks}}
   <div class="pt-4 pb-4">
     {{ range .ApplyWorks }}
     <div class="mb-4">

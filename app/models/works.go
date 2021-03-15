@@ -43,7 +43,7 @@ func (u *User) CreateWork(work *Work) (err error) {
 }
 
 func GetWork(id int) (work Work, err error) {
-	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works
+	cmd := `select id, replace(date, '-', '/'), title, money, job_id, evaluation, user_id, created_at from works
 	where id = $1`
 	work = Work{}
 
@@ -91,7 +91,7 @@ func GetWorks() (works []Work, err error) {
 }
 
 func (u *User) GetWorksByUser() (works []Work, err error) {
-	cmd := `select id, date, title, money, job_id, evaluation, user_id, created_at from works where user_id = $1`
+	cmd := `select id, replace(date, '-', '/'), title, money, job_id, evaluation, user_id, created_at from works where user_id = $1`
 	rows, err := Db.Query(cmd, u.ID)
 	if err != nil {
 		log.Fatalln(err)
