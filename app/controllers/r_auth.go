@@ -24,10 +24,16 @@ func signup(w http.ResponseWriter, r *http.Request) {
 		if err := r.ParseForm(); err != nil {
 			log.Fatalln(err)
 		}
+
+		//メールアドレスのハッシュ値の生成
+		avatar_byte := md5.Sum([]byte(strings.ToLower(r.PostFormValue("email"))))
+		avatar_id := fmt.Sprintf("%x", avatar_byte) //バイト型を文字列に変換する時は%x
+
 		user := models.User{
 			Name:     r.PostFormValue("name"),
 			Email:    r.PostFormValue("email"),
 			PassWord: r.PostFormValue("password"),
+			AvatarID:  avatar_id,
 		}
 		if err := user.CreateUser(); err != nil {
 			log.Fatalln(err)
