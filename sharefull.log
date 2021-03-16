@@ -6462,3 +6462,303 @@ created by net/http.(*Server).Serve
 2021/03/16 05:52:13 main.go:16: success
 2021/03/16 05:52:20 main.go:16: success
 2021/03/16 05:53:59 main.go:16: success
+2021/03/16 08:45:07 main.go:16: success
+2021/03/16 08:45:32 main.go:16: success
+2021/03/16 08:45:55 main.go:16: success
+2021/03/16 08:50:03 main.go:16: success
+2021/03/16 08:51:19 main.go:16: success
+2021/03/16 08:52:09 main.go:16: success
+2021/03/16 08:52:20 server.go:3095: http: panic serving [::1]:60756: template: user_status.html:3: unexpected "|" in if
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0002181e0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000204c50)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0002480e0, 0x1602040, 0xc0002b2000, 0xc0002ab350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0002480e0, 0xc000240100, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0002480e0, 0xc000240100)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000204270, 0x16e6f60, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x16e6f60, 0xc0002480e0, 0xc000240100)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0002181e0, 0x16e8de0, 0xc00020a1c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 08:52:26 server.go:3095: http: panic serving [::1]:60758: template: user_status.html:3: unexpected "|" in if
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc000218b40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000205210)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0002481c0, 0x1602040, 0xc0002b2160, 0xc00009d350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0002481c0, 0xc000240b00, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0002481c0, 0xc000240b00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000204270, 0x16e6f60, 0xc0002481c0, 0xc000240b00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0002481c0, 0xc000240b00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x16e6f60, 0xc0002481c0, 0xc000240b00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000218b40, 0x16e8de0, 0xc00020aa80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 08:52:37 server.go:3095: http: panic serving [::1]:60760: template: user_status.html:3: unexpected "|" in if
+goroutine 31 [running]:
+net/http.(*conn).serve.func1(0xc000219360)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc0002057d0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0002482a0, 0x1602040, 0xc0002b22c0, 0xc0002cf350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0002482a0, 0xc000241300, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0002482a0, 0xc000241300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc000204270, 0x16e6f60, 0xc0002482a0, 0xc000241300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0002482a0, 0xc000241300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000248000, 0x16e6f60, 0xc0002482a0, 0xc000241300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000219360, 0x16e8de0, 0xc00020b080)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 08:53:33 main.go:16: success
+2021/03/16 08:53:47 server.go:3095: http: panic serving [::1]:60769: template: user_status.html:3: unexpected "&" in operand
+goroutine 22 [running]:
+net/http.(*conn).serve.func1(0xc0000b9f40)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc00013ec70)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0001420e0, 0x1602040, 0xc0000dcb00, 0xc000287350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0001420e0, 0xc00011a300, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0001420e0, 0xc00011a300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc00013e2a0, 0x16e6f60, 0xc0001420e0, 0xc00011a300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0001420e0, 0xc00011a300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000142000, 0x16e6f60, 0xc0001420e0, 0xc00011a300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b9f40, 0x16e8de0, 0xc0000cdb80)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 08:53:54 server.go:3095: http: panic serving [::1]:60771: template: user_status.html:3: unexpected "&" in operand
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0001a6000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc00013edb0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0001be000, 0x1602040, 0xc0001d2000, 0xc0001cd350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0001be000, 0xc0001ac000, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0001be000, 0xc0001ac000)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc00013e2a0, 0x16e6f60, 0xc0001be000, 0xc0001ac000)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0001be000, 0xc0001ac000)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000142000, 0x16e6f60, 0xc0001be000, 0xc0001ac000)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0001a6000, 0x16e8de0, 0xc0001a0040)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 08:54:07 main.go:16: success
+2021/03/16 12:59:00 works.go:69: dial tcp 54.242.43.231:5432: connect: operation timed out
+2021/03/16 13:02:13 main.go:16: success
+2021/03/16 13:02:30 server.go:3095: http: panic serving [::1]:61073: template: user_status.html:3: unexpected "|" in if
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000c4000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000206340)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0000ae620, 0x1602040, 0xc0000be9a0, 0xc0000e5350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0000ae620, 0xc000175300, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0000ae620, 0xc000175300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0001942c0, 0x16e6f60, 0xc0000ae620, 0xc000175300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0000ae620, 0xc000175300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000198000, 0x16e6f60, 0xc0000ae620, 0xc000175300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000c4000, 0x16e8de0, 0xc0000b6080)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:02:35 server.go:3095: http: panic serving [::1]:61072: template: user_status.html:3: unexpected "|" in if
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc000218000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000195fb0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0001981c0, 0x1602040, 0xc0001374a0, 0xc0000e1350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0001981c0, 0xc000214300, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0001981c0, 0xc000214300)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0001942c0, 0x16e6f60, 0xc0001981c0, 0xc000214300)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0001981c0, 0xc000214300)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000198000, 0x16e6f60, 0xc0001981c0, 0xc000214300)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc000218000, 0x16e8de0, 0xc00020c4c0)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:02:42 server.go:3095: http: panic serving [::1]:61070: template: user_status.html:3: unexpected "|" in if
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc00019c000)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000097030)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0000ae700, 0x1602040, 0xc0000beb00, 0xc00009d350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0000ae700, 0xc0000a8500, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0000ae700, 0xc0000a8500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0001942c0, 0x16e6f60, 0xc0000ae700, 0xc0000a8500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0000ae700, 0xc0000a8500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000198000, 0x16e6f60, 0xc0000ae700, 0xc0000a8500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00019c000, 0x16e8de0, 0xc000035c40)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:02:51 server.go:3095: http: panic serving [::1]:61077: template: user_status.html:3: unexpected "|" in if
+goroutine 55 [running]:
+net/http.(*conn).serve.func1(0xc00019cf00)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc0000975a0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0001982a0, 0x1602040, 0xc0000bec60, 0xc0000e1350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0001982a0, 0xc000175c00, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0001982a0, 0xc000175c00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0001942c0, 0x16e6f60, 0xc0001982a0, 0xc000175c00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0001982a0, 0xc000175c00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000198000, 0x16e6f60, 0xc0001982a0, 0xc000175c00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc00019cf00, 0x16e8de0, 0xc0001cf900)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:03:00 server.go:3095: http: panic serving [::1]:61078: template: user_status.html:3: unexpected "|" in if
+goroutine 68 [running]:
+net/http.(*conn).serve.func1(0xc0000c59a0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc0002064c0)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0000ae7e0, 0x1602040, 0xc0000bedc0, 0xc0000e5350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0000ae7e0, 0xc00031c200, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0000ae7e0, 0xc00031c200)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0001942c0, 0x16e6f60, 0xc0000ae7e0, 0xc00031c200)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0000ae7e0, 0xc00031c200)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc000198000, 0x16e6f60, 0xc0000ae7e0, 0xc00031c200)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000c59a0, 0x16e8de0, 0xc0000b7480)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:04:29 main.go:16: success
+2021/03/16 13:04:50 server.go:3095: http: panic serving [::1]:61105: template: user_status.html:3: unexpected "|" in parenthesized pipeline
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc0000b0280)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000204f50)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc0001980e0, 0x1602040, 0xc000136f20, 0xc0002a9350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc0001980e0, 0xc000212d00, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc0001980e0, 0xc000212d00)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0000962b0, 0x16e6f60, 0xc0001980e0, 0xc000212d00)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc0001980e0, 0xc000212d00)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x16e6f60, 0xc0001980e0, 0xc000212d00)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b0280, 0x16e8de0, 0xc0000a6500)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:04:56 server.go:3095: http: panic serving [::1]:61107: template: user_status.html:3: unexpected "|" in parenthesized pipeline
+goroutine 30 [running]:
+net/http.(*conn).serve.func1(0xc0000b0aa0)
+	/usr/local/go/src/net/http/server.go:1801 +0x147
+panic(0x15829e0, 0xc000205520)
+	/usr/local/go/src/runtime/panic.go:975 +0x47a
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:372
+github.com/keigooba/sharefull/app/controllers.generateHTML(0x16e6f60, 0xc000310000, 0x1602040, 0xc0002302c0, 0xc0002a9350, 0x4, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:22 +0x2be
+github.com/keigooba/sharefull/app/controllers.userStatus(0x16e6f60, 0xc000310000, 0xc000213500, 0x4)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/r_user.go:114 +0x73c
+github.com/keigooba/sharefull/app/controllers.parseURL.func1(0x16e6f60, 0xc000310000, 0xc000213500)
+	/Users/keigo/go/src/github.com/keigooba/sharefull/app/controllers/server.go:72 +0x268
+net/http.HandlerFunc.ServeHTTP(0xc0000962b0, 0x16e6f60, 0xc000310000, 0xc000213500)
+	/usr/local/go/src/net/http/server.go:2042 +0x44
+net/http.(*ServeMux).ServeHTTP(0x19fcec0, 0x16e6f60, 0xc000310000, 0xc000213500)
+	/usr/local/go/src/net/http/server.go:2417 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000de000, 0x16e6f60, 0xc000310000, 0xc000213500)
+	/usr/local/go/src/net/http/server.go:2843 +0xa3
+net/http.(*conn).serve(0xc0000b0aa0, 0x16e8de0, 0xc00020f340)
+	/usr/local/go/src/net/http/server.go:1925 +0x8ad
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2969 +0x36c
+2021/03/16 13:10:04 main.go:16: success
