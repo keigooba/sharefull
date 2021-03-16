@@ -46,6 +46,12 @@ func workNew(w http.ResponseWriter, r *http.Request) {
 
 		if r.Method == "GET" {
 			work := models.Work{}
+
+			// リストを追加
+			if err := work.WorkList(); err != nil {
+				log.Println(err)
+			}
+
 			work.User = user
 			generateHTML(w, work, "layout", "private_navbar", "work_new", "js/index")
 		} else if r.Method == "POST" {

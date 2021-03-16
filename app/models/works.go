@@ -19,11 +19,11 @@ type Work struct {
 	EvaluationList []string
 }
 
-// func (w *Work) WorkList() error {
-// 	w.JobList = []string{"エキストラ", "データ入力", "モニターバイト", "仕分けバイト", "工場バイト", "カフェ", "コールセンター", "イベントスタッフ", "試験監督"}
-// 	w.EvaluationList = []string{"設定しない", "1以上", "2以上", "3以上"}
-// 	return err
-// }
+func (w *Work) WorkList() error {
+	w.JobList = []string{"エキストラ", "データ入力", "モニターバイト", "仕分けバイト", "工場バイト", "カフェ", "コールセンター", "イベントスタッフ", "試験監督"}
+	// w.EvaluationList = []string{"設定しない", "1以上", "2以上", "3以上"}
+	return err
+}
 
 func (u *User) CreateWork(work *Work) (err error) {
 	cmd := `insert into works (
