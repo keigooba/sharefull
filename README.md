@@ -39,6 +39,6 @@ https://youtu.be/CuLaU8hvhy4
 3. Udemy[【Go入門】Golang(Go言語)基礎〜応用 + 各種ライブラリ+ webアプリ開発コース(CRUD処理)](https://www.udemy.com/share/103TVaAEEedFtXR3wH/) 2月7日~2月21日  
    Todoリスト  
    https://github.com/keigooba/todo_app
-4. オライリーの書籍[「Go言語によるWebアプリケーション開発」](https://www.oreilly.co.jp/books/9784873117522/)  2月22日~現在  
+4. オライリーの書籍[「Go言語によるWebアプリケーション開発」](https://www.oreilly.co.jp/books/9784873117522/)  2月22日~３月25日  
    チャットアプリケーション・ドメイン名を検索するコマンドラインツール  
    https://github.com/keigooba/goblueprints
